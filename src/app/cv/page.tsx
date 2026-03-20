@@ -430,25 +430,38 @@ const otherItems: ReactNode[] = [
   "International Junior Science Olympiad 2008 in Korea, silver medal.",
 ];
 
-const skills: ReactNode[] = [
-  <>
-    <strong>Machine Learning &amp; Artificial Intelligence:</strong> models for structured, non-text, domain-specific data.
-  </>,
-  <>
-    <strong>Programming:</strong> research coding in Python and PyTorch; production in C++; Linux administration.
-  </>,
-  <>
-    <strong>Research writing &amp; speaking</strong>
-  </>,
-  <>
-    <strong>Physics:</strong> deep understanding of natural science.
-  </>,
-  <>
-    <strong>Collaboration, leadership &amp; mentorship</strong>
-  </>,
-  <>
-    <strong>Languages:</strong> Russian (native), English (fluent, IELTS 8).
-  </>,
+type SkillTag = {
+  label: string;
+  detail?: string;
+};
+
+const skillTags: SkillTag[] = [
+  { label: "ML & AI", detail: "Structured, non-text, domain-specific data" },
+  { label: "Python & PyTorch", detail: "Research coding" },
+  { label: "C++", detail: "Production" },
+  { label: "Linux", detail: "Administration" },
+  { label: "Research Writing & Speaking" },
+  { label: "Physics", detail: "Deep domain understanding" },
+  { label: "Leadership & Mentorship" },
+  { label: "Russian", detail: "Native" },
+  { label: "English", detail: "Fluent · IELTS 8" },
+];
+
+const stats = [
+  { value: "12", label: "years in research" },
+  { value: "9", label: "students mentored" },
+  { value: "$3.4M", label: "grant co-PI" },
+  { value: "20+", label: "conference talks" },
+  { value: "\u{1F3C6}", label: "Breakthrough Prize 2025" },
+];
+
+const sectionNav = [
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
+  { label: "Mentorship", href: "#mentorship" },
+  { label: "Teaching", href: "#teaching" },
+  { label: "Skills", href: "#skills" },
+  { label: "Publications", href: "#publications" },
 ];
 
 const publications: Publication[] = [
@@ -536,45 +549,61 @@ function ReferenceList({ links }: { links: ReferenceLink[] }) {
 export default function CvPage() {
   return (
     <main className="prose cv-page flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
-      <div className="w-full space-y-12">
-        <section className="cv-hero grid gap-6 border-b border-neutral-200 pb-8 dark:border-neutral-800 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <div className="space-y-4">
-            <p className="eyebrow">Curriculum Vitae</p>
-            <h1 className="max-w-4xl">Nikita Kazeev</h1>
-            <p className="max-w-3xl">
-              Research scientist with 7+ years of experience at the intersection of AI and physics, specializing in novel machine learning models for bespoke scientific challenges.
-            </p>
-            <p className="max-w-3xl">
-              Current role: Postdoctoral researcher at the National University of Singapore in the laboratory of{" "}
-              <a href="https://en.wikipedia.org/wiki/Konstantin_Novoselov" target="_blank" rel="noreferrer">
-                Kostya Novoselov
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className="space-y-4 lg:pl-6">
-            <p className="eyebrow">January 2026 edition</p>
-            <div className="flex flex-wrap gap-3">
+      <div className="w-full space-y-8">
+        {/* ── Hero ── */}
+        <section className="cv-hero space-y-6 border-b border-neutral-200 pb-6 dark:border-neutral-800">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="space-y-2">
+              <p className="eyebrow">Curriculum Vitae</p>
+              <h1>Nikita Kazeev</h1>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <a href={pdfHref} download="Nikita Kazeev - CV [January 2026].pdf" className="cv-download">
                 Download PDF
               </a>
+              <span className="text-xs text-neutral-400">Jan 2026</span>
             </div>
+          </div>
+
+          <p className="max-w-3xl">
+            Research scientist at the intersection of AI and physics. Postdoc with{" "}
+            <a href="https://en.wikipedia.org/wiki/Konstantin_Novoselov" target="_blank" rel="noreferrer">
+              Kostya Novoselov
+            </a>{" "}
+            at NUS.
+          </p>
+
+          <div className="cv-stats" aria-label="Key metrics">
+            {stats.map((stat) => (
+              <div key={stat.label} className="cv-stat">
+                <p className="cv-stat-value">{stat.value}</p>
+                <p className="cv-stat-label">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section className="space-y-5">
-          <div className="max-w-3xl space-y-3">
-            <p className="eyebrow">Work Experience</p>
-            <h2>Research, leadership, and production work across science.</h2>
+        {/* ── Sticky section nav ── */}
+        <nav className="cv-section-nav-sticky" aria-label="CV sections">
+          <div className="cv-section-nav">
+            {sectionNav.map((link) => (
+              <a key={link.href} href={link.href} className="cv-nav-pill">
+                {link.label}
+              </a>
+            ))}
           </div>
+        </nav>
 
-          <div className="space-y-6">
+        {/* ── Work Experience ── */}
+        <section id="experience" className="space-y-4">
+          <h2>Work Experience</h2>
+
+          <div className="space-y-5">
             {workExperience.map((entry) => (
               <article key={`${entry.organization}-${entry.period}`} className="cv-entry rounded-2xl border border-neutral-200 p-5 dark:border-neutral-800 dark:bg-neutral-950/30">
                 <div className="cv-entry-header">
                   <div>
-                    <h3 className="text-xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
+                    <h3 className="text-lg font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
                       {entry.organization}
                     </h3>
                     <p className="cv-role">{entry.role}</p>
@@ -582,19 +611,24 @@ export default function CvPage() {
                   <p className="cv-period">{entry.period}</p>
                 </div>
 
-                <div className="mt-6 space-y-6">
-                  {entry.highlights.map((highlight) => (
-                    <section key={highlight.title} className="space-y-3">
-                      <div className="space-y-1">
-                        <p className="eyebrow">{highlight.title}</p>
+                <div className="mt-3 space-y-1.5">
+                  {entry.highlights.map((highlight, hIndex) => (
+                    <details key={highlight.title} className="cv-highlight" open={hIndex === 0 ? true : undefined}>
+                      <summary>
+                        <span>{highlight.title}</span>
+                        <svg className="cv-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </summary>
+                      <div className="cv-highlight-content">
                         {highlight.references ? <ReferenceList links={highlight.references} /> : null}
+                        <ul className="space-y-1.5">
+                          {highlight.bullets.map((bullet, index) => (
+                            <li key={index}>{bullet}</li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-2">
-                        {highlight.bullets.map((bullet, index) => (
-                          <li key={index}>{bullet}</li>
-                        ))}
-                      </ul>
-                    </section>
+                    </details>
                   ))}
                 </div>
               </article>
@@ -602,109 +636,92 @@ export default function CvPage() {
           </div>
         </section>
 
-        <section className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <article className="space-y-5">
-            <div className="max-w-3xl space-y-3">
-              <p className="eyebrow">Education</p>
-              <h2>Formal training across computer science, physics, and product thinking.</h2>
-            </div>
-
-            <div className="space-y-4">
-              {education.map((item, index) => (
-                <section key={`${item.title ?? "item"}-${index}`} className="cv-subentry">
-                  {item.title ? <p className="cv-subentry-title">{item.title}</p> : null}
-                  {item.period ? <p className="cv-period">{item.period}</p> : null}
-                  <p className="mt-2">{item.body}</p>
-                </section>
-              ))}
-            </div>
-          </article>
-
-          <article className="space-y-5">
-            <div className="max-w-3xl space-y-3">
-              <p className="eyebrow">Mentorship</p>
-              <h2>Building people, teams, and research capacity.</h2>
-            </div>
-            <ul className="space-y-3">
-              {mentorship.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </article>
+        {/* ── Education ── */}
+        <section id="education" className="space-y-4">
+          <h2>Education</h2>
+          <div className="cv-timeline">
+            {education.map((item, index) => (
+              <div key={`${item.title ?? "item"}-${index}`} className="cv-timeline-item">
+                <div className="cv-timeline-dot" />
+                <div className="cv-timeline-content">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                    {item.title ? <p className="font-medium text-neutral-900 dark:text-neutral-100">{item.title}</p> : null}
+                    {item.period ? <p className="cv-period">{item.period}</p> : null}
+                  </div>
+                  <p className="mt-1 text-sm">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
-        <section className="grid gap-10 lg:grid-cols-2">
-          <article className="space-y-5">
-            <div className="max-w-3xl space-y-3">
-              <p className="eyebrow">Teaching and Outreach</p>
-              <h2>Translating difficult ideas across classrooms, conferences, and the public sphere.</h2>
-            </div>
-            <ul className="space-y-3">
-              {teachingAndOutreach.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </article>
+        {/* ── Mentorship & Teaching ── */}
+        <section id="mentorship" className="space-y-4">
+          <h2>Mentorship</h2>
+          <ul className="space-y-2">
+            {mentorship.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
-          <div className="space-y-10">
-            <article className="space-y-5">
-              <div className="max-w-3xl space-y-3">
-                <p className="eyebrow">Service</p>
-                <h2>Professional contribution beyond primary research.</h2>
-              </div>
-              <ul className="space-y-3">
+        <section id="teaching" className="space-y-4">
+          <h2>Teaching &amp; Outreach</h2>
+          <ul className="space-y-2">
+            {teachingAndOutreach.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        {/* ── Skills ── */}
+        <section id="skills" className="space-y-4">
+          <h2>Skills</h2>
+          <div className="flex flex-wrap gap-2">
+            {skillTags.map((skill) => (
+              <span key={skill.label} className="cv-skill-tag">
+                <strong>{skill.label}</strong>
+                {skill.detail ? <span className="cv-skill-detail">{skill.detail}</span> : null}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Publications ── */}
+        <section id="publications" className="space-y-4">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <h2>Selected Publications</h2>
+            <a href="https://scholar.google.com/citations?user=vamy2okAAAAJ" target="_blank" rel="noreferrer" className="text-sm">
+              Full list on Google Scholar &rarr;
+            </a>
+          </div>
+          <ol className="cv-publications space-y-3">
+            {publications.map((publication, index) => (
+              <li key={index}>{publication.citation}</li>
+            ))}
+          </ol>
+        </section>
+
+        {/* ── Service & Other (compact) ── */}
+        <section className="cv-compact-section space-y-3 border-t border-neutral-200 pt-6 dark:border-neutral-800">
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div>
+              <p className="eyebrow mb-2">Service</p>
+              <ul className="space-y-1.5 text-sm">
                 {service.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-            </article>
-
-            <article className="space-y-5">
-              <div className="max-w-3xl space-y-3">
-                <p className="eyebrow">Other</p>
-                <h2>Signals of range outside the lab.</h2>
-              </div>
-              <ul className="space-y-3">
+            </div>
+            <div>
+              <p className="eyebrow mb-2">Also</p>
+              <ul className="space-y-1.5 text-sm">
                 {otherItems.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-            </article>
+            </div>
           </div>
-        </section>
-
-        <section className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <article className="space-y-5">
-            <div className="max-w-3xl space-y-3">
-              <p className="eyebrow">Skills</p>
-              <h2>Technical range grounded in research practice.</h2>
-            </div>
-            <ul className="space-y-3">
-              {skills.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="space-y-5">
-            <div className="max-w-3xl space-y-3">
-              <p className="eyebrow">Academic Publications</p>
-              <h2>Selected publications</h2>
-              <p>
-                Full list on{" "}
-                <a href="https://scholar.google.com/citations?user=vamy2okAAAAJ" target="_blank" rel="noreferrer">
-                  Google Scholar
-                </a>
-                .
-              </p>
-            </div>
-
-            <ol className="cv-publications space-y-4">
-              {publications.map((publication, index) => (
-                <li key={index}>{publication.citation}</li>
-              ))}
-            </ol>
-          </article>
         </section>
       </div>
     </main>

@@ -29,6 +29,7 @@
 html {
   min-width: 360px;
   background: var(--background);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -86,8 +87,14 @@ a {
   @apply text-neutral-800 dark:text-neutral-200;
 }
 
+/* ── CV page ── */
+
 .cv-page {
   scroll-margin-top: 5rem;
+}
+
+.cv-page section[id] {
+  scroll-margin-top: 6rem;
 }
 
 .cv-hero {
@@ -95,23 +102,15 @@ a {
 }
 
 .cv-entry-header {
-  @apply flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between;
+  @apply flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between;
 }
 
 .cv-role {
-  @apply mt-1 text-base leading-6 text-neutral-700 dark:text-neutral-300;
+  @apply text-sm leading-5 text-neutral-600 dark:text-neutral-400;
 }
 
 .cv-period {
-  @apply text-sm tracking-tight text-neutral-600 dark:text-neutral-400;
-}
-
-.cv-subentry {
-  @apply rounded-xl border border-neutral-200 p-4 dark:border-neutral-800 dark:bg-neutral-950/20;
-}
-
-.cv-subentry-title {
-  @apply text-lg font-medium tracking-tight text-neutral-900 dark:text-neutral-100;
+  @apply text-sm tracking-tight text-neutral-500 dark:text-neutral-500;
 }
 
 .cv-links {
@@ -122,14 +121,99 @@ a {
   @apply inline-flex items-center justify-center rounded-full border border-neutral-900 bg-neutral-900 px-4 py-2 text-sm font-medium text-neutral-50 no-underline transition-colors hover:bg-neutral-700 dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300;
 }
 
-.cv-secondary-link {
-  @apply inline-flex items-center justify-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium no-underline transition-colors hover:border-neutral-500 hover:text-neutral-900 dark:border-neutral-700 dark:hover:border-neutral-500 dark:hover:text-neutral-100;
-}
-
 .cv-publications {
   @apply list-decimal pl-6;
 }
 
 .cv-publications li {
-  @apply pl-1;
+  @apply pl-1 text-left;
 }
+
+.cv-stats {
+  @apply grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5;
+}
+
+.cv-stat {
+  @apply flex flex-col items-center justify-center rounded-lg border border-neutral-200 px-2 py-3 text-center dark:border-neutral-800 dark:bg-neutral-950/20;
+}
+
+.cv-stat-value {
+  @apply text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100;
+}
+
+.cv-stat-label {
+  @apply mt-0.5 text-[11px] leading-tight tracking-tight text-neutral-500 dark:text-neutral-400;
+}
+
+.cv-section-nav-sticky {
+  @apply sticky top-12 z-[5] -mx-2 bg-neutral-50/90 px-2 py-2 backdrop-blur-sm dark:bg-neutral-900/90 md:-mx-0 md:px-0;
+}
+
+.cv-section-nav {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.cv-nav-pill {
+  @apply inline-flex items-center rounded-full border border-neutral-200 px-2.5 py-0.5 text-xs tracking-tight text-neutral-600 no-underline transition-colors hover:border-neutral-400 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-500 dark:hover:text-neutral-100;
+}
+
+.cv-highlight {
+  @apply rounded-lg border border-neutral-100 dark:border-neutral-800/50;
+}
+
+.cv-highlight summary {
+  @apply flex cursor-pointer list-none items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm font-medium tracking-tight text-neutral-900 transition-colors select-none hover:bg-neutral-50 dark:text-neutral-100 dark:hover:bg-neutral-800/30;
+}
+
+.cv-highlight summary::-webkit-details-marker {
+  display: none;
+}
+
+.cv-highlight[open] > summary {
+  @apply rounded-b-none border-b border-neutral-100 dark:border-neutral-800/50;
+}
+
+.cv-chevron {
+  @apply h-4 w-4 shrink-0 text-neutral-400 transition-transform duration-200;
+}
+
+.cv-highlight[open] > summary .cv-chevron {
+  transform: rotate(90deg);
+}
+
+.cv-highlight-content {
+  @apply px-3 py-2;
+}
+
+.cv-timeline {
+  @apply relative ml-3 border-l border-neutral-200 dark:border-neutral-800;
+}
+
+.cv-timeline-item {
+  @apply relative pl-5 pb-4 last:pb-0;
+}
+
+.cv-timeline-dot {
+  @apply absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-neutral-300 bg-neutral-50 dark:border-neutral-600 dark:bg-neutral-900;
+}
+
+.cv-timeline-content {
+  @apply text-sm;
+}
+
+.cv-skill-tag {
+  @apply flex flex-col rounded-lg border border-neutral-200 px-3 py-1.5 dark:border-neutral-800 dark:bg-neutral-950/20;
+}
+
+.cv-skill-detail {
+  @apply text-[11px] leading-tight text-neutral-500 dark:text-neutral-400;
+}
+
+.cv-compact-section ul {
+  @apply pl-4;
+}
+
+.cv-compact-section li {
+  @apply text-sm leading-5;
+}
+
