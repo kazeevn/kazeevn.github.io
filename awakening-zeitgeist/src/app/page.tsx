@@ -2,64 +2,71 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="mx-auto flex min-h-screen w-full max-w-4xl flex-1 px-6 py-10 sm:px-8 sm:py-16">
+      <section className="w-full">
+        <div className="grid gap-8 lg:grid-cols-[300px_1fr] lg:gap-12">
+          <div className="mx-auto w-full max-w-[18rem] space-y-4 sm:max-w-[20rem] lg:mx-0 lg:max-w-none">
+            <div className="overflow-hidden rounded-2xl border border-border bg-card">
+              <Image
+                src="/nikita-kazeev.webp"
+                alt="Portrait of Nikita Kazeev"
+                width={900}
+                height={900}
+                priority
+                className="aspect-[4/5] h-auto w-full object-cover object-top lg:aspect-auto"
+              />
+            </div>
+
+            <div className="space-y-2 text-sm text-muted">
+              <p className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
+                Research Fellow, NUS
+              </p>
+              <p>Double PhD in computer science and physics.</p>
+              <p>Machine learning for science, from particles to materials.</p>
+            </div>
+          </div>
+
+          <div className="space-y-5 sm:space-y-6">
+            <p className="text-2xl font-medium tracking-[0.18em] text-accent-strong sm:text-3xl">
+              Nikita Kazeev
+            </p>
+            <h1 className="max-w-3xl text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+              Turning hard science into usable intelligence.
+            </h1>
+            <p className="max-w-2xl hyphens-auto text-justify text-lg leading-8 text-muted">
+              Nikita Kazeev is a research fellow at the National University of
+              Singapore with a double PhD in computer science and physics. He has
+              worked across particle physics, materials, and autonomous systems,
+              built communities around machine learning for science, and mentored
+              researchers along the way. His vision is direct: AI should not stop
+              at fitting data, it should help scientists discover the right
+              abstractions, at the right scale, in time to matter.
+            </p>
+
+            <div className="grid gap-4 border-t border-border pt-6 text-sm text-muted sm:grid-cols-2">
+              <div>
+                <p className="mb-2 text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
+                  What stands out
+                </p>
+                <p className="hyphens-auto text-justify leading-7">
+                  Research depth in both physics and machine learning, paired with
+                  a track record of making ambitious scientific ideas legible to
+                  broader research communities.
+                </p>
+              </div>
+              <div>
+                <p className="mb-2 text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
+                  What comes next
+                </p>
+                <p className="hyphens-auto text-justify leading-7">
+                  Building tools and collaborations that let scientists move from
+                  expensive low-level simulations to robust, decision-grade models.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }

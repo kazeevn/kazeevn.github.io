@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4efe5;
+  --foreground: #181512;
+  --muted: #5f564d;
+  --card: #f8f3ea;
+  --border: rgba(91, 77, 63, 0.18);
+  --accent: #8e5d2f;
+  --accent-strong: #6d421c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #11100d;
+    --foreground: #f4efe7;
+    --muted: #c6bcae;
+    --card: #1a1713;
+    --border: rgba(231, 216, 193, 0.14);
+    --accent: #d39a63;
+    --accent-strong: #e7bd8f;
   }
+
+  html {
+    color-scheme: dark;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, white);
+  color: var(--foreground);
+}
+
+html {
+  min-width: 360px;
+  background: var(--background);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+a {
+  color: inherit;
 }
