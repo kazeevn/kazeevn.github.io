@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated site and build artifacts for this repo:
+    "dev/**",
     "docs/**",
   ]),
 ]);
