@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${poiretOne.variable} h-full antialiased`}
     >
       <body className="mx-4 mt-8 flex min-h-full max-w-4xl flex-col bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 lg:mx-auto">
