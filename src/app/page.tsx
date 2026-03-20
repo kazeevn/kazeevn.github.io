@@ -46,7 +46,7 @@ export default function Home() {
         <div className="space-y-8">
           <div className="pb-4">
             <div className="grid gap-5 md:grid-cols-[128px_1fr] md:gap-6">
-              <div className="mx-auto w-full max-w-32 md:mx-0">
+              <div className="mx-auto grid w-full max-w-sm grid-cols-[128px_minmax(0,1fr)] items-center gap-4 md:mx-0 md:block md:max-w-32">
                 <div className="overflow-hidden rounded-2xl">
                   <Image
                     src="/nikita-kazeev.webp"
@@ -54,38 +54,40 @@ export default function Home() {
                     width={900}
                     height={900}
                     priority
-                    className="aspect-[4/5] h-auto w-full object-cover object-top"
+                    className="aspect-4/5 h-auto w-full object-cover object-top"
                   />
                 </div>
 
-                <p className="mt-4 text-center text-sm tracking-tight text-neutral-900 dark:text-neutral-100 md:text-left">
-                  <span className="block">Research Fellow</span>
-                  <span className="block">National University of Singapore</span>
-                </p>
+                <div className="space-y-4 text-left md:mt-4">
+                  <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
+                    <span className="block">Research Fellow</span>
+                    <span className="block">National University of Singapore</span>
+                  </p>
 
-                <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-                  {profileLinks.map((profileLink) => (
-                    <Link
-                      key={profileLink.label}
-                      href={profileLink.href}
-                      aria-label={profileLink.label}
-                      title={profileLink.label}
-                      className="rounded-sm p-1 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500"
-                      target={profileLink.external ? "_blank" : undefined}
-                      rel={profileLink.external ? "noreferrer" : undefined}
-                    >
-                      <span className="relative block h-6 w-6">
-                        <Image
-                          src={profileLink.iconSrc}
-                          alt=""
-                          fill
-                          sizes="24px"
-                          aria-hidden="true"
-                          className={profileLink.iconClassName}
-                        />
-                      </span>
-                    </Link>
-                  ))}
+                  <div className="flex flex-wrap items-center gap-3 md:justify-start">
+                    {profileLinks.map((profileLink) => (
+                      <Link
+                        key={profileLink.label}
+                        href={profileLink.href}
+                        aria-label={profileLink.label}
+                        title={profileLink.label}
+                        className="rounded-sm p-1 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500"
+                        target={profileLink.external ? "_blank" : undefined}
+                        rel={profileLink.external ? "noreferrer" : undefined}
+                      >
+                        <span className="relative block h-6 w-6">
+                          <Image
+                            src={profileLink.iconSrc}
+                            alt=""
+                            fill
+                            sizes="24px"
+                            aria-hidden="true"
+                            className={profileLink.iconClassName}
+                          />
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
 
