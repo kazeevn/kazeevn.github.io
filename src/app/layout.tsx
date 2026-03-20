@@ -27,16 +27,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <header className="sticky top-0 z-10 border-b border-border bg-background/90 backdrop-blur">
+        <header className="sticky top-0 z-10 border-b border-border/90 bg-background/92 backdrop-blur-sm">
           <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-6 py-4 sm:px-8">
-            <Link href="/" className="text-sm font-medium tracking-[0.2em] text-accent-strong uppercase">
+            <Link
+              href="/"
+              className="text-sm font-medium tracking-[0.22em] text-accent-strong uppercase transition-colors hover:text-accent"
+            >
               Nikita Kazeev
             </Link>
 
             <nav className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm text-muted">
-              <Link href="/">Home</Link>
-              <Link href="/mastery-of-matter">Mastery of Matter</Link>
-              <Link href="/leadership">Leadership</Link>
+              <Link href="/" className="transition-colors hover:text-foreground">
+                Home
+              </Link>
+              <Link href="/mastery-of-matter" className="transition-colors hover:text-foreground">
+                Mastery of Matter
+              </Link>
+              <Link href="/leadership" className="transition-colors hover:text-foreground">
+                Leadership
+              </Link>
             </nav>
           </div>
         </header>

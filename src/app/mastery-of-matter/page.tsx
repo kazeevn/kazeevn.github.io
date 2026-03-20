@@ -124,7 +124,7 @@ const selectedWork = [
 
 export default function MasteryOfMatterPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-16">
+    <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-14">
       <div className="w-full space-y-12">
         <section className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div className="space-y-5">
@@ -144,7 +144,7 @@ export default function MasteryOfMatterPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-6">
+          <div className="border-t border-border pt-4 lg:pl-6">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               Core idea
             </p>
@@ -156,9 +156,9 @@ export default function MasteryOfMatterPage() {
           </div>
         </section>
 
-        <section className="grid gap-5 lg:grid-cols-3">
+        <section className="grid gap-6 lg:grid-cols-3">
           {principles.map((item) => (
-            <article key={item.title} className="rounded-3xl border border-border bg-card p-6">
+            <article key={item.title} className="border-t border-border pt-4">
               <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                 {item.title}
               </p>
@@ -168,7 +168,7 @@ export default function MasteryOfMatterPage() {
         </section>
 
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <article className="space-y-5 rounded-3xl border border-border bg-card p-7">
+          <article className="space-y-5 border-t border-border pt-4">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               What I mean by this
             </p>
@@ -193,7 +193,7 @@ export default function MasteryOfMatterPage() {
             </p>
           </article>
 
-          <article className="space-y-5 rounded-3xl border border-border p-7">
+          <article className="space-y-5 border-t border-border pt-4">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               Research program
             </p>
@@ -223,9 +223,9 @@ export default function MasteryOfMatterPage() {
             </p>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2">
             {selectedWork.map((item) => (
-              <article key={item.title} className="rounded-3xl border border-border bg-card p-6">
+              <article key={item.title} className="border-t border-border pt-4">
                 <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                   {item.title}
                 </p>
@@ -250,7 +250,7 @@ export default function MasteryOfMatterPage() {
           </div>
         </section>
 
-        <section className="rounded-3xl border border-border bg-card p-7 sm:p-8">
+        <section className="border-t border-border pt-4">
           <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
             End goal
           </p>

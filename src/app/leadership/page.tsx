@@ -54,7 +54,7 @@ const teachingAndOutreach = [
 
 export default function LeadershipPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-16">
+    <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-14">
       <div className="w-full space-y-12">
         <section className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div className="space-y-5">
@@ -72,7 +72,7 @@ export default function LeadershipPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-6">
+          <div className="border-t border-border pt-4 lg:pl-6">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               Leadership principle
             </p>
@@ -84,9 +84,9 @@ export default function LeadershipPage() {
           </div>
         </section>
 
-        <section className="grid gap-5 lg:grid-cols-3">
+        <section className="grid gap-6 lg:grid-cols-3">
           {leadershipItems.map((section) => (
-            <article key={section.title} className="rounded-3xl border border-border bg-card p-6">
+            <article key={section.title} className="border-t border-border pt-4">
               <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                 {section.title}
               </p>
@@ -118,9 +118,9 @@ export default function LeadershipPage() {
             </p>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3">
             {teachingAndOutreach.map((item) => (
-              <article key={item.title} className="rounded-3xl border border-border p-6">
+              <article key={item.title} className="border-t border-border pt-4">
                 <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                   {item.title}
                 </p>
