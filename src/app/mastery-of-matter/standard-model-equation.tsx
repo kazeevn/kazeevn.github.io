@@ -16,12 +16,20 @@ const mathJaxConfig: MathJax4Config = {
 };
 
 const standardModelLagrangian = String.raw`\[
-\begin{aligned}
-\mathcal{L}_{\mathrm{SM}} ={}&
+\mathcal{L}_{\mathrm{SM}} =
 -\frac{1}{4} F_{\mu\nu} F^{\mu\nu}
 + i\bar{\psi} \cancel{D} \psi 
 + \psi_i y_{ij} \psi_j \phi + \text{h.c.}
 + \lvert D_\mu \phi \rvert^2 - V(\phi)
+\]`;
+
+const compactStandardModelLagrangian = String.raw`\[
+\begin{aligned}
+\mathcal{L}_{\mathrm{SM}} ={}&
+-\frac{1}{4} F_{\mu\nu} F^{\mu\nu}
++ i\bar{\psi} \cancel{D} \psi \\
+&+ \psi_i y_{ij} \psi_j \phi + \text{h.c.} \\
+&+ \lvert D_\mu \phi \rvert^2 - V(\phi)
 \end{aligned}
 \]`;
 
@@ -34,9 +42,16 @@ export default function StandardModelEquation() {
       hideUntilTypeset="first"
     >
       <div className="overflow-x-auto">
-        <MathJax>
-          {standardModelLagrangian}
-        </MathJax>
+        <div className="min-[35rem]:hidden">
+          <MathJax>
+            {compactStandardModelLagrangian}
+          </MathJax>
+        </div>
+        <div className="hidden min-[35rem]:block">
+          <MathJax>
+            {standardModelLagrangian}
+          </MathJax>
+        </div>
       </div>
     </MathJaxContext>
   );
