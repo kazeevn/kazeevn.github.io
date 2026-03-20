@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   title: "Nikita Kazeev",
   description:
     "Personal website of Nikita Kazeev, a researcher building machine learning tools for science across physics, materials, and multiscale systems.",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({
