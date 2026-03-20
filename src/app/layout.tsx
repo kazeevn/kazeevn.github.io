@@ -34,6 +34,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <html
       lang="en"
@@ -70,6 +72,10 @@ export default function RootLayout({
         </header>
 
         {children}
+
+        <footer className="border-t border-neutral-200 px-2 py-4 text-sm tracking-tight text-neutral-600 dark:border-neutral-800 dark:text-neutral-400 md:px-0">
+          <p>Copyright © {currentYear} Nikita Kazeev</p>
+        </footer>
       </body>
     </html>
   );
