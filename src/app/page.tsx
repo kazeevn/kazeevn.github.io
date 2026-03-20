@@ -6,10 +6,10 @@ export default function Home() {
     <main className="mx-auto flex min-h-screen w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-14">
       <section className="w-full">
         <div className="space-y-10">
-          <div className="border-b border-border pb-8">
+          <div className="pb-8">
             <div className="grid gap-6 sm:grid-cols-[140px_1fr] sm:gap-8">
               <div className="mx-auto w-full max-w-[8.75rem] sm:mx-0">
-                <div className="overflow-hidden rounded-2xl">
+                <div className="overflow-hidden">
                   <Image
                     src="/nikita-kazeev.webp"
                     alt="Portrait of Nikita Kazeev"
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(18rem,1fr)] lg:gap-12">
             <div className="space-y-8">
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="border-t border-border pt-4">
+                <div className="pt-1">
                   <p className="mb-2 text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
                     What stands out
                   </p>
@@ -62,7 +62,7 @@ export default function Home() {
                     broader research communities.
                   </p>
                 </div>
-                <div className="border-t border-border pt-4">
+                <div className="pt-1">
                   <p className="mb-2 text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
                     What comes next
                   </p>
@@ -73,7 +73,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="border-t border-border pt-4">
+              <div className="pt-1">
                 <p className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
                   Current direction
                 </p>
@@ -86,14 +86,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-1 border-t border-border pt-4">
+            <div className="space-y-1 pt-1">
               <p className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
                 Read next
               </p>
 
               <Link
                 href="/mastery-of-matter"
-                className="block border-b border-border/80 py-4 transition-colors hover:text-accent"
+                className="block py-4 transition-colors hover:text-accent"
               >
                 <p className="text-xl font-medium tracking-tight text-foreground">
                   Mastery of Matter
@@ -106,7 +106,7 @@ export default function Home() {
 
               <Link
                 href="/leadership"
-                className="block border-b border-border/80 py-4 transition-colors hover:text-accent"
+                className="block py-4 transition-colors hover:text-accent"
               >
                 <p className="text-xl font-medium tracking-tight text-foreground">
                   Leadership

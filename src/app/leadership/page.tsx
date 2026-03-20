@@ -56,7 +56,7 @@ export default function LeadershipPage() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-14">
       <div className="w-full space-y-12">
-        <section className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+        <section className="grid gap-8 pb-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div className="space-y-5">
             <p className="text-[0.72rem] uppercase tracking-[0.24em] text-accent-strong">
               Leadership
@@ -72,7 +72,7 @@ export default function LeadershipPage() {
             </p>
           </div>
 
-          <div className="border-t border-border pt-4 lg:pl-6">
+          <div className="pt-1 lg:pl-6">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               Leadership principle
             </p>
@@ -86,15 +86,14 @@ export default function LeadershipPage() {
 
         <section className="grid gap-6 lg:grid-cols-3">
           {leadershipItems.map((section) => (
-            <article key={section.title} className="border-t border-border pt-4">
+            <article key={section.title} className="pt-1">
               <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                 {section.title}
               </p>
               <ul className="mt-4 space-y-3 text-muted">
                 {section.items.map((item) => (
-                  <li key={item} className="flex gap-3 leading-7">
-                    <span className="mt-2 h-2 w-2 rounded-full bg-accent" />
-                    <span className="hyphens-auto text-justify">{item}</span>
+                  <li key={item} className="leading-7 hyphens-auto text-justify">
+                    {item}
                   </li>
                 ))}
               </ul>
@@ -120,7 +119,7 @@ export default function LeadershipPage() {
 
           <div className="grid gap-6 lg:grid-cols-3">
             {teachingAndOutreach.map((item) => (
-              <article key={item.title} className="border-t border-border pt-4">
+              <article key={item.title} className="pt-1">
                 <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                   {item.title}
                 </p>

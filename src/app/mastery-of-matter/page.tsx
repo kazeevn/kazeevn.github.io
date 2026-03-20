@@ -126,7 +126,7 @@ export default function MasteryOfMatterPage() {
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-14">
       <div className="w-full space-y-12">
-        <section className="grid gap-8 border-b border-border pb-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+        <section className="grid gap-8 pb-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div className="space-y-5">
             <p className="text-[0.72rem] uppercase tracking-[0.24em] text-accent-strong">
               Research Statement
@@ -144,7 +144,7 @@ export default function MasteryOfMatterPage() {
             </p>
           </div>
 
-          <div className="border-t border-border pt-4 lg:pl-6">
+          <div className="pt-1 lg:pl-6">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               Core idea
             </p>
@@ -158,7 +158,7 @@ export default function MasteryOfMatterPage() {
 
         <section className="grid gap-6 lg:grid-cols-3">
           {principles.map((item) => (
-            <article key={item.title} className="border-t border-border pt-4">
+            <article key={item.title} className="pt-1">
               <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                 {item.title}
               </p>
@@ -168,7 +168,7 @@ export default function MasteryOfMatterPage() {
         </section>
 
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <article className="space-y-5 border-t border-border pt-4">
+          <article className="space-y-5 pt-1">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               What I mean by this
             </p>
@@ -193,15 +193,14 @@ export default function MasteryOfMatterPage() {
             </p>
           </article>
 
-          <article className="space-y-5 border-t border-border pt-4">
+          <article className="space-y-5 pt-1">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
               Research program
             </p>
             <ul className="space-y-4 text-muted">
               {agenda.map((item) => (
-                <li key={item} className="flex gap-3 leading-7">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-accent" />
-                  <span className="hyphens-auto text-justify">{item}</span>
+                <li key={item} className="leading-7 hyphens-auto text-justify">
+                  {item}
                 </li>
               ))}
             </ul>
@@ -225,7 +224,7 @@ export default function MasteryOfMatterPage() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             {selectedWork.map((item) => (
-              <article key={item.title} className="border-t border-border pt-4">
+              <article key={item.title} className="pt-1">
                 <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
                   {item.title}
                 </p>
@@ -250,7 +249,7 @@ export default function MasteryOfMatterPage() {
           </div>
         </section>
 
-        <section className="border-t border-border pt-4">
+        <section className="pt-1">
           <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
             End goal
           </p>
