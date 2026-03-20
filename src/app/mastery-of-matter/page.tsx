@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import BeyondStandardModelNote from "./beyond-standard-model-note";
 import StandardModelEquation from "./standard-model-equation";
 
@@ -154,13 +155,8 @@ export default function MasteryOfMatterPage() {
           </p>
         </div>
         <h2>Vision</h2>
-        <h3>Policy</h3>
-        The world has too many scientists. It does not function like a video game, where you hire 2x more scientists who produce 2x more science points
-
-https://miro.com/app/board/uXjVJnuhKys=/?share_link_id=792830040596
-
+        <h3>Resource Allocation</h3>
         <h3>Prediction</h3>
-        CERN started 
         <h3>Mastery</h3>
         <section className="grid gap-6 lg:grid-cols-3">
           {principles.map((item) => (

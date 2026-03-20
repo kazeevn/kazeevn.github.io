@@ -18,6 +18,7 @@ type WorkEntry = {
   organization: string;
   role: string;
   period: string;
+  note?: ReactNode;
   highlights: Highlight[];
 };
 
@@ -131,20 +132,15 @@ const workExperience: WorkEntry[] = [
     organization: "CERN [Yandex -> HSE University]",
     role: "Research scientist",
     period: "2014 - 2022",
+    note: (
+      <>
+        <a href="https://breakthroughprize.org/Laureates/1/L3995" target="_blank" rel="noreferrer">
+          2025 Breakthrough Prize in Fundamental Physics
+        </a>
+        {" "}as a member of LHCb.
+      </>
+    ),
     highlights: [
-      {
-        title: "LHCb collaboration",
-        skills: ["Physics"],
-        references: [
-          {
-            href: "https://breakthroughprize.org/Laureates/1/L3995",
-            label: "2025 Breakthrough Prize in Fundamental Physics",
-          },
-        ],
-        bullets: [
-          "Received the 2025 Breakthrough Prize in Fundamental Physics as a member of LHCb.",
-        ],
-      },
       {
         title: "Generative models uncertainty estimation",
         skills: ["ML & AI", "Python & PyTorch", "Physics", "Leadership & Mentorship"],
@@ -695,6 +691,10 @@ export default function CvContent() {
                   </div>
                   <p className="cv-period">{entry.period}</p>
                 </div>
+
+                {entry.note && (
+                  <p className="mt-2 text-sm text-neutral-700 dark:text-neutral-300">{entry.note}</p>
+                )}
 
                 <div className="mt-3 space-y-1.5">
                   {entry.highlights.map((highlight, hIndex) => {

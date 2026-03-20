@@ -68,6 +68,12 @@ export default function RootLayout({
                 Mastery of Matter
               </Link>
               <Link
+                href="/reward-signal-for-the-academy"
+                className="transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
+              >
+                A Reward Signal for the Academy
+              </Link>
+              <Link
                 href="/leadership"
                 className="transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
               >
