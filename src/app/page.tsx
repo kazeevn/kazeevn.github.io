@@ -6,7 +6,6 @@ const profileLinks = [
     href: "https://scholar.google.com/citations?user=vamy2okAAAAJ&hl=en",
     label: "Google Scholar",
     iconSrc: "/google-scholar-square.svg",
-    iconAlt: "",
     iconClassName: "object-contain",
     external: true,
   },
@@ -14,7 +13,6 @@ const profileLinks = [
     href: "https://www.linkedin.com/in/nikita-kazeev/",
     label: "LinkedIn",
     iconSrc: "/LinkedIn.png",
-    iconAlt: "",
     iconClassName: "object-contain",
     external: true,
   },
@@ -22,7 +20,6 @@ const profileLinks = [
     href: "https://orcid.org/0000-0002-5699-7634",
     label: "ORCID",
     iconSrc: "/ORCID-iD_icon_vector.svg",
-    iconAlt: "",
     iconClassName: "object-contain",
     external: true,
   },
@@ -30,7 +27,6 @@ const profileLinks = [
     href: "mailto:kna@nus.edu.sg",
     label: "Email",
     iconSrc: "/email.svg",
-    iconAlt: "",
     iconClassName: "object-contain",
     external: false,
   },
@@ -38,7 +34,6 @@ const profileLinks = [
     href: "https://github.com/kazeevn/",
     label: "GitHub",
     iconSrc: "/GitHub_Invertocat_Black.svg",
-    iconAlt: "",
     iconClassName: "object-contain dark:invert",
     external: true,
   },
@@ -82,7 +77,7 @@ export default function Home() {
                       <span className="relative block h-6 w-6">
                         <Image
                           src={profileLink.iconSrc}
-                          alt={profileLink.iconAlt}
+                          alt=""
                           fill
                           sizes="24px"
                           aria-hidden="true"
@@ -95,97 +90,19 @@ export default function Home() {
               </div>
 
               <div className="space-y-3">
-                <div className="space-y-1.5 text-sm text-neutral-800 dark:text-neutral-200">
-                  <p>Double PhD in computer science and physics.</p>
-                  <p>Machine learning for science, from particles to materials.</p>
-                </div>
-
-                <p className="font-[family:var(--font-poiret-one)] text-3xl tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl">
-                  Nikita Kazeev
-                </p>
                 <h1 className="max-w-3xl text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl">
-                  Turning hard science into usable intelligence.
+                  Turning hard science into usable intelligence
                 </h1>
-                <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
-                  Nikita Kazeev is a research fellow at the National University of
-                  Singapore with a double PhD in computer science and physics. He has
-                  worked across particle physics, materials, and autonomous systems,
-                  built communities around machine learning for science, and mentored
-                  researchers along the way. His vision is direct: AI should not stop
-                  at fitting data, it should help scientists discover the right
-                  abstractions, at the right scale, in time to matter.
-                </p>
+                  <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
+                    Nikita Kazeev is a Research Fellow in the laboratory of Professor Kostya Novoselov at the Institute for Functional Intelligent Materials, National University of Singapore (NUS). He holds a dual PhD degree in CS from HSE University and in Physics from Sapienza Università di Roma. He completed his undergraduate studies at the Moscow Institute of Physics and Technology and graduated from the Yandex School of Data Analysis.
+                  </p>
+                  <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
+                    Prior to joining NUS, Dr. Kazeev worked at CERN, where he specialized in applying machine learning techniques to complex challenges in high-energy physics; he received the <Link href="https://breakthroughprize.org/Laureates/1/L3995">2025 Breakthrough Prize in Fundamental Physics</Link> as a part of the LHCb collaboration.
+                  </p>
+                  <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
+                    His current research at NUS is focused on pioneering the use of machine learning for the discovery and design of novel materials. Dr. Kazeev is deeply involved in fostering the AI/ML research community. He was the main organizer for the <Link href="https://multiscale-ai.github.io/">ICLR 2025 Workshop on Machine Learning for Multiscale Processes</Link> and the deputy chair of the scientific committee for the <Link href="https://ai4x.cc/">AI4X conference</Link>. Furthermore, he is a co-Principal Investigator on a US$3.4 million AI Singapore grant dedicated to advancing multiscale machine learning.
+                  </p>
               </div>
-            </div>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.45fr)_minmax(16rem,1fr)] lg:gap-10">
-            <div className="space-y-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div className="pt-1">
-                  <p className="mb-2 text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
-                    What stands out
-                  </p>
-                  <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
-                    Research depth in both physics and machine learning, paired with
-                    a track record of making ambitious scientific ideas legible to
-                    broader research communities.
-                  </p>
-                </div>
-                <div className="pt-1">
-                  <p className="mb-2 text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
-                    What comes next
-                  </p>
-                  <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
-                    Building tools and collaborations that let scientists move from
-                    expensive low-level simulations to robust, decision-grade models.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-1">
-                <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
-                  Current direction
-                </p>
-                <p className="mt-3 max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
-                  The work focuses on scientific machine learning that respects scale,
-                  structure, and computational cost. The goal is not only predictive
-                  accuracy, but usable models that can guide experiments, engineering,
-                  and scientific decision-making.
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-1 pt-1">
-              <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
-                Read next
-              </p>
-
-              <Link
-                href="/mastery-of-matter"
-                className="block py-3 transition-colors hover:text-neutral-700 dark:hover:text-neutral-300"
-              >
-                <p className="text-lg font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
-                  Mastery of Matter
-                </p>
-                <p className="mt-2 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
-                  A research statement on science as approximate computation and machine
-                  learning as the path to tractable, decision-grade models.
-                </p>
-              </Link>
-
-              <Link
-                href="/leadership"
-                className="block py-3 transition-colors hover:text-neutral-700 dark:hover:text-neutral-300"
-              >
-                <p className="text-lg font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
-                  Leadership
-                </p>
-                <p className="mt-2 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
-                  A view of research leadership, mentorship, teaching, and public-facing
-                  scientific communication.
-                </p>
-              </Link>
             </div>
           </div>
         </div>
