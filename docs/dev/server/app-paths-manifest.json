@@ -1,3 +1,5 @@
 {
+  "/leadership/page": "app/leadership/page.js",
+  "/mastery-of-matter/page": "app/mastery-of-matter/page.js",
   "/page": "app/page.js"
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -63,6 +64,41 @@ export default function Home() {
                   expensive low-level simulations to robust, decision-grade models.
                 </p>
               </div>
+            </div>
+
+            <div className="grid gap-4 pt-2 sm:grid-cols-2">
+              <Link
+                href="/mastery-of-matter"
+                className="rounded-3xl border border-border bg-card p-5 transition-colors hover:border-accent"
+              >
+                <p className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
+                  Research Statement
+                </p>
+                <p className="mt-3 text-xl font-medium tracking-tight text-foreground">
+                  Mastery of Matter
+                </p>
+                <p className="mt-3 hyphens-auto text-justify leading-7 text-muted">
+                  A narrative about science as approximate computation and machine
+                  learning as the path to tractable, decision-grade models of the
+                  physical world.
+                </p>
+              </Link>
+
+              <Link
+                href="/leadership"
+                className="rounded-3xl border border-border bg-card p-5 transition-colors hover:border-accent"
+              >
+                <p className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-strong">
+                  Leadership
+                </p>
+                <p className="mt-3 text-xl font-medium tracking-tight text-foreground">
+                  Research, mentorship, and outreach
+                </p>
+                <p className="mt-3 hyphens-auto text-justify leading-7 text-muted">
+                  A consolidated view of research leadership, institution building,
+                  teaching, and public-facing scientific communication.
+                </p>
+              </Link>
             </div>
           </div>
         </div>
