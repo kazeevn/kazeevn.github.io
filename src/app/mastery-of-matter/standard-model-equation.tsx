@@ -6,6 +6,8 @@ import {
   type MathJax4Config,
 } from "better-react-mathjax";
 
+const mathJaxSrc = "https://cdn.jsdelivr.net/npm/mathjax@4.1.1/tex-mml-chtml.js";
+
 const mathJaxConfig: MathJax4Config = {
   loader: { load: ["[tex]/cancel"] },
   tex: {
@@ -25,7 +27,12 @@ const standardModelLagrangian = String.raw`\[
 
 export default function StandardModelEquation() {
   return (
-    <MathJaxContext version={4} config={mathJaxConfig} hideUntilTypeset="first">
+    <MathJaxContext
+      version={4}
+      src={mathJaxSrc}
+      config={mathJaxConfig}
+      hideUntilTypeset="first"
+    >
       <div className="overflow-x-auto">
         <MathJax>
           {standardModelLagrangian}
