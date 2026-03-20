@@ -56,6 +56,12 @@ export default function RootLayout({
                 Home
               </Link>
               <Link
+                href="/cv"
+                className="transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
+              >
+                CV
+              </Link>
+              <Link
                 href="/mastery-of-matter"
                 className="transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
               >

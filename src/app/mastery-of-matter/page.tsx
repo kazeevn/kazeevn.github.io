@@ -128,45 +128,40 @@ export default function MasteryOfMatterPage() {
   return (
     <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <div className="w-full space-y-10">
-        <section className="grid gap-6 pb-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <div>
-            <p className="eyebrow">
-              Research Statement
-            </p>
-            <h1 className="max-w-4xl">
-              Mastery of matter means approximate computation
-            </h1>
-            <StandardModelEquation />
-            <p>
-              <BeyondStandardModelNote>Almost</BeyondStandardModelNote>{" "}
-              everything we observe on Earth is governed by this equation, the
-              appropriately named Standard Model of particle physics. It is
-              fascinating from the machine learning point of view - the ultimate
-              example of inductive bias. From a relatively small experimental
-              dataset, we inferred an equation which with almost perfect
-              generalizability describes a huge range of phenomena, from the
-              behavior of quarks in the Large Hadron Collider to the electrons
-              inside an H100 GPU, and the DNA of the living organisms.
-            </p>
-            <p>
-              So, in a way, we have <i>solved</i> science. Aristotle claimed that by using pure reason he could understand the world, now we finally can. And yet, there are no cure for cancer, fusion power plant, or a printer that consistently connects to the Wi-Fi on the first try – all of which are most certainly permitted by the Standard Model.
+        <div>
+          <p className="eyebrow">
+            Research Statement
+          </p>
+          <h1 className="max-w-4xl">
+            Mastery of matter means approximate computation
+          </h1>
+          <StandardModelEquation />
+          <p>
+            <BeyondStandardModelNote>Almost</BeyondStandardModelNote>{" "}
+            everything we observe on Earth is governed by this equation, the
+            appropriately named Standard Model of particle physics. It is
+            fascinating from the machine learning point of view - the ultimate
+            example of inductive bias. From a relatively small experimental
+            dataset, we inferred an equation which with almost perfect
+            generalizability describes a huge range of phenomena, from the
+            behavior of quarks in the Large Hadron Collider to the electrons
+            inside an H100 GPU, and the DNA of the living organisms.
+          </p>
+          <p>
+            In a way, we have <i>solved</i> science. Aristotle claimed that by using pure reason he could understand the world, now we finally can. And yet, there are no cure for cancer, fusion power plant, or a printer that consistently connects to the Wi-Fi on the first try – all of which are most certainly permitted by the Standard Model.
 
-              The cause of this most unfortunate gap is our meager reasoning power. Anything more complex than a hydrogen atom can't be solved exactly – we enter the realm of approximation. Machine learning, by its nature is the automated tool for approximation building. My research is about using it to expand the frontier of what we can understand and control in the physical world.
-            </p>
-          </div>
+            The cause of this most unfortunate gap is our meager reasoning power. Anything more complex than a hydrogen atom can't be solved exactly – we enter the realm of approximation. Machine learning, by its nature is the automated tool for approximation building. My research is about using it to expand the frontier of what we can understand and control in the physical world.
+          </p>
+        </div>
+        <h2>Vision</h2>
+        <h3>Policy</h3>
+        The world has too many scientists. It does not function like a video game, where you hire 2x more scientists who produce 2x more science points
 
-          <div className="pt-1 lg:pl-6">
-            <p className="eyebrow">
-              Core idea
-            </p>
-            <p className="lead mt-3">
-              I use machine learning to build approximations that are faster than
-              brute-force simulation, more structured than generic black-box
-              fitting, and useful for actual scientific decisions.
-            </p>
-          </div>
-        </section>
+https://miro.com/app/board/uXjVJnuhKys=/?share_link_id=792830040596
 
+        <h3>Prediction</h3>
+        CERN started 
+        <h3>Mastery</h3>
         <section className="grid gap-6 lg:grid-cols-3">
           {principles.map((item) => (
             <article key={item.title} className="pt-1">
