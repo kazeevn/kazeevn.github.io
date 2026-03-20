@@ -54,17 +54,17 @@ const teachingAndOutreach = [
 
 export default function LeadershipPage() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-1 px-6 py-10 sm:px-8 sm:py-14">
-      <div className="w-full space-y-12">
-        <section className="grid gap-8 pb-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-          <div className="space-y-5">
-            <p className="text-[0.72rem] uppercase tracking-[0.24em] text-accent-strong">
+    <main className="flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
+      <div className="w-full space-y-10">
+        <section className="grid gap-6 pb-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+          <div className="space-y-4">
+            <p className="text-sm tracking-tight text-accent-strong">
               Leadership
             </p>
-            <h1 className="max-w-4xl text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-4xl text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
               Leading through research, community, and intellectual clarity.
             </h1>
-            <p className="max-w-3xl hyphens-auto text-justify text-lg leading-8 text-muted">
+            <p className="max-w-3xl hyphens-auto text-justify leading-6 text-muted">
               My leadership work spans research teams, scientific events,
               mentorship, and public communication. The common thread is simple:
               create structures that help difficult ideas move further, faster,
@@ -73,10 +73,10 @@ export default function LeadershipPage() {
           </div>
 
           <div className="pt-1 lg:pl-6">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
+            <p className="text-sm tracking-tight text-accent-strong">
               Leadership principle
             </p>
-            <p className="mt-4 text-lg leading-8 text-foreground">
+            <p className="mt-3 leading-6 text-foreground">
               Strong leadership in science means setting direction, creating
               systems for others to do excellent work, and making the field more
               coherent than you found it.
@@ -87,12 +87,12 @@ export default function LeadershipPage() {
         <section className="grid gap-6 lg:grid-cols-3">
           {leadershipItems.map((section) => (
             <article key={section.title} className="pt-1">
-              <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
+              <p className="text-sm tracking-tight text-accent-strong">
                 {section.title}
               </p>
-              <ul className="mt-4 space-y-3 text-muted">
+              <ul className="mt-3 space-y-2 text-muted">
                 {section.items.map((item) => (
-                  <li key={item} className="leading-7 hyphens-auto text-justify">
+                  <li key={item} className="leading-6 hyphens-auto text-justify">
                     {item}
                   </li>
                 ))}
@@ -103,13 +103,13 @@ export default function LeadershipPage() {
 
         <section className="space-y-5">
           <div className="max-w-3xl space-y-3">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-strong">
+            <p className="text-sm tracking-tight text-accent-strong">
               Teaching and outreach
             </p>
-            <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
               Teaching and outreach as leadership.
             </h2>
-            <p className="hyphens-auto text-justify leading-8 text-muted">
+            <p className="hyphens-auto text-justify leading-6 text-muted">
               This section is included here because teaching and outreach are
               part of how scientific leadership works in practice. They scale
               expertise, expand the pipeline of collaborators, and make advanced
@@ -120,10 +120,10 @@ export default function LeadershipPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {teachingAndOutreach.map((item) => (
               <article key={item.title} className="pt-1">
-                <p className="text-sm uppercase tracking-[0.18em] text-accent-strong">
+                <p className="text-sm tracking-tight text-accent-strong">
                   {item.title}
                 </p>
-                <p className="mt-4 hyphens-auto text-justify leading-7 text-muted">{item.body}</p>
+                <p className="mt-3 hyphens-auto text-justify leading-6 text-muted">{item.body}</p>
               </article>
             ))}
           </div>

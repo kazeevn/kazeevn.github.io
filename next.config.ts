@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
-const nextConfig: NextConfig = {
+const sharedConfig: NextConfig = {
   output: 'export',
-  distDir: 'docs',
   reactCompiler: true,
   images: {
     unoptimized: true,
@@ -11,5 +11,10 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 };
+
+const nextConfig = (phase: string): NextConfig => ({
+  ...sharedConfig,
+  distDir: phase === PHASE_DEVELOPMENT_SERVER ? 'dev' : 'docs',
+});
 
 export default nextConfig;
