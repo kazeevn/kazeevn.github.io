@@ -130,11 +130,15 @@ a {
 }
 
 .cv-stats {
-  @apply grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5;
+  @apply grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6;
 }
 
 .cv-stat {
   @apply flex flex-col items-center justify-center rounded-lg border border-neutral-200 px-2 py-3 text-center dark:border-neutral-800 dark:bg-neutral-950/20;
+}
+
+.cv-stat--button {
+  @apply w-full cursor-pointer bg-transparent transition-colors hover:border-neutral-400 dark:hover:border-neutral-600;
 }
 
 .cv-stat-value {
@@ -143,6 +147,10 @@ a {
 
 .cv-stat-label {
   @apply mt-0.5 text-[11px] leading-tight tracking-tight text-neutral-500 dark:text-neutral-400;
+}
+
+.cv-stat-label--interactive {
+  @apply underline decoration-dotted decoration-neutral-500 underline-offset-[0.18em];
 }
 
 .cv-section-nav-sticky {
@@ -272,4 +280,3 @@ a {
 .cv-compact-section li {
   @apply text-sm leading-5;
 }
-

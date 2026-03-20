@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
+import Link from "next/link";
 
 type ReferenceLink = {
   href: string;
@@ -35,6 +36,16 @@ type Publication = {
 type SkillTag = {
   label: string;
   detail?: string;
+};
+
+type Stat = {
+  value: ReactNode;
+  label: string;
+  note?: {
+    title: string;
+    body: ReactNode;
+    align?: "left" | "right";
+  };
 };
 
 const pdfHref = "/Nikita%20Kazeev%20-%20CV%20%5BJanuary%202026%5D.pdf";
@@ -448,8 +459,25 @@ const otherItems: ReactNode[] = [
   "International Junior Science Olympiad 2008 in Korea, silver medal.",
 ];
 
-const stats = [
+const stats: Stat[] = [
   { value: "12", label: "years in research" },
+  {
+    value: "\u226578",
+    label: "h-index",
+    note: {
+      title: "h-index",
+      body: (
+        <>
+          And from the hight of my{" "}
+          <Link href="https://scholar.google.com/citations?hl=en&user=vamy2okAAAAJ" target="_blank" rel="noreferrer">
+            citation pile
+          </Link>
+          , I'm telling you: don't use h-index to judge people
+        </>
+      ),
+      align: "right",
+    },
+  },
   { value: "9", label: "students mentored" },
   { value: "$3.4M", label: "grant co-PI" },
   { value: "20+", label: "conference talks" },
@@ -559,6 +587,97 @@ function ReferenceList({ links }: { links: ReferenceLink[] }) {
   );
 }
 
+function CvStatCard({ stat }: { stat: Stat }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const popoverId = useId();
+  const titleId = useId();
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    function handlePointerDown(event: PointerEvent) {
+      if (!containerRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: globalThis.KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
+  if (!stat.note) {
+    return (
+      <div className="cv-stat">
+        <p className="cv-stat-value">{stat.value}</p>
+        <p className="cv-stat-label">{stat.label}</p>
+      </div>
+    );
+  }
+
+  return (
+    <div ref={containerRef} className="relative">
+      <button
+        type="button"
+        aria-controls={popoverId}
+        aria-expanded={isOpen}
+        aria-haspopup="dialog"
+        onClick={() => setIsOpen((current) => !current)}
+        className="cv-stat cv-stat--button"
+      >
+        <p className="cv-stat-value">{stat.value}</p>
+        <p className="cv-stat-label cv-stat-label--interactive">{stat.label}</p>
+      </button>
+
+      {isOpen ? (
+        <span
+          id={popoverId}
+          role="dialog"
+          aria-modal="false"
+          aria-labelledby={titleId}
+          className={`absolute top-[calc(100%+0.75rem)] z-20 block w-[calc(100vw-1.5rem)] max-w-[24rem] rounded-2xl border border-neutral-300 bg-white/95 p-5 text-left shadow-xl shadow-neutral-950/10 backdrop-blur dark:border-neutral-700 dark:bg-neutral-950/95 dark:shadow-black/40 ${
+            stat.note.align === "right" ? "right-0" : "left-0"
+          }`}
+        >
+          <span className="flex items-start justify-between gap-4">
+            <span
+              id={titleId}
+              className="block text-xs font-medium tracking-[0.2em] text-neutral-600 uppercase dark:text-neutral-400"
+            >
+              {stat.note.title}
+            </span>
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="text-sm text-neutral-600 transition-colors hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-500/40 dark:text-neutral-400 dark:hover:text-neutral-100 dark:focus:ring-neutral-300/30"
+              style={{ font: "inherit" }}
+            >
+              Close
+            </button>
+          </span>
+
+          <span className="mt-3 block text-sm leading-6 text-neutral-800 dark:text-neutral-200">
+            {stat.note.body}
+          </span>
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 /* ── Main component ── */
 
 export default function CvContent() {
@@ -612,10 +731,7 @@ export default function CvContent() {
 
           <div className="cv-stats" aria-label="Key metrics">
             {stats.map((stat) => (
-              <div key={stat.label} className="cv-stat">
-                <p className="cv-stat-value">{stat.value}</p>
-                <p className="cv-stat-label">{stat.label}</p>
-              </div>
+              <CvStatCard key={stat.label} stat={stat} />
             ))}
           </div>
         </section>
