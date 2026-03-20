@@ -34,24 +34,6 @@ const leadershipItems = [
   },
 ];
 
-const teachingAndOutreach = [
-  {
-    title: "Teaching",
-    body:
-      "Teaching is presented here as a form of leadership because it scales expertise beyond a single project. This includes teaching at the Machine Learning in High Energy Physics Summer School across eight editions between 2015 and 2023, lecturing in the Coursera Advanced Machine Learning specialization, and contributing teaching and course development for an introductory data analysis course at HSE.",
-  },
-  {
-    title: "Outreach",
-    body:
-      "Outreach extends that same work into broader audiences through newspaper features, research blogs, interviews, public talks, and science-slam style presentations. The purpose is not promotion for its own sake, but building public and interdisciplinary understanding around what machine learning for science can realistically do.",
-  },
-  {
-    title: "Why it belongs here",
-    body:
-      "Teaching and outreach belong on this page because they shape agendas, grow technical communities, and make difficult ideas transferable across students, collaborators, and the public.",
-  },
-];
-
 export default function LeadershipPage() {
   return (
     <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
@@ -99,36 +81,6 @@ export default function LeadershipPage() {
               </ul>
             </article>
           ))}
-        </section>
-
-        <section className="space-y-5">
-          <div className="max-w-3xl space-y-3">
-            <p className="eyebrow">
-              Teaching and outreach
-            </p>
-            <h2>
-              Teaching and outreach as leadership.
-            </h2>
-            <p>
-              This section is included here because teaching and outreach are
-              part of how scientific leadership works in practice. They scale
-              expertise, expand the pipeline of collaborators, and make advanced
-              work legible beyond a narrow specialist audience.
-            </p>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-3">
-            {teachingAndOutreach.map((item) => (
-              <article key={item.title} className="pt-1">
-                <p className="eyebrow">
-                  {item.title}
-                </p>
-                <p className="mt-3">
-                  {item.body}
-                </p>
-              </article>
-            ))}
-          </div>
         </section>
       </div>
     </main>

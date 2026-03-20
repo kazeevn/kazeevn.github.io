@@ -205,8 +205,64 @@ a {
   @apply flex flex-col rounded-lg border border-neutral-200 px-3 py-1.5 dark:border-neutral-800 dark:bg-neutral-950/20;
 }
 
+.cv-skill-tag--clickable {
+  @apply cursor-pointer transition-all;
+}
+
+.cv-skill-tag--clickable:hover {
+  @apply border-neutral-400 dark:border-neutral-500;
+}
+
+.cv-skill-tag--active {
+  @apply border-neutral-900 bg-neutral-900 dark:border-neutral-100 dark:bg-neutral-100;
+}
+
+.cv-skill-tag--active strong {
+  @apply text-neutral-50 dark:text-neutral-900;
+}
+
+.cv-skill-tag--active .cv-skill-detail {
+  @apply text-neutral-300 dark:text-neutral-600;
+}
+
 .cv-skill-detail {
   @apply text-[11px] leading-tight text-neutral-500 dark:text-neutral-400;
+}
+
+/* ── Project skill tags ── */
+
+.cv-project-skills {
+  @apply inline-flex flex-wrap gap-1;
+}
+
+.cv-project-skill {
+  @apply rounded-md border border-neutral-200 px-1.5 py-0.5 text-[10px] leading-tight text-neutral-500 transition-all dark:border-neutral-700 dark:text-neutral-500;
+}
+
+.cv-project-skill:hover {
+  @apply border-neutral-400 text-neutral-700 dark:border-neutral-500 dark:text-neutral-300;
+}
+
+.cv-project-skill--active {
+  @apply border-neutral-900 bg-neutral-900 text-neutral-50 dark:border-neutral-100 dark:bg-neutral-100 dark:text-neutral-900;
+}
+
+/* ── Filter state ── */
+
+.cv-entry--dimmed {
+  @apply opacity-30 transition-opacity duration-200;
+}
+
+.cv-highlight--dimmed {
+  @apply opacity-30 transition-opacity duration-200;
+}
+
+.cv-filter-bar {
+  @apply inline-flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400;
+}
+
+.cv-filter-clear {
+  @apply cursor-pointer text-lg leading-none text-neutral-400 no-underline transition-colors hover:text-neutral-700 dark:hover:text-neutral-200;
 }
 
 .cv-compact-section ul {
