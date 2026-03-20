@@ -37,6 +37,13 @@ const profileLinks = [
     iconClassName: "object-contain dark:invert",
     external: true,
   },
+  {
+    href: "https://signal.me/#eu/DQWx28yS0y5U7K4W7KMnYMCC6DLj4mmg4hZTz5nBWoZxizaCrPlHJbzapVb9rfub",
+    label: "Signal",
+    iconSrc: "/Signal-Logo-Ultramarine.svg",
+    iconClassName: "object-contain",
+    external: true,
+  }
 ] as const;
 
 export default function Home() {
