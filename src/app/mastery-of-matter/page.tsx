@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import BeyondStandardModelNote from "./beyond-standard-model-note";
+import StandardModelEquation from "./standard-model-equation";
 
 export const metadata: Metadata = {
   title: "Mastery of Matter | Nikita Kazeev",
@@ -132,9 +134,29 @@ export default function MasteryOfMatterPage() {
               Research Statement
             </p>
             <h1 className="max-w-4xl">
-              Mastery of matter starts with better approximations.
+              Mastery of matter means approximate computation
             </h1>
-            <p className="max-w-3xl">
+            <StandardModelEquation />
+            <p>
+              <BeyondStandardModelNote>Almost</BeyondStandardModelNote>{" "}
+              everything we observe on Earth is governed by this equation, the
+              appropriately named Standard Model of particle physics. It is
+              fascinating from the machine learning point of view - the ultimate
+              example of inductive bias. From a relatively small experimental
+              dataset, we inferred an equation which with almost perfect
+              generalizability describes a huge range of phenomena, from the
+              behavior of quarks in the Large Hadron Collider to the electrons
+              inside an H100 GPU, and the DNA of the living organisms.
+            </p>
+            <p>
+              So, in a way, we have <i>solved</i> science. Aristotle claimed that by using pure reason he could understand the world, now we finally can. And yet, there are no cure for cancer, fusion power plant, or a printer that consistently connects to the Wi-Fi on the first try – all of which are most certainly permitted by the Standard Model.
+
+              The 
+
+
+
+
+
               My working view of science is simple: in the end, we are trying to
               compute consequences of the laws of physics for specific systems.
               The underlying theory may be known, but exact calculation is
