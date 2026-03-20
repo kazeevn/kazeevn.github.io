@@ -3,6 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   reactCompiler: true,
+  turbopack: {
+    root: process.cwd(),
+  },
   images: {
     unoptimized: true,
     formats: ['image/avif', 'image/webp'], // Enable WebP & AVIF formats
