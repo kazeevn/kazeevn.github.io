@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 type ReferenceLink = {
@@ -472,7 +473,7 @@ const stats: Stat[] = [
           <Link href="https://scholar.google.com/citations?hl=en&user=vamy2okAAAAJ" target="_blank" rel="noreferrer">
             citation pile
           </Link>
-          , I'm telling you: don't use h-index to judge people
+          , I&apos;m telling you: don&apos;t use h-index to judge people
         </>
       ),
       align: "right",
@@ -481,7 +482,18 @@ const stats: Stat[] = [
   { value: "9", label: "students mentored" },
   { value: "$3.4M", label: "grant co-PI" },
   { value: "20+", label: "conference talks" },
-  { value: "\u{1F3C6}", label: "Breakthrough Prize 2025" },
+  {
+    value: (
+      <Image
+        src="/Breakthrough_Prize_logo.webp"
+        alt="Breakthrough Prize logo"
+        width={28}
+        height={28}
+        className="cv-stat-icon"
+      />
+    ),
+    label: "Breakthrough Prize 2025",
+  },
 ];
 
 const sectionNav = [

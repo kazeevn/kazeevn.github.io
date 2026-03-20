@@ -145,6 +145,10 @@ a {
   @apply text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100;
 }
 
+.cv-stat-icon {
+  @apply mx-auto h-7 w-7 object-contain;
+}
+
 .cv-stat-label {
   @apply mt-0.5 text-[11px] leading-tight tracking-tight text-neutral-500 dark:text-neutral-400;
 }
