@@ -129,7 +129,7 @@ export default function MasteryOfMatterPage() {
     <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <div className="w-full space-y-10">
         <section className="grid gap-6 pb-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-          <div className="space-y-4">
+          <div>
             <p className="eyebrow">
               Research Statement
             </p>
@@ -151,18 +151,7 @@ export default function MasteryOfMatterPage() {
             <p>
               So, in a way, we have <i>solved</i> science. Aristotle claimed that by using pure reason he could understand the world, now we finally can. And yet, there are no cure for cancer, fusion power plant, or a printer that consistently connects to the Wi-Fi on the first try – all of which are most certainly permitted by the Standard Model.
 
-              The 
-
-
-
-
-
-              My working view of science is simple: in the end, we are trying to
-              compute consequences of the laws of physics for specific systems.
-              The underlying theory may be known, but exact calculation is
-              usually impossible, wasteful, or simply at the wrong scale. Real
-              progress comes from finding approximations that preserve what
-              matters for the question at hand.
+              The cause of this most unfortunate gap is our meager reasoning power. Anything more complex than a hydrogen atom can't be solved exactly – we enter the realm of approximation. Machine learning, by its nature is the automated tool for approximation building. My research is about using it to expand the frontier of what we can understand and control in the physical world.
             </p>
           </div>
 

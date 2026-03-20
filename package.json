@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && touch docs/.nojekyll",
-    "deploy": "gh-pages -d docs",
+    "build": "next build",
+    "deploy": "gh-pages -d docs --nojekyll",
     "start": "next start",
     "lint": "eslint"
   },
