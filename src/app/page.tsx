@@ -1,7 +1,13 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
-import linkedInIcon from "./_assets/LinkedIn.png";
-import portraitImage from "./_assets/nikita-kazeev.webp";
+
+type ProfileLink = {
+  href: string;
+  label: string;
+  iconSrc: string;
+  iconClassName: string;
+  external: boolean;
+};
 
 const profileLinks = [
   {
@@ -14,7 +20,7 @@ const profileLinks = [
   {
     href: "https://www.linkedin.com/in/nikita-kazeev/",
     label: "LinkedIn",
-    iconSrc: linkedInIcon,
+    iconSrc: "/main/linkedin.png",
     iconClassName: "object-contain",
     external: true,
   },
@@ -46,7 +52,7 @@ const profileLinks = [
     iconClassName: "object-contain",
     external: true,
   }
-] as const;
+] satisfies readonly ProfileLink[];
 
 export default function Home() {
   return (
@@ -56,14 +62,15 @@ export default function Home() {
           <div className="pb-4">
             <div className="grid gap-5 md:grid-cols-[128px_1fr] md:gap-6">
               <div className="mx-auto grid w-full max-w-sm grid-cols-[96px_minmax(0,1fr)] items-center gap-3 sm:grid-cols-[112px_minmax(0,1fr)] sm:gap-4 md:mx-0 md:block md:max-w-[128px]">
-                <div className="overflow-hidden rounded-2xl">
-                  <Image
-                    src={portraitImage}
+                <div className="relative aspect-4/5 overflow-hidden rounded-2xl">
+                  <ExportedImage
+                    src="/main/nikita-kazeev.webp"
                     alt="Portrait of Nikita Kazeev"
+                    fill
                     preload
                     placeholder="blur"
                     sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
-                    className="aspect-4/5 h-auto w-full object-cover object-top"
+                    className="object-cover object-top"
                   />
                 </div>
 
@@ -85,10 +92,11 @@ export default function Home() {
                         rel={profileLink.external ? "noreferrer" : undefined}
                       >
                         <span className="relative block h-5 w-5 sm:h-6 sm:w-6">
-                          <Image
+                          <ExportedImage
                             src={profileLink.iconSrc}
                             alt=""
                             fill
+                            placeholder="empty"
                             sizes="(max-width: 640px) 20px, 24px"
                             aria-hidden="true"
                             className={profileLink.iconClassName}

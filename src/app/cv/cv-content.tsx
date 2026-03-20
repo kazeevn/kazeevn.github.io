@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 
 type ReferenceLink = {
@@ -484,11 +484,12 @@ const stats: Stat[] = [
   { value: "20+", label: "conference talks" },
   {
     value: (
-      <Image
+      <ExportedImage
         src="/Breakthrough_Prize_logo.webp"
         alt="Breakthrough Prize logo"
         width={28}
         height={28}
+        placeholder="empty"
         className="cv-stat-icon"
       />
     ),

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-image-export-optimizer --nextConfigPath next.config.ts",
     "deploy": "gh-pages -d docs --nojekyll",
     "start": "next start",
     "lint": "eslint"
