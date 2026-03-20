@@ -58,13 +58,13 @@ export default function LeadershipPage() {
       <div className="w-full space-y-10">
         <section className="grid gap-6 pb-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div className="space-y-4">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Leadership
             </p>
-            <h1 className="max-w-4xl text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="max-w-4xl text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl">
               Leading through research, community, and intellectual clarity.
             </h1>
-            <p className="max-w-3xl hyphens-auto text-justify leading-6 text-muted">
+            <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
               My leadership work spans research teams, scientific events,
               mentorship, and public communication. The common thread is simple:
               create structures that help difficult ideas move further, faster,
@@ -73,10 +73,10 @@ export default function LeadershipPage() {
           </div>
 
           <div className="pt-1 lg:pl-6">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Leadership principle
             </p>
-            <p className="mt-3 leading-6 text-foreground">
+            <p className="mt-3 leading-6 text-neutral-800 dark:text-neutral-200">
               Strong leadership in science means setting direction, creating
               systems for others to do excellent work, and making the field more
               coherent than you found it.
@@ -87,10 +87,10 @@ export default function LeadershipPage() {
         <section className="grid gap-6 lg:grid-cols-3">
           {leadershipItems.map((section) => (
             <article key={section.title} className="pt-1">
-              <p className="text-sm tracking-tight text-accent-strong">
+              <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                 {section.title}
               </p>
-              <ul className="mt-3 space-y-2 text-muted">
+              <ul className="mt-3 space-y-2 text-neutral-800 dark:text-neutral-200">
                 {section.items.map((item) => (
                   <li key={item} className="leading-6 hyphens-auto text-justify">
                     {item}
@@ -103,13 +103,13 @@ export default function LeadershipPage() {
 
         <section className="space-y-5">
           <div className="max-w-3xl space-y-3">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Teaching and outreach
             </p>
-            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
+            <h2 className="text-2xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl">
               Teaching and outreach as leadership.
             </h2>
-            <p className="hyphens-auto text-justify leading-6 text-muted">
+            <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
               This section is included here because teaching and outreach are
               part of how scientific leadership works in practice. They scale
               expertise, expand the pipeline of collaborators, and make advanced
@@ -120,10 +120,12 @@ export default function LeadershipPage() {
           <div className="grid gap-6 lg:grid-cols-3">
             {teachingAndOutreach.map((item) => (
               <article key={item.title} className="pt-1">
-                <p className="text-sm tracking-tight text-accent-strong">
+                <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                   {item.title}
                 </p>
-                <p className="mt-3 hyphens-auto text-justify leading-6 text-muted">{item.body}</p>
+                <p className="mt-3 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
+                  {item.body}
+                </p>
               </article>
             ))}
           </div>

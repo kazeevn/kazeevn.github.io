@@ -128,13 +128,13 @@ export default function MasteryOfMatterPage() {
       <div className="w-full space-y-10">
         <section className="grid gap-6 pb-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div className="space-y-4">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Research Statement
             </p>
-            <h1 className="max-w-4xl text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
+            <h1 className="max-w-4xl text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl">
               Mastery of matter starts with better approximations.
             </h1>
-            <p className="max-w-3xl hyphens-auto text-justify leading-6 text-muted">
+            <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
               My working view of science is simple: in the end, we are trying to
               compute consequences of the laws of physics for specific systems.
               The underlying theory may be known, but exact calculation is
@@ -145,10 +145,10 @@ export default function MasteryOfMatterPage() {
           </div>
 
           <div className="pt-1 lg:pl-6">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Core idea
             </p>
-            <p className="mt-3 leading-6 text-foreground">
+            <p className="mt-3 leading-6 text-neutral-800 dark:text-neutral-200">
               I use machine learning to build approximations that are faster than
               brute-force simulation, more structured than generic black-box
               fitting, and useful for actual scientific decisions.
@@ -159,20 +159,22 @@ export default function MasteryOfMatterPage() {
         <section className="grid gap-6 lg:grid-cols-3">
           {principles.map((item) => (
             <article key={item.title} className="pt-1">
-              <p className="text-sm tracking-tight text-accent-strong">
+              <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                 {item.title}
               </p>
-              <p className="mt-3 hyphens-auto text-justify leading-6 text-muted">{item.body}</p>
+              <p className="mt-3 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
+                {item.body}
+              </p>
             </article>
           ))}
         </section>
 
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <article className="space-y-5 pt-1">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               What I mean by this
             </p>
-            <p className="hyphens-auto text-justify leading-6 text-muted">
+            <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
               If one takes the Standard Model seriously, then most of science and
               engineering can be viewed as the art of computing approximate
               solutions for relevant effective degrees of freedom. Nobody designs
@@ -180,7 +182,7 @@ export default function MasteryOfMatterPage() {
               microscopic equations in full generality. We work through reduced
               descriptions, symmetries, coarse-graining, and controlled shortcuts.
             </p>
-            <p className="hyphens-auto text-justify leading-6 text-muted">
+            <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
               Machine learning is useful here not because it replaces physics,
               but because it can help construct these shortcuts. In the best
               case, it learns representations, surrogates, and uncertainty models
@@ -194,10 +196,10 @@ export default function MasteryOfMatterPage() {
           </article>
 
           <article className="space-y-5 pt-1">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Research program
             </p>
-            <ul className="space-y-3 text-muted">
+            <ul className="space-y-3 text-neutral-800 dark:text-neutral-200">
               {agenda.map((item) => (
                 <li key={item} className="leading-6 hyphens-auto text-justify">
                   {item}
@@ -209,13 +211,13 @@ export default function MasteryOfMatterPage() {
 
         <section className="space-y-5">
           <div className="max-w-3xl space-y-3">
-            <p className="text-sm tracking-tight text-accent-strong">
+            <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
               Selected work
             </p>
-            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
+            <h2 className="text-2xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl">
               Concrete projects behind the argument.
             </h2>
-            <p className="hyphens-auto text-justify leading-6 text-muted">
+            <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
               These are the projects that shaped the way I think about machine
               learning for science: not as generic prediction, but as the craft
               of building the right approximation for a hard physical problem.
@@ -225,21 +227,25 @@ export default function MasteryOfMatterPage() {
           <div className="grid gap-6 lg:grid-cols-2">
             {selectedWork.map((item) => (
               <article key={item.title} className="pt-1">
-                <p className="text-sm tracking-tight text-accent-strong">
+                <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                   {item.title}
                 </p>
-                <p className="mt-3 hyphens-auto text-justify leading-6 text-muted">{item.body}</p>
-                <ul className="mt-5 space-y-3 text-sm text-muted">
+                <p className="mt-3 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
+                  {item.body}
+                </p>
+                <ul className="mt-5 space-y-3 text-sm text-neutral-800 dark:text-neutral-200">
                   {item.links.map((link) => (
                     <li key={link.href}>
                       <a
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-baseline gap-2 transition-colors hover:text-accent-strong"
+                        className="inline-flex items-baseline gap-2 transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
                       >
-                        <span className="font-medium text-foreground">{link.label}</span>
-                        <span className="text-muted">{link.note}</span>
+                        <span className="font-medium text-neutral-900 dark:text-neutral-100">
+                          {link.label}
+                        </span>
+                        <span className="text-neutral-800 dark:text-neutral-200">{link.note}</span>
                       </a>
                     </li>
                   ))}
@@ -250,10 +256,10 @@ export default function MasteryOfMatterPage() {
         </section>
 
         <section className="pt-1">
-          <p className="text-sm tracking-tight text-accent-strong">
+          <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
             End goal
           </p>
-          <p className="mt-3 max-w-4xl hyphens-auto text-justify leading-6 text-muted">
+          <p className="mt-3 max-w-4xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
             The point is not machine learning for its own sake. The point is to
             expand our ability to understand and deliberately shape the physical
             world. Better approximations mean better experiments, better models,

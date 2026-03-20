@@ -22,21 +22,21 @@ export default function Home() {
               </div>
 
               <div className="space-y-3">
-                <div className="space-y-1.5 text-sm text-muted">
-                  <p className="text-sm tracking-tight text-accent-strong">
+                <div className="space-y-1.5 text-sm text-neutral-800 dark:text-neutral-200">
+                  <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                     Research Fellow, NUS
                   </p>
                   <p>Double PhD in computer science and physics.</p>
                   <p>Machine learning for science, from particles to materials.</p>
                 </div>
 
-                <p className="font-[family:var(--font-poiret-one)] text-3xl tracking-tight text-accent-strong sm:text-4xl">
+                <p className="font-[family:var(--font-poiret-one)] text-3xl tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl">
                   Nikita Kazeev
                 </p>
-                <h1 className="max-w-3xl text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
+                <h1 className="max-w-3xl text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl">
                   Turning hard science into usable intelligence.
                 </h1>
-                <p className="max-w-3xl hyphens-auto text-justify leading-6 text-muted">
+                <p className="max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
                   Nikita Kazeev is a research fellow at the National University of
                   Singapore with a double PhD in computer science and physics. He has
                   worked across particle physics, materials, and autonomous systems,
@@ -53,20 +53,20 @@ export default function Home() {
             <div className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="pt-1">
-                  <p className="mb-2 text-sm tracking-tight text-accent-strong">
+                  <p className="mb-2 text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                     What stands out
                   </p>
-                  <p className="hyphens-auto text-justify leading-6 text-muted">
+                  <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
                     Research depth in both physics and machine learning, paired with
                     a track record of making ambitious scientific ideas legible to
                     broader research communities.
                   </p>
                 </div>
                 <div className="pt-1">
-                  <p className="mb-2 text-sm tracking-tight text-accent-strong">
+                  <p className="mb-2 text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                     What comes next
                   </p>
-                  <p className="hyphens-auto text-justify leading-6 text-muted">
+                  <p className="hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
                     Building tools and collaborations that let scientists move from
                     expensive low-level simulations to robust, decision-grade models.
                   </p>
@@ -74,10 +74,10 @@ export default function Home() {
               </div>
 
               <div className="pt-1">
-                <p className="text-sm tracking-tight text-accent-strong">
+                <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                   Current direction
                 </p>
-                <p className="mt-3 max-w-3xl hyphens-auto text-justify leading-6 text-muted">
+                <p className="mt-3 max-w-3xl hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
                   The work focuses on scientific machine learning that respects scale,
                   structure, and computational cost. The goal is not only predictive
                   accuracy, but usable models that can guide experiments, engineering,
@@ -87,18 +87,18 @@ export default function Home() {
             </div>
 
             <div className="space-y-1 pt-1">
-              <p className="text-sm tracking-tight text-accent-strong">
+              <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
                 Read next
               </p>
 
               <Link
                 href="/mastery-of-matter"
-                className="block py-3 transition-colors hover:text-accent"
+                className="block py-3 transition-colors hover:text-neutral-700 dark:hover:text-neutral-300"
               >
-                <p className="text-lg font-medium tracking-tight text-foreground">
+                <p className="text-lg font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
                   Mastery of Matter
                 </p>
-                <p className="mt-2 hyphens-auto text-justify leading-6 text-muted">
+                <p className="mt-2 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
                   A research statement on science as approximate computation and machine
                   learning as the path to tractable, decision-grade models.
                 </p>
@@ -106,12 +106,12 @@ export default function Home() {
 
               <Link
                 href="/leadership"
-                className="block py-3 transition-colors hover:text-accent"
+                className="block py-3 transition-colors hover:text-neutral-700 dark:hover:text-neutral-300"
               >
-                <p className="text-lg font-medium tracking-tight text-foreground">
+                <p className="text-lg font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
                   Leadership
                 </p>
-                <p className="mt-2 hyphens-auto text-justify leading-6 text-muted">
+                <p className="mt-2 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200">
                   A view of research leadership, mentorship, teaching, and public-facing
                   scientific communication.
                 </p>
