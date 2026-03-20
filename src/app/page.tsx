@@ -52,7 +52,7 @@ export default function Home() {
           <div className="pb-4">
             <div className="grid gap-5 md:grid-cols-[128px_1fr] md:gap-6">
               <div className="mx-auto w-full max-w-32 md:mx-0">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden rounded-2xl">
                   <Image
                     src="/nikita-kazeev.webp"
                     alt="Portrait of Nikita Kazeev"
@@ -62,6 +62,11 @@ export default function Home() {
                     className="aspect-[4/5] h-auto w-full object-cover object-top"
                   />
                 </div>
+
+                <p className="mt-4 text-center text-sm tracking-tight text-neutral-900 dark:text-neutral-100 md:text-left">
+                  <span className="block">Research Fellow</span>
+                  <span className="block">National University of Singapore</span>
+                </p>
 
                 <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:justify-start">
                   {profileLinks.map((profileLink) => (
@@ -91,9 +96,6 @@ export default function Home() {
 
               <div className="space-y-3">
                 <div className="space-y-1.5 text-sm text-neutral-800 dark:text-neutral-200">
-                  <p className="text-sm tracking-tight text-neutral-900 dark:text-neutral-100">
-                    Research Fellow, NUS
-                  </p>
                   <p>Double PhD in computer science and physics.</p>
                   <p>Machine learning for science, from particles to materials.</p>
                 </div>
