@@ -1,14 +1,57 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const profileLinks = [
+  {
+    href: "https://scholar.google.com/citations?user=vamy2okAAAAJ&hl=en",
+    label: "Google Scholar",
+    iconSrc: "/google-scholar-square.svg",
+    iconAlt: "",
+    iconClassName: "object-contain",
+    external: true,
+  },
+  {
+    href: "https://www.linkedin.com/in/nikita-kazeev/",
+    label: "LinkedIn",
+    iconSrc: "/LinkedIn.png",
+    iconAlt: "",
+    iconClassName: "object-contain",
+    external: true,
+  },
+  {
+    href: "https://orcid.org/0000-0002-5699-7634",
+    label: "ORCID",
+    iconSrc: "/ORCID-iD_icon_vector.svg",
+    iconAlt: "",
+    iconClassName: "object-contain",
+    external: true,
+  },
+  {
+    href: "mailto:kna@nus.edu.sg",
+    label: "Email",
+    iconSrc: "/email.svg",
+    iconAlt: "",
+    iconClassName: "object-contain",
+    external: false,
+  },
+  {
+    href: "https://github.com/kazeevn/",
+    label: "GitHub",
+    iconSrc: "/GitHub_Invertocat_Black.svg",
+    iconAlt: "",
+    iconClassName: "object-contain dark:invert",
+    external: true,
+  },
+] as const;
+
 export default function Home() {
   return (
     <main className="flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <section className="w-full">
         <div className="space-y-8">
           <div className="pb-4">
-            <div className="grid gap-5 sm:grid-cols-[128px_1fr] sm:gap-6">
-              <div className="mx-auto w-full max-w-32 sm:mx-0">
+            <div className="grid gap-5 md:grid-cols-[128px_1fr] md:gap-6">
+              <div className="mx-auto w-full max-w-32 md:mx-0">
                 <div className="overflow-hidden">
                   <Image
                     src="/nikita-kazeev.webp"
@@ -18,6 +61,31 @@ export default function Home() {
                     priority
                     className="aspect-[4/5] h-auto w-full object-cover object-top"
                   />
+                </div>
+
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+                  {profileLinks.map((profileLink) => (
+                    <Link
+                      key={profileLink.label}
+                      href={profileLink.href}
+                      aria-label={profileLink.label}
+                      title={profileLink.label}
+                      className="rounded-sm p-1 transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500"
+                      target={profileLink.external ? "_blank" : undefined}
+                      rel={profileLink.external ? "noreferrer" : undefined}
+                    >
+                      <span className="relative block h-6 w-6">
+                        <Image
+                          src={profileLink.iconSrc}
+                          alt={profileLink.iconAlt}
+                          fill
+                          sizes="24px"
+                          aria-hidden="true"
+                          className={profileLink.iconClassName}
+                        />
+                      </span>
+                    </Link>
+                  ))}
                 </div>
               </div>
 
