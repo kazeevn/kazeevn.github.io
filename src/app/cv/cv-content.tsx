@@ -58,9 +58,7 @@ const skillTags: SkillTag[] = [
   { label: "Linux", detail: "Administration" },
   { label: "Research Writing & Speaking" },
   { label: "Physics", detail: "Deep domain understanding" },
-  { label: "Leadership & Mentorship" },
-  { label: "Russian", detail: "Native" },
-  { label: "English", detail: "Fluent · IELTS 8" },
+  { label: "Leadership & Mentorship" }
 ];
 
 const workExperience: WorkEntry[] = [
@@ -661,9 +659,8 @@ function CvStatCard({ stat }: { stat: Stat }) {
           role="dialog"
           aria-modal="false"
           aria-labelledby={titleId}
-          className={`absolute top-[calc(100%+0.75rem)] z-20 block w-[calc(100vw-1.5rem)] max-w-[24rem] rounded-2xl border border-neutral-300 bg-white/95 p-5 text-left shadow-xl shadow-neutral-950/10 backdrop-blur dark:border-neutral-700 dark:bg-neutral-950/95 dark:shadow-black/40 ${
-            stat.note.align === "right" ? "right-0" : "left-0"
-          }`}
+          className={`absolute top-[calc(100%+0.75rem)] z-20 block w-[calc(100vw-1.5rem)] max-w-[24rem] rounded-2xl border border-neutral-300 bg-white/95 p-5 text-left shadow-xl shadow-neutral-950/10 backdrop-blur dark:border-neutral-700 dark:bg-neutral-950/95 dark:shadow-black/40 ${stat.note.align === "right" ? "right-0" : "left-0"
+            }`}
         >
           <span className="flex items-start justify-between gap-4">
             <span
@@ -807,9 +804,8 @@ export default function CvContent() {
             {workExperience.map((entry) => (
               <article
                 key={`${entry.organization}-${entry.period}`}
-                className={`cv-entry rounded-2xl border border-neutral-200 p-5 dark:border-neutral-800 dark:bg-neutral-950/30 transition-opacity${
-                  !entryHasMatch(entry) ? " cv-entry--dimmed" : ""
-                }`}
+                className={`cv-entry rounded-2xl border border-neutral-200 p-5 dark:border-neutral-800 dark:bg-neutral-950/30 transition-opacity${!entryHasMatch(entry) ? " cv-entry--dimmed" : ""
+                  }`}
               >
                 <div className="cv-entry-header">
                   <div>
@@ -855,7 +851,7 @@ export default function CvContent() {
                             </span>
                           </span>
                           <svg className="cv-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                         </summary>
                         <div className="cv-highlight-content">
