@@ -53,7 +53,8 @@ const pdfHref = "/Nikita%20Kazeev%20-%20CV%20%5BJanuary%202026%5D.pdf";
 
 const skillTags: SkillTag[] = [
   { label: "ML & AI", detail: "Structured, non-text, domain-specific data" },
-  { label: "Python & PyTorch", detail: "Research coding" },
+  { label: "Python", detail: "Research coding" },
+  { label: "PyTorch", detail: "Deep learning" },
   { label: "C++", detail: "Production" },
   { label: "Linux", detail: "Administration" },
   { label: "Research Writing & Speaking" },
@@ -87,7 +88,7 @@ const workExperience: WorkEntry[] = [
       },
       {
         title: "Transformer for generating symmetric crystals",
-        skills: ["ML & AI", "Python & PyTorch", "Physics", "Leadership & Mentorship"],
+        skills: ["ML & AI", "Python", "PyTorch", "Physics", "Leadership & Mentorship"],
         references: [
           {
             href: "https://icml.cc/virtual/2025/poster/44595",
@@ -107,7 +108,7 @@ const workExperience: WorkEntry[] = [
       },
       {
         title: "ML for predicting properties of defects in 2D crystals",
-        skills: ["ML & AI", "Python & PyTorch", "Physics", "Leadership & Mentorship", "Linux"],
+        skills: ["ML & AI", "Python", "PyTorch", "Physics", "Leadership & Mentorship", "Linux"],
         references: [
           {
             href: "https://www.nature.com/articles/s41699-023-00369-1",
@@ -153,7 +154,7 @@ const workExperience: WorkEntry[] = [
     highlights: [
       {
         title: "Generative models uncertainty estimation",
-        skills: ["ML & AI", "Python & PyTorch", "Physics", "Leadership & Mentorship"],
+        skills: ["ML & AI", "Python", "PyTorch", "Physics", "Leadership & Mentorship"],
         references: [
           {
             href: "https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088",
@@ -179,7 +180,7 @@ const workExperience: WorkEntry[] = [
       },
       {
         title: "Generative models for fast simulation",
-        skills: ["ML & AI", "Python & PyTorch", "Physics", "Research Writing & Speaking"],
+        skills: ["ML & AI", "Python", "Physics", "Research Writing & Speaking"],
         references: [
           {
             href: "https://www.sciencedirect.com/science/article/pii/S0168900219300701",
@@ -225,7 +226,7 @@ const workExperience: WorkEntry[] = [
       },
       {
         title: "Machine learning on noisy data",
-        skills: ["ML & AI", "Python & PyTorch", "Physics"],
+        skills: ["ML & AI", "Python", "PyTorch", "Physics"],
         references: [
           {
             href: "http://doi.org/10.1088/1748-0221/14/08/P08020",
@@ -250,7 +251,7 @@ const workExperience: WorkEntry[] = [
       },
       {
         title: "Muon identification at the LHCb experiment at CERN",
-        skills: ["ML & AI", "Python & PyTorch", "C++", "Physics"],
+        skills: ["ML & AI", "Python", "C++", "Physics"],
         references: [
           {
             href: "https://iopscience.iop.org/article/10.1088/1742-6596/1525/1/012100/pdf",
@@ -274,7 +275,7 @@ const workExperience: WorkEntry[] = [
       },
       {
         title: "CatBoost aka fighting biases with dynamic boosting",
-        skills: ["ML & AI", "Python & PyTorch", "Linux"],
+        skills: ["ML & AI", "Python", "Linux"],
         references: [
           {
             href: "https://arxiv.org/abs/1706.09516v1",

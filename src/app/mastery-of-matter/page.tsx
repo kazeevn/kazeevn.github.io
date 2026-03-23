@@ -9,24 +9,6 @@ export const metadata: Metadata = {
     "A research statement on science as approximate computation and machine learning as a path to practical mastery over matter.",
 };
 
-const principles = [
-  {
-    title: "The base theory is not the bottleneck",
-    body:
-      "For much of the physical world, we already know the underlying rules well enough. The Standard Model and its effective descendants define the game. The hard part is not writing the equations down, but extracting useful answers for specific materials, devices, defects, and operating conditions.",
-  },
-  {
-    title: "Science works through approximations",
-    body:
-      "Every practical scientific workflow is an approximation stack: choose the right variables, discard irrelevant detail, exploit symmetry, and compute only what matters for the decision at hand. The value of a scientific model is its ability to preserve the essential structure while making prediction tractable.",
-  },
-  {
-    title: "Machine learning extends the approximation toolkit",
-    body:
-      "Machine learning becomes useful when it is treated not as a replacement for physics, but as a disciplined way to learn reduced representations, surrogate simulators, and multiscale bridges. It should compress expensive computation without breaking the invariants that make the answers scientifically meaningful.",
-  },
-];
-
 const agenda = [
   "Learn representations that respect symmetry, sparsity, and scale separation.",
   "Build surrogates for expensive simulations so the search space becomes explorable.",
@@ -155,21 +137,21 @@ export default function MasteryOfMatterPage() {
           </p>
         </div>
         <h2>Vision</h2>
-        <h3>Resource Allocation</h3>
-        <h3>Prediction</h3>
-        <h3>Mastery</h3>
-        <section className="grid gap-6 lg:grid-cols-3">
-          {principles.map((item) => (
-            <article key={item.title} className="pt-1">
-              <p className="eyebrow">
-                {item.title}
-              </p>
-              <p className="mt-3">
-                {item.body}
-              </p>
-            </article>
-          ))}
-        </section>
+        <h3>Forward problem: Prediction</h3>
+        <p>
+          The most straightforward application of machine learning is to take an expensive ab initio simulator, run in it enough times, and train a model to appropriate the result. I did this for a <Link href="https://doi.org/10.1016/j.nima.2019.01.031" target="_blank">Cherenkov detector</Link>, for example. This naive approach has crucial practical and fundamental limitations. Practically, for it to make sense, the training dataset must be much smaller than the number of future model invocations. Fundamentally, such an approach will only ever be capable of modelling the systems which can be reliably and cheaply simulated in the first place. Particle physics detectors, where Monte-Carlo simulation repeatedly models interactions of the same types of particles with the same detector, are a good example where straightforward ML surrogate works.
+        </p>
+        <p>
+          The infinitely more interesting and challenging problem is expanding the range of systems which can be modelled. Solve Schrödinger equation for 10 atoms, train a model to predict for 1000. The issue is that such a model can't ever be a naive black box – it must contain some assuptions, some <i>inductive bias</i> about operation of the world. For example, once we agree that interatomic interactions are limited by physical distance, we suddenly can train an ML model on small systems and predict the properties of much larger ones, leading to machine-learning interatomic potentials, the most successful application of ML in materials science to date. We are <Link href="https://omniscale-ai.github.io/" target="_blank">looking for similar scale transitions</Link> across the board.
+        </p>
+        <p>
+          Short-range interactions are the most obvious inductive bias to use. But it's unlikely that it would lead us to things like a tractable superconductivity model. We need better and more creative assumptions. The ongoing explosion of <i>reasoning models</i> offers enticing opportunities here:
+          <ul>
+            <li>AI Theoretitian, which would carry analytical math to bound and isolate the black-box approximation among strictly derived equations, similarly to Nobel-prize winning density functional theory</li>
+            <li>A</li>
+          </ul>
+        </p>
+        <h3>Inversse problem: Mastery</h3>
 
         <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <article className="space-y-5 pt-1">
@@ -263,6 +245,6 @@ export default function MasteryOfMatterPage() {
           </p>
         </section>
       </div>
-    </main>
+    </main >
   );
 }

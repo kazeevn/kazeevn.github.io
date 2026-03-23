@@ -12,7 +12,7 @@ export default function ResourceAllocationPage() {
     <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <div className="w-full space-y-10">
         <div>
-          <p className="eyebrow">Vision</p>
+          <p className="eyebrow">Research Statement</p>
           <h1>A Reward Signal for the Academy</h1>
           <p>
             Research as a whole is an activity with sparse reward. A fundamental
