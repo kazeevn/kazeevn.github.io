@@ -36,7 +36,7 @@ const leadershipItems = [
 
 export default function LeadershipPage() {
   return (
-    <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
+    <main className="prose prose-neutral dark:prose-invert max-w-none flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <div className="w-full space-y-10">
         <section className="grid gap-6 pb-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <div className="space-y-4">

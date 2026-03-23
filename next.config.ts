@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
 import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+});
 
 const sharedConfig: NextConfig = {
   output: "export",
   reactCompiler: true,
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   images: {
     loader: "custom",
     formats: ["image/avif", "image/webp"],
@@ -15,7 +21,7 @@ const sharedConfig: NextConfig = {
 const nextConfig = (phase: string): NextConfig => {
   const exportFolderPath = phase === PHASE_DEVELOPMENT_SERVER ? "dev" : "docs";
 
-  return {
+  return withMDX({
     ...sharedConfig,
     distDir: exportFolderPath,
     transpilePackages: ["next-image-export-optimizer"],
@@ -28,7 +34,7 @@ const nextConfig = (phase: string): NextConfig => {
       nextImageExportOptimizer_generateAndUseBlurImages: "true",
       nextImageExportOptimizer_remoteImageCacheTTL: "0",
     },
-  };
+  });
 };
 
 export default nextConfig;

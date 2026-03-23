@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin "@tailwindcss/typography";
 :root {
   --background: #fafafa;
 }
@@ -43,48 +43,11 @@ a {
   @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
 }
 
-.prose {
-  @apply text-[15px] sm:text-base;
-}
 
-.prose h1 {
-  @apply mt-2 mb-4 text-3xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl lg:text-5xl;
-}
-
-.prose h2 {
-  @apply mt-8 mb-3 text-2xl font-medium tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl;
-}
-
-.prose p {
-  @apply mt-4 hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200;
-}
-
-.prose ul {
-  @apply mt-4 list-disc pl-5 text-neutral-800 dark:text-neutral-200;
-}
-
-.prose .eyebrow {
-  @apply mt-0 mb-1 text-left text-sm tracking-tight text-neutral-900 dark:text-neutral-100;
-}
-
-.prose .lead {
-  @apply text-left leading-6 text-neutral-800 dark:text-neutral-200;
-}
-
+/* Typography overrides */
+.prose p,
 .prose li {
-  @apply hyphens-auto text-justify leading-6 marker:text-neutral-500 dark:marker:text-neutral-400;
-}
-
-.prose li a {
-  @apply inline-flex items-baseline gap-2 no-underline transition-colors hover:text-neutral-900 dark:hover:text-neutral-100;
-}
-
-.prose li a strong {
-  @apply font-medium text-neutral-900 dark:text-neutral-100;
-}
-
-.prose li a small {
-  @apply text-neutral-800 dark:text-neutral-200;
+  @apply hyphens-auto text-justify leading-6 text-neutral-800 dark:text-neutral-200;
 }
 
 /* ── CV page ── */

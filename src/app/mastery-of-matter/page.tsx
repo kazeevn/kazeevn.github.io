@@ -109,142 +109,57 @@ const selectedWork = [
 
 export default function MasteryOfMatterPage() {
   return (
-    <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
-      <div className="w-full space-y-10">
-        <div>
-          <p className="eyebrow">
-            Research Statement
-          </p>
-          <h1 className="max-w-4xl">
-            Mastery of matter means approximate computation
-          </h1>
-          <StandardModelEquation />
-          <p>
-            <BeyondStandardModelNote>Almost</BeyondStandardModelNote>{" "}
-            everything we observe on Earth is governed by this equation, the
-            appropriately named Standard Model of particle physics. It is
-            fascinating from the machine learning point of view - the ultimate
-            example of inductive bias. From a relatively small experimental
-            dataset, we inferred an equation which with almost perfect
-            generalizability describes a huge range of phenomena, from the
-            behavior of quarks in the Large Hadron Collider to the electrons
-            inside an H100 GPU, and the DNA of the living organisms.
-          </p>
-          <p>
-            In a way, we have <i>solved</i> science. Aristotle claimed that by using pure reason he could understand the world, now we finally can. And yet, there are no cure for cancer, fusion power plant, or a printer that consistently connects to the Wi-Fi on the first try – all of which are most certainly permitted by the Standard Model.
-
-            The cause of this most unfortunate gap is our meager reasoning power. Anything more complex than a hydrogen atom can't be solved exactly – we enter the realm of approximation. Machine learning, by its nature is the automated tool for approximation building. My research is about using it to expand the frontier of what we can understand and control in the physical world.
-          </p>
-        </div>
-        <h2>Vision</h2>
-        <h3>Forward problem: Prediction</h3>
+    <main className="prose prose-neutral dark:prose-invert max-w-none flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
+      <div>
+        <p className="eyebrow">
+          Research Statement
+        </p>
+        <h1 className="max-w-4xl">
+          Mastery of matter means approximate computation
+        </h1>
+        <StandardModelEquation />
         <p>
-          The most straightforward application of machine learning is to take an expensive ab initio simulator, run in it enough times, and train a model to appropriate the result. I did this for a <Link href="https://doi.org/10.1016/j.nima.2019.01.031" target="_blank">Cherenkov detector</Link>, for example. This naive approach has crucial practical and fundamental limitations. Practically, for it to make sense, the training dataset must be much smaller than the number of future model invocations. Fundamentally, such an approach will only ever be capable of modelling the systems which can be reliably and cheaply simulated in the first place. Particle physics detectors, where Monte-Carlo simulation repeatedly models interactions of the same types of particles with the same detector, are a good example where straightforward ML surrogate works.
+          <BeyondStandardModelNote>Almost</BeyondStandardModelNote>{" "}
+          everything we observe on Earth is governed by this equation, the
+          appropriately named Standard Model of particle physics. It is
+          fascinating from the machine learning point of view - the ultimate
+          example of inductive bias. From a relatively small experimental
+          dataset, we inferred an equation which with almost perfect
+          generalizability describes a huge range of phenomena, from the
+          behavior of quarks in the Large Hadron Collider to the electrons
+          inside an H100 GPU, and the DNA of the living organisms.
         </p>
         <p>
-          The infinitely more interesting and challenging problem is expanding the range of systems which can be modelled. Solve Schrödinger equation for 10 atoms, train a model to predict for 1000. The issue is that such a model can't ever be a naive black box – it must contain some assuptions, some <i>inductive bias</i> about operation of the world. For example, once we agree that interatomic interactions are limited by physical distance, we suddenly can train an ML model on small systems and predict the properties of much larger ones, leading to machine-learning interatomic potentials, the most successful application of ML in materials science to date. We are <Link href="https://omniscale-ai.github.io/" target="_blank">looking for similar scale transitions</Link> across the board.
+          In a way, we have <i>solved</i> science. Aristotle claimed that by using pure reason he could understand the world, now we finally can. And yet, there are no cure for cancer, fusion power plant, or a printer that consistently connects to the Wi-Fi on the first try – all of which are most certainly permitted by the Standard Model.
+
+          The cause of this most unfortunate gap is our meager reasoning power. Anything more complex than a hydrogen atom can't be solved exactly – we enter the realm of approximation. Machine learning, by its nature is the automated tool for approximation building. My research is about using it to expand the frontier of what we can understand and control in the physical world.
         </p>
-        <p>
-          Short-range interactions are the most obvious inductive bias to use. But it's unlikely that it would lead us to things like a tractable superconductivity model. We need better and more creative assumptions. The ongoing explosion of <i>reasoning models</i> offers enticing opportunities here:
-          <ul>
-            <li>AI Theoretitian, which would carry analytical math to bound and isolate the black-box approximation among strictly derived equations, similarly to Nobel-prize winning density functional theory</li>
-            <li>A</li>
-          </ul>
-        </p>
-        <h3>Inversse problem: Mastery</h3>
-
-        <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <article className="space-y-5 pt-1">
-            <p className="eyebrow">
-              What I mean by this
-            </p>
-            <p>
-              If one takes the Standard Model seriously, then most of science and
-              engineering can be viewed as the art of computing approximate
-              solutions for relevant effective degrees of freedom. Nobody designs
-              a material, analyzes a detector, or studies a defect by solving the
-              microscopic equations in full generality. We work through reduced
-              descriptions, symmetries, coarse-graining, and controlled shortcuts.
-            </p>
-            <p>
-              Machine learning is useful here not because it replaces physics,
-              but because it can help construct these shortcuts. In the best
-              case, it learns representations, surrogates, and uncertainty models
-              that let us compute at the right level of abstraction. In particle
-              physics this means extracting signal from noisy or weakly labeled
-              data and replacing expensive detector simulation where appropriate.
-              In materials science it means navigating huge spaces of structures,
-              symmetries, and defects without paying the full microscopic cost at
-              every step.
-            </p>
-          </article>
-
-          <article className="space-y-5 pt-1">
-            <p className="eyebrow">
-              Research program
-            </p>
-            <ul className="space-y-3">
-              {agenda.map((item) => (
-                <li key={item}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </article>
-        </section>
-
-        <section className="space-y-5">
-          <div className="max-w-3xl space-y-3">
-            <p className="eyebrow">
-              Selected work
-            </p>
-            <h2>
-              Concrete projects behind the argument.
-            </h2>
-            <p>
-              These are the projects that shaped the way I think about machine
-              learning for science: not as generic prediction, but as the craft
-              of building the right approximation for a hard physical problem.
-            </p>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-2">
-            {selectedWork.map((item) => (
-              <article key={item.title} className="pt-1">
-                <p className="eyebrow">
-                  {item.title}
-                </p>
-                <p className="mt-3">
-                  {item.body}
-                </p>
-                <ul className="mt-5 space-y-3 text-sm">
-                  {item.links.map((link) => (
-                    <li key={link.href}>
-                      <a href={link.href} target="_blank" rel="noreferrer">
-                        <strong>{link.label}</strong>
-                        <small>{link.note}</small>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="pt-1">
-          <p className="eyebrow">
-            End goal
-          </p>
-          <p className="mt-3 max-w-4xl">
-            The point is not machine learning for its own sake. The point is to
-            expand our ability to understand and deliberately shape the physical
-            world. Better approximations mean better experiments, better models,
-            better materials, and eventually a more direct form of human control
-            over matter. That is the direction of my research.
-          </p>
-        </section>
       </div>
-    </main >
+      <h2>Vision</h2>
+      <h3>Forward problem: Prediction</h3>
+      <p>
+        The most straightforward application of machine learning is to take an expensive ab initio simulator, run in it enough times, and train a model to appropriate the result. I did this for a <Link href="https://doi.org/10.1016/j.nima.2019.01.031" target="_blank">Cherenkov detector</Link>, for example. This naive approach has crucial practical and fundamental limitations. Practically, for it to make sense, the training dataset must be much smaller than the number of future model invocations. Fundamentally, such an approach will only ever be capable of modelling the systems which can be reliably and cheaply simulated in the first place. Particle physics detectors, where Monte-Carlo simulation repeatedly models interactions of the same types of particles with the same detector, are a good example where straightforward ML surrogate works.
+      </p>
+      <p>
+        The infinitely more interesting and challenging problem is expanding the range of systems which can be modelled. Solve Schrödinger equation for 10 atoms, train a model to predict for 1000. The issue is that such a model can't ever be a naive black box – it must contain some assuptions, some <i>inductive bias</i> about operation of the world. For example, once we agree that interatomic interactions are limited by physical distance, we suddenly can train an ML model on small systems and predict the properties of much larger ones, leading to machine-learning interatomic potentials, the most successful application of ML in materials science to date. We are <Link href="https://omniscale-ai.github.io/" target="_blank">looking for similar scale transitions</Link> across the board.
+      </p>
+      <p>
+        Short-range interactions are the most obvious inductive bias to use. But it's unlikely that it would lead us to things like a tractable superconductivity model. We need better and more creative assumptions. The ongoing explosion of <i>reasoning models</i> offers enticing opportunities here:
+        <ul>
+          <li>AI Theoretician, which would carry analytical math to bound and isolate the black-box approximation among strictly derived equations, similarly to Nobel-prize winning <Link href="https://www.nobelprize.org/prizes/chemistry/1998/summary/" target="_blank">density functional theory</Link></li>
+          <li>AI Phenomenologist – its softer brother who doesn't rely on strict mathematical derivation, but uses the available experimental data and general physical principles to build a working model.</li>
+        </ul>
+      </p>
+      <h3>Inverse problem: Mastery</h3>
+      <p>
+        From the point of view of the applied science, prediction is just scaffolding which enables us to make <i>useful</i> things. The ultimate goal is to <i>control</i> the system, to design it to our needs. This is the inverse problem. It is also much harder, as it requires us to navigate the space of possible solutions, rather than just predicting the outcome for a given input.
+      </p>
+      <p>
+        Formally, the inverse problem can viewed as an optimization problem. For example, see our <Link href="https://doi.org/10.1103/gr2z-3qjp" target="_blank">work on Terahertz antenna</Link>. But most often, such direct formulation is not feasible – real world utility is just too complex to define and too expensive to evaluate on scale.
+      </p>
+      <p>
+        The trad
+      </p>
+    </main>
   );
 }

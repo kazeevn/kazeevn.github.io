@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ResourceAllocationPage() {
   return (
-    <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
+    <main className="prose prose-neutral dark:prose-invert max-w-none flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <div className="w-full space-y-10">
         <div>
           <p className="eyebrow">Research Statement</p>

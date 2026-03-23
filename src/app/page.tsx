@@ -56,13 +56,13 @@ const profileLinks = [
 
 export default function Home() {
   return (
-    <main className="prose flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
+    <main className="prose prose-neutral dark:prose-invert max-w-none flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <section className="w-full">
         <div className="space-y-8">
           <div className="pb-4">
             <div className="grid gap-5 md:grid-cols-[128px_1fr] md:gap-6">
               <div className="mx-auto grid w-full max-w-sm grid-cols-[96px_minmax(0,1fr)] items-center gap-3 sm:grid-cols-[112px_minmax(0,1fr)] sm:gap-4 md:mx-0 md:block md:max-w-[128px]">
-                <div className="relative aspect-4/5 overflow-hidden rounded-2xl">
+                <div className="relative aspect-square overflow-hidden rounded-2xl">
                   <ExportedImage
                     src="/main/nikita-kazeev.webp"
                     alt="Portrait of Nikita Kazeev"
@@ -71,14 +71,15 @@ export default function Home() {
                     placeholder="blur"
                     sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
                     className="object-cover object-top"
+                    style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                 </div>
 
-                <div className="space-y-3 text-left sm:space-y-4 md:mt-4">
-                  <p className="eyebrow">
+                <div className="space-y-1.5 text-left sm:space-y-2 md:mt-4">
+                  <div className="eyebrow">
                     <span className="block">Research Fellow</span>
                     <span className="block">National University of Singapore</span>
-                  </p>
+                  </div>
 
                   <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 md:justify-start">
                     {profileLinks.map((profileLink) => (

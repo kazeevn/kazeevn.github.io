@@ -80,6 +80,12 @@ export default function RootLayout({
               >
                 Leadership
               </Link>
+              <Link
+                href="/blog"
+                className="transition-colors hover:text-neutral-900 dark:hover:text-neutral-100"
+              >
+                Blog
+              </Link>
             </nav>
           </div>
         </header>

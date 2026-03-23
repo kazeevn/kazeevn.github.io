@@ -715,7 +715,7 @@ export default function CvContent() {
   }
 
   return (
-    <main className="prose cv-page flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
+    <main className="prose prose-neutral dark:prose-invert max-w-none cv-page flex w-full flex-1 flex-col px-2 py-6 md:px-0 md:py-8">
       <div className="w-full space-y-8">
         {/* ── Hero ── */}
         <section className="cv-hero space-y-6 border-b border-neutral-200 pb-6 dark:border-neutral-800">
