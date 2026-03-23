@@ -76,7 +76,7 @@ export default function Home() {
                 </div>
 
                 <div className="space-y-1.5 text-left sm:space-y-2 md:mt-4">
-                  <div className="eyebrow">
+                  <div className="eyebrow text-sm md:text-xs leading-snug">
                     <span className="block">Research Fellow</span>
                     <span className="block">National University of Singapore</span>
                   </div>
