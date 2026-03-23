@@ -70,7 +70,7 @@ export default function Home() {
                     preload
                     placeholder="blur"
                     sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, 128px"
-                    className="object-cover object-top"
+                    className="!m-0 object-cover object-top"
                     style={{ objectFit: "cover", objectPosition: "top" }}
                   />
                 </div>
@@ -100,7 +100,7 @@ export default function Home() {
                             placeholder="empty"
                             sizes="(max-width: 640px) 20px, 24px"
                             aria-hidden="true"
-                            className={profileLink.iconClassName}
+                            className={`!m-0 ${profileLink.iconClassName}`}
                           />
                         </span>
                       </Link>

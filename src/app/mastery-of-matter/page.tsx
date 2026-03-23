@@ -158,7 +158,9 @@ export default function MasteryOfMatterPage() {
         Formally, the inverse problem can viewed as an optimization problem. For example, see our <Link href="https://doi.org/10.1103/gr2z-3qjp" target="_blank">work on Terahertz antenna</Link>. But most often, such direct formulation is not feasible – real world utility is just too complex to define and too expensive to evaluate on scale.
       </p>
       <p>
-        The trad
+        The traditional solution to this problem is the multiscale approach we discussed in the forward problem section. It has an important new dimension though: proxy fitness functions, the approximate criteria used to guide the search for solutions. They are typically arranged into a funnnel
+
+        https://doi.org/10.1088/2053-1583/ad4661
       </p>
     </main>
   );
