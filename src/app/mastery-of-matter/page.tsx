@@ -155,12 +155,16 @@ export default function MasteryOfMatterPage() {
         From the point of view of the applied science, prediction is just scaffolding which enables us to make <i>useful</i> things. The ultimate goal is to <i>control</i> the system, to design it to our needs. This is the inverse problem. It is also much harder, as it requires us to navigate the space of possible solutions, rather than just predicting the outcome for a given input.
       </p>
       <p>
-        Formally, the inverse problem can viewed as an optimization problem. For example, see our <Link href="https://doi.org/10.1103/gr2z-3qjp" target="_blank">work on Terahertz antenna</Link>. But most often, such direct formulation is not feasible – real world utility is just too complex to define and too expensive to evaluate on scale.
+        For most real-world applications, the utility function is just too complex to define and expensive to evaluate. The traditional solution is to define a hierachy of proxy functions, each approximating the utility function at a different level of abstraction and cost. For example, see our <Link href="https://doi.org/10.1088/2053-1583/ad4661" target="_blank">review on automated 2D material design</Link>. Again, modern reasoning AI offers an opportunity here: instead of manually crafting proxy functions, they can be generated and refined based on literature and upstream results.
       </p>
       <p>
-        The traditional solution to this problem is the multiscale approach we discussed in the forward problem section. It has an important new dimension though: proxy fitness functions, the approximate criteria used to guide the search for solutions. They are typically arranged into a funnnel
-
-        https://doi.org/10.1088/2053-1583/ad4661
+        Once, at some level, the search space and the fitness function are fixed, the problem becomes an optimization problem. And global optimization is hard, with no unversal algorithm that works for all problems. Optimizaton typically has two things to balance: exploration vs exploitation and the cost of the surrogate model vs the evaluation cost. This leads to very different approaches in different domains.
+      </p>
+      <p>
+        In <Link href="https://doi.org/10.1103/gr2z-3qjp" target="_blank">our work on Terahertz antenna</Link> the fitness function was well-defined and bearable, and the search space high-dimensional, so we went with annealing.
+      </p>
+      <p>
+        In materials science, on the other hand, true fitness is often prohibitively e
       </p>
     </main>
   );

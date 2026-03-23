@@ -66,7 +66,7 @@ const workExperience: WorkEntry[] = [
   {
     organization: "National University of Singapore",
     role: "Postdoc under Kostya Novoselov",
-    period: "2022 - present",
+    period: "2022–present",
     highlights: [
       {
         title: "Leadership",
@@ -140,9 +140,9 @@ const workExperience: WorkEntry[] = [
     ],
   },
   {
-    organization: "CERN [Yandex -> HSE University]",
-    role: "Research scientist",
-    period: "2014 - 2022",
+    organization: "CERN [Yandex → HSE University]",
+    role: "Researcher",
+    period: "2014–2022",
     note: (
       <>
         <a href="https://breakthroughprize.org/Laureates/1/L3995" target="_blank" rel="noreferrer">
@@ -294,7 +294,7 @@ const workExperience: WorkEntry[] = [
 const education: SimpleSectionItem[] = [
   {
     title: "Higher School of Economics (HSE University)",
-    period: "2016 - 2020",
+    period: "2016–2020",
     body: (
       <>
         PhD in Computer Science, supervisor{" "}
@@ -310,8 +310,8 @@ const education: SimpleSectionItem[] = [
     ),
   },
   {
-    title: "Sapienza - Universita di Roma",
-    period: "2016 - 2020",
+    title: "Sapienza — Universita di Roma",
+    period: "2016–2020",
     body: (
       <>
         PhD in Physics (double degree with HSE), supervisor{" "}
@@ -329,16 +329,16 @@ const education: SimpleSectionItem[] = [
   },
   {
     title: "Yandex School of Data Analysis",
-    period: "2013 - 2015",
+    period: "2013–2015",
     body: <>Master&apos;s level CS course covering algorithms, machine learning, deep learning, and distributed systems.</>,
   },
   {
     title: "Moscow Institute of Physics and Technology",
     body: (
       <>
-        <strong>MS in Physics</strong> (2014 - 2016): Optimisation of data processing of the LHCb experiment.
+        <strong>MS in Physics</strong> (2014–2016): Optimisation of data processing of the LHCb experiment.
         <br />
-        <strong>BS in Physics</strong> (2010 - 2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting.
+        <strong>BS in Physics</strong> (2010–2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting.
       </>
     ),
   },
@@ -450,7 +450,7 @@ const teachingAndOutreach: ReactNode[] = [
 ];
 
 const service: ReactNode[] = [
-  "Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023 - 2025).",
+  "Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023–2025).",
   "Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing.",
 ];
 
@@ -725,7 +725,7 @@ export default function CvContent() {
               <h1>Nikita Kazeev</h1>
             </div>
             <div className="flex flex-wrap items-center gap-3 pt-1">
-              <a href={pdfHref} download="Nikita Kazeev - CV [January 2026].pdf" className="cv-download">
+              <a href={pdfHref} download="Nikita Kazeev – CV [January 2026].pdf" className="cv-download">
                 Download PDF
               </a>
               <span className="text-xs text-neutral-400">Jan 2026</span>
