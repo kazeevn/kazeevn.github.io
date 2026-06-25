@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.75in}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Set font to Helvetica or standard sans-serif
+\renewcommand{\familydefault}{\sfdefault}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+\pagestyle{empty} % Suppress page numbers for a clean look
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\LARGE \textbf{ {{ personal.name }} }} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:{{ personal.email }}}{ {{ personal.email }} } $\cdot$ 
+    \href{ {{ personal.website }} }{Website} $\cdot$ 
+    \href{ {{ personal.github }} }{GitHub} $\cdot$ 
+    \href{ {{ personal.linkedin }} }{LinkedIn} $\cdot$ 
+    \href{ {{ personal.scholar }} }{Google Scholar} $\cdot$ 
+    \href{ {{ personal.orcid }} }{ORCID}
+\end{center}
+
+\vspace{6pt}
+
+% Summary/Title
+\begin{center}
+    \textit{ {{ personal.title }} }
+\end{center}
+
+% Work Experience Section
+\section*{Work Experience}
+{% for entry in workExperience %}
+\noindent \textbf{ {{ entry.organization }} } \hfill \textbf{ {{ entry.period }} } \\
+\textit{ {{ entry.role }} }{% if entry.note %} \\ \small {{ entry.note }}{% endif %}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
+{% for h in entry.highlights %}
+  \item \textbf{ {{ h.title }} }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  {% for bullet in h.bullets %}
+    \item {{ bullet }}
+  {% endfor %}
+  \end{itemize}
+{% endfor %}
+\end{itemize}
+\vspace{8pt}
+
+{% endfor %}
+
+% Education Section
+\section*{Education}
+{% for item in education %}
+\noindent \textbf{ {{ item.title }} } \hfill \textbf{ {{ item.period }} } \\
+{{ item.body }}
+\vspace{6pt}
+
+{% endfor %}
+
+% Mentorship Section
+{% if mentorship %}
+\section*{Mentorship}
+\begin{itemize}[leftmargin=*, noitemsep]
+{% for item in mentorship %}
+  \item {{ item.body }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+
+% Teaching Section
+{% if teachingAndOutreach %}
+\section*{Teaching \& Outreach}
+\begin{itemize}[leftmargin=*, noitemsep]
+{% for item in teachingAndOutreach %}
+  \item {{ item.body }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+
+% Service Section
+{% if service %}
+\section*{Service}
+\begin{itemize}[leftmargin=*, noitemsep]
+{% for item in service %}
+  \item {{ item.body }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+
+% Skills Section
+{% if skills %}
+\section*{Skills}
+\noindent
+{% for skill in skills %}
+\textbf{ {{ skill.label }} } {% if skill.detail %}({{ skill.detail }}){% endif %}{% if not loop.last %} $\cdot$ {% endif %}
+{% endfor %}
+{% endif %}
+
+% Publications Section
+\section*{Selected Publications}
+\begin{enumerate}[leftmargin=*, noitemsep]
+{% for pub in publications %}
+  \item {{ pub.citation }}
+{% endfor %}
+\end{enumerate}
+
+\end{document}

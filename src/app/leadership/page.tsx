@@ -43,10 +43,10 @@ export default function LeadershipPage() {
             <p className="eyebrow">
               Leadership
             </p>
-            <h1 className="max-w-4xl">
+            <h1 className="max-w-5xl">
               Leading through research, community, and intellectual clarity.
             </h1>
-            <p className="max-w-3xl">
+            <p className="max-w-4xl">
               My leadership work spans research teams, scientific events,
               mentorship, and public communication. The common thread is simple:
               create structures that help difficult ideas move further, faster,

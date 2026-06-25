@@ -114,7 +114,7 @@ export default function MasteryOfMatterPage() {
         <p className="eyebrow">
           Research Statement
         </p>
-        <h1 className="max-w-4xl">
+        <h1 className="max-w-5xl">
           Mastery of matter means approximate computation
         </h1>
         <StandardModelEquation />

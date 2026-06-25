@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.75in}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Set font to Helvetica or standard sans-serif
+\renewcommand{\familydefault}{\sfdefault}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+\pagestyle{empty} % Suppress page numbers for a clean look
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\LARGE \textbf{ Nikita Kazeev }} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:nikita@kazeev.ru}{ nikita@kazeev.ru } $\cdot$ 
+    \href{ https://kazeevn.github.io }{Website} $\cdot$ 
+    \href{ https://github.com/kazeevn }{GitHub} $\cdot$ 
+    \href{ https://linkedin.com/in/nikita-kazeev }{LinkedIn} $\cdot$ 
+    \href{ https://scholar.google.com/citations?user=vamy2okAAAAJ }{Google Scholar} $\cdot$ 
+    \href{ https://orcid.org/0000-0002-3843-0598 }{ORCID}
+\end{center}
+
+\vspace{6pt}
+
+% Summary/Title
+\begin{center}
+    \textit{ Research Scientist at the intersection of AI and Physics }
+\end{center}
+
+% Work Experience Section
+\section*{Work Experience}
+
+\noindent \textbf{ National University of Singapore } \hfill \textbf{ 2022--present } \\
+\textit{ Postdoc under Kostya Novoselov }
+\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
+
+  \item \textbf{ Transformer for generating symmetric crystals }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Created a generative model for material design based on symmetry inductive bias.
+  
+    \item Implemented the model in PyTorch.
+  
+    \item Achieved the best generation quality and diversity among space-group-conditioned models.
+  
+    \item Led a team of 6.
+  
+  \end{itemize}
+
+  \item \textbf{ ML for predicting properties of defects in 2D crystals }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Created a sparse representation of crystals with defects, achieving 4x energy prediction error reduction.
+  
+    \item Developed code for reproducible parallel running of machine learning experiments.
+  
+    \item Led a team of 3.
+  
+  \end{itemize}
+
+\end{itemize}
+\vspace{8pt}
+
+
+\noindent \textbf{ Constructor Group } \hfill \textbf{ February 2021--present } \\
+\textit{ Machine Learning Consultant }
+\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
+
+  \item \textbf{ AI/ML Consulting }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Consulted on machine learning algorithms, deep learning applications, and architectural designs for scientific and industry-led projects.
+  
+  \end{itemize}
+
+\end{itemize}
+\vspace{8pt}
+
+
+\noindent \textbf{ CERN [Yandex $\rightarrow$ HSE University] } \hfill \textbf{ 2014--2022 } \\
+\textit{ Researcher } \\ \small \href{https://breakthroughprize.org/Laureates/1/L3995}{2025 Breakthrough Prize in Fundamental Physics} as a member of LHCb.
+\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
+
+  \item \textbf{ Generative models uncertainty estimation }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Developed the first methods for estimating uncertainty of conditional GANs.
+  
+    \item Led a team of 3 students.
+  
+  \end{itemize}
+
+  \item \textbf{ Machine learning on noisy data }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Developed a rigorous way to train ML algorithms on data with the label-noise model common in high-energy physics.
+  
+  \end{itemize}
+
+  \item \textbf{ Muon identification at the LHCb experiment at CERN }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Solved a classification problem over tabular data with noisy labels under timing constraints.
+  
+    \item Developed a gradient boosting model that reduced the false positive rate by 30\% in the critical low-track-momentum region.
+  
+    \item Integrated the model into LHCb production, mostly in C++.
+  
+    \item Packaged the work as a data science competition problem for IDAO-2019.
+  
+  \end{itemize}
+
+  \item \textbf{ CatBoost aka fighting biases with dynamic boosting }: 
+  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
+  
+    \item Set up a distributed system for running experiments for the team with Bash and Python.
+  
+    \item Studied gradient boosting improvements with experiments on toy data.
+  
+  \end{itemize}
+
+\end{itemize}
+\vspace{8pt}
+
+
+
+% Education Section
+\section*{Education}
+
+\noindent \textbf{ Higher School of Economics (HSE University) } \hfill \textbf{ 2016--2020 } \\
+PhD in Computer Science, supervisor \href{https://www.linkedin.com/profile/view?id=2422149}{Andrey Ustyuzhanin}; \href{https://repository.cern/records/034yx-nt191}{Machine Learning for particle identification in the LHCb detector}.
+\vspace{6pt}
+
+
+\noindent \textbf{ Sapienza --- Universita di Roma } \hfill \textbf{ 2016--2020 } \\
+PhD in Physics (double degree with HSE), supervisor \href{https://it.linkedin.com/in/barbara-sciascia-234935a}{Barbara Sciascia}.
+\vspace{6pt}
+
+
+\noindent \textbf{ Product Management course at Yandex } \hfill \textbf{ Spring 2018 } \\
+Focused coursework in product strategy and execution.
+\vspace{6pt}
+
+
+\noindent \textbf{ Yandex School of Data Analysis } \hfill \textbf{ 2013--2015 } \\
+Master's level CS course covering algorithms, machine learning, deep learning, and distributed systems.
+\vspace{6pt}
+
+
+\noindent \textbf{ Moscow Institute of Physics and Technology } \hfill \textbf{  } \\
+\textbf{MS in Physics} (2014--2016): Optimisation of data processing of the LHCb experiment.
+
+\textbf{BS in Physics} (2010--2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting.
+\vspace{6pt}
+
+
+
+% Mentorship Section
+
+\section*{Mentorship}
+\begin{itemize}[leftmargin=*, noitemsep]
+
+  \item Mentored 9 students (\href{https://www.hse.ru/edu/vkr/219430466}{1}, \href{https://www.hse.ru/edu/vkr/296294066}{2}, \href{https://www.hse.ru/edu/vkr/219524130}{3}, \href{https://www.hse.ru/en/edu/vkr/470561417}{4}, \href{https://www.hse.ru/en/edu/vkr/470935224}{5}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565328}{6}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565422}{7}, \href{https://www.hse.ru/edu/vkr/624890096}{8}, \href{https://www.hse.ru/ba/ami/students/diplomas/834351454}{9}), 3 interns, and student workshop projects (\href{https://sochisirius.ru/news/3148}{1}, \href{https://www.hse.ru/edu/vkr/296294066}{2}0).
+
+\end{itemize}
+
+
+% Teaching Section
+
+\section*{Teaching \& Outreach}
+\begin{itemize}[leftmargin=*, noitemsep]
+
+  \item Taught at the Machine Learning in High Energy Physics Summer School in \href{https://indico.cern.ch/event/439520/}{2015}, \href{https://indico.cern.ch/event/497368/}{2016}, \href{https://indico.cern.ch/event/613571/}{2017}, \href{https://indico.cern.ch/event/687473/}{2018}, \href{https://indico.cern.ch/event/768915/}{2019}, \href{https://indico.cern.ch/event/838377/}{2020}, \href{https://indico.cern.ch/event/1025052/}{2021}, and \href{https://indico.cern.ch/event/1229514/}{2023}.
+
+  \item Lecturer in the \href{https://www.coursera.org/specializations/aml}{Coursera Advanced Machine Learning specialisation}, which is \href{https://www.hse.ru/en/news/edu/259378493.html}{award-winning}.
+
+  \item Taught and developed an introductory data analysis \href{https://we.hse.ru/en/}{course} at HSE.
+
+  \item Delivered more than 20 \href{https://docs.google.com/document/d/1IOlBse4q0YgEoL\_RCJTvJfbFhFaD\_YMAIJJ3W77B\_X0/edit?usp=sharing}{conference talks}.
+
+\end{itemize}
+
+
+% Service Section
+
+\section*{Service}
+\begin{itemize}[leftmargin=*, noitemsep]
+
+  \item Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023--2025).
+
+  \item Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing.
+
+\end{itemize}
+
+
+% Skills Section
+
+\section*{Skills}
+\noindent
+
+\textbf{ ML \& AI } (Structured, non-text, domain-specific data) $\cdot$ 
+
+\textbf{ Python } (Research coding) $\cdot$ 
+
+\textbf{ PyTorch } (Deep learning) $\cdot$ 
+
+\textbf{ C++ } (Production) $\cdot$ 
+
+\textbf{ Linux } (Administration) $\cdot$ 
+
+\textbf{ Physics } (Deep domain understanding)
+
+
+
+% Publications Section
+\section*{Selected Publications}
+\begin{enumerate}[leftmargin=*, noitemsep]
+
+  \item M. Y. Lukianov, A. Maevskiy, \textbf{N. Kazeev}, D. Mylnikov, D. A. Svintsov, K. S. Novoselov, A. Ustyuzhanin, and D. A. Bandurin. \href{https://doi.org/10.1103/gr2z-3qjp}{Inverse design of broadband antennas for terahertz devices based on two-dimensional materials}. \textit{Physical Review Applied} 24, 054079, November 2025.
+
+  \item \textbf{Kazeev, Nikita}, et al. \href{https://arxiv.org/abs/2503.02407}{WyckoffTransformer: Generation of Symmetric Crystals}. ICML 2025, May 2025.
+
+  \item \textbf{Kazeev, N.}, Al-Maeeni, A.R., Romanov, I. et al. \href{https://doi.org/10.1038/s41524-023-01062-z}{Sparse representation for machine learning the properties of defects in 2D materials}. npj Comput Mater 9, 113 (2023).
+
+  \item Anderlini, L., Chimpoesh, C., \textbf{Kazeev, N.}, Shishigina, A., \& LHCb collaboration. \href{https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088/meta}{Generative models uncertainty estimation}. Journal of Physics: Conference Series, 2023. \textit{I'm the corresponding author.}
+
+  \item M. Borisyak and \textbf{N. Kazeev}. \href{https://doi.org/10.1088\%2F1748-0221\%2F14\%2F08\%2Fp08020}{Machine Learning on data with sPlot background subtraction}. Journal of Instrumentation 14.08 (2019). \textit{I'm the corresponding author.}
+
+  \item Derkach, D., \textbf{Kazeev, N.}, Ratnikov, F., Ustyuzhanin, A., \& Volokhova, A. (2019). \href{https://doi.org/10.1016/j.nima.2019.01.031}{Cherenkov detectors fast simulation using neural networks}. \textit{Nuclear Instruments and Methods in Physics Research Section A}. \textit{I'm the corresponding author.}
+
+\end{enumerate}
+
+\end{document}

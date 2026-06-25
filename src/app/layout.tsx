@@ -42,7 +42,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} ${poiretOne.variable} h-full antialiased`}
     >
-      <body className="mx-4 mt-8 flex min-h-full max-w-4xl flex-col bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 lg:mx-auto">
+      <body className="mx-4 mt-8 flex min-h-full max-w-5xl flex-col bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 lg:mx-auto">
         <header className="sticky top-0 z-10 bg-neutral-50/92 backdrop-blur-sm dark:bg-neutral-900/92">
           <div className="flex w-full flex-wrap items-center justify-between gap-x-6 gap-y-2 px-2 py-2 md:px-0">
             <Link
