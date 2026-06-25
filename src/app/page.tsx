@@ -114,13 +114,19 @@ export default function Home() {
                   Turning hard science into usable intelligence
                 </h1>
                 <p className="max-w-4xl">
-                  Nikita Kazeev is a Research Fellow in the laboratory of Professor Kostya Novoselov at the Institute for Functional Intelligent Materials, National University of Singapore (NUS). He holds a dual PhD degree in CS from HSE University and in Physics from Sapienza Università di Roma. He completed his undergraduate studies at the Moscow Institute of Physics and Technology and graduated from the Yandex School of Data Analysis.
+                  Nikita Kazeev is a Research Fellow in the laboratory of Professor Kostya Novoselov at the National University of Singapore (NUS). His work starts from the premise that, if you look deep enough, <Link href="/mastery-of-matter">most of science is approximate computation</Link>, and machine learning is the best tool we have for building those approximations – a way to expand the frontier of what we can predict and, ultimately, control in the physical world.
                 </p>
                 <p className="max-w-4xl">
-                  Prior to joining NUS, Dr. Kazeev worked at CERN, where he applied machine learning techniques to complex challenges in high-energy physics; he received the <Link href="https://breakthroughprize.org/Laureates/1/L3995">2025 Breakthrough Prize in Fundamental Physics</Link> as a part of the LHCb collaboration.
+                  He holds a dual PhD in Computer Science from HSE University and in Physics from Sapienza Università di Roma, studied as an undergraduate at the Moscow Institute of Physics and Technology, and graduated from the Yandex School of Data Analysis.
                 </p>
                 <p className="max-w-4xl">
-                  His current research at NUS is focused on pioneering the use of machine learning for the discovery and design of novel materials. Dr. Kazeev is deeply involved in fostering the AI/ML research community. He was the main organizer for the <Link href="https://multiscale-ai.github.io/">ICLR 2025 Workshop on Machine Learning for Multiscale Processes</Link> and the Program Chair for the <Link href="https://ai4x.cc/">AI4X 2025/6 conference</Link>. Furthermore, he is a co-Principal Investigator on a US$3.4 million AI Singapore grant dedicated to advancing multiscale machine learning.
+                  Prior to joining NUS, Dr. Kazeev worked at CERN, applying machine learning to structured data and ML-driven simulation in high-energy physics; he received the <Link href="https://breakthroughprize.org/Laureates/1/L3995" target="_blank" rel="noreferrer">2025 Breakthrough Prize in Fundamental Physics</Link> as a part of the LHCb collaboration.
+                </p>
+                <p className="max-w-4xl">
+                  At NUS his research centers on making AI an instrument for scientific discovery – starting with the design of new materials, and reaching beyond. He is deeply involved in building the AI-for-science community: he was the main organizer of the <Link href="https://multiscale-ai.github.io/" target="_blank">ICLR 2025 Workshop on Machine Learning for Multiscale Processes</Link> and Program Chair for the <Link href="https://ai4x.cc/" target="_blank">AI4X 2025/6 conference</Link>, and is co-Principal Investigator on a US$3.4 million AI Singapore grant for multiscale machine learning. He works on turning AI into <Link href="/reward-signal-for-the-academy">a fair and objective tool</Link> for science governance.
+                </p>
+                <p className="max-w-4xl">
+                  Beyond academia, he is an AI Advisor at <Link href="https://perfomax.io/" target="_blank">Perfomax</Link> and has been a machine learning consultant to the <Link href="https://constructor.org/" target="_blank">Constructor Group</Link> since 2021, helping translate frontier methods into shipped products across science and industry.
                 </p>
               </div>
             </div>
