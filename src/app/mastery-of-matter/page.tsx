@@ -145,11 +145,11 @@ export default function MasteryOfMatterPage() {
       </p>
       <p>
         Short-range interactions are the most obvious inductive bias to use. But it's unlikely that it would lead us to things like a tractable superconductivity model. We need better and more creative assumptions. The ongoing explosion of <i>reasoning models</i> offers enticing opportunities here:
-        <ul>
-          <li>AI Theoretician, which would carry analytical math to bound and isolate the black-box approximation among strictly derived equations, similarly to Nobel-prize winning <Link href="https://www.nobelprize.org/prizes/chemistry/1998/summary/" target="_blank">density functional theory</Link></li>
-          <li>AI Phenomenologist – its softer brother who doesn't rely on strict mathematical derivation, but uses the available experimental data and general physical principles to build a working model.</li>
-        </ul>
       </p>
+      <ul>
+        <li>AI Theoretician, which would carry analytical math to bound and isolate the black-box approximation among strictly derived equations, similarly to Nobel-prize winning <Link href="https://www.nobelprize.org/prizes/chemistry/1998/summary/" target="_blank">density functional theory</Link></li>
+        <li>AI Phenomenologist – its softer brother who doesn't rely on strict mathematical derivation, but uses the available experimental data and general physical principles to build a working model.</li>
+      </ul>
       <h3>Inverse problem: Mastery</h3>
       <p>
         From the point of view of the applied science, prediction is just scaffolding which enables us to make <i>useful</i> things. The ultimate goal is to <i>control</i> the system, to design it to our needs. This is the inverse problem. It is also much harder, as it requires us to navigate the space of possible solutions, rather than just predicting the outcome for a given input.

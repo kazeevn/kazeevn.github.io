@@ -117,10 +117,10 @@ export default function Home() {
                   Nikita Kazeev is a Research Fellow in the laboratory of Professor Kostya Novoselov at the Institute for Functional Intelligent Materials, National University of Singapore (NUS). He holds a dual PhD degree in CS from HSE University and in Physics from Sapienza Università di Roma. He completed his undergraduate studies at the Moscow Institute of Physics and Technology and graduated from the Yandex School of Data Analysis.
                 </p>
                 <p className="max-w-4xl">
-                  Prior to joining NUS, Dr. Kazeev worked at CERN, where he specialized in applying machine learning techniques to complex challenges in high-energy physics; he received the <Link href="https://breakthroughprize.org/Laureates/1/L3995">2025 Breakthrough Prize in Fundamental Physics</Link> as a part of the LHCb collaboration.
+                  Prior to joining NUS, Dr. Kazeev worked at CERN, where he applied machine learning techniques to complex challenges in high-energy physics; he received the <Link href="https://breakthroughprize.org/Laureates/1/L3995">2025 Breakthrough Prize in Fundamental Physics</Link> as a part of the LHCb collaboration.
                 </p>
                 <p className="max-w-4xl">
-                  His current research at NUS is focused on pioneering the use of machine learning for the discovery and design of novel materials. Dr. Kazeev is deeply involved in fostering the AI/ML research community. He was the main organizer for the <Link href="https://multiscale-ai.github.io/">ICLR 2025 Workshop on Machine Learning for Multiscale Processes</Link> and the deputy chair of the scientific committee for the <Link href="https://ai4x.cc/">AI4X conference</Link>. Furthermore, he is a co-Principal Investigator on a US$3.4 million AI Singapore grant dedicated to advancing multiscale machine learning.
+                  His current research at NUS is focused on pioneering the use of machine learning for the discovery and design of novel materials. Dr. Kazeev is deeply involved in fostering the AI/ML research community. He was the main organizer for the <Link href="https://multiscale-ai.github.io/">ICLR 2025 Workshop on Machine Learning for Multiscale Processes</Link> and the Program Chair for the <Link href="https://ai4x.cc/">AI4X 2025/6 conference</Link>. Furthermore, he is a co-Principal Investigator on a US$3.4 million AI Singapore grant dedicated to advancing multiscale machine learning.
                 </p>
               </div>
             </div>
