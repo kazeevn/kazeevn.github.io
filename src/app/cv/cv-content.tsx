@@ -13,7 +13,7 @@ type ReferenceLink = {
 type Highlight = {
   title: string;
   references?: ReferenceLink[];
-  bullets: string[];
+  bullets?: string[];
   skills: string[];
 };
 
@@ -22,7 +22,7 @@ type WorkEntry = {
   role: string;
   period: string;
   note?: string;
-  highlights: Highlight[];
+  highlights?: Highlight[];
 };
 
 type SimpleSectionItem = {
@@ -75,7 +75,7 @@ const sectionNav = [
 /* ── Compute which skills have associated projects ── */
 const skillsWithProjects = new Set<string>();
 for (const entry of workExperience) {
-  for (const h of entry.highlights) {
+  for (const h of entry.highlights ?? []) {
     for (const s of h.skills) {
       skillsWithProjects.add(s);
     }
@@ -243,7 +243,7 @@ export default function CvContent() {
   }
 
   function entryHasMatch(entry: WorkEntry): boolean {
-    return activeSkill === null || entry.highlights.some((h) => h.skills.includes(activeSkill));
+    return activeSkill === null || (entry.highlights?.some((h) => h.skills.includes(activeSkill)) ?? false);
   }
 
   return (
@@ -364,7 +364,7 @@ export default function CvContent() {
                 )}
 
                 <div className="mt-4 space-y-2">
-                  {entry.highlights.map((highlight, hIndex) => {
+                  {(entry.highlights ?? []).map((highlight, hIndex) => {
                     const matches = highlightMatches(highlight);
                     const shouldOpen = activeSkill ? matches : hIndex === 0;
                     return (
@@ -393,11 +393,13 @@ export default function CvContent() {
                             ))}
                           </div>
                           {highlight.references ? <ReferenceList links={highlight.references} /> : null}
-                          <ul className="list-disc pl-5 space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
-                            {highlight.bullets.map((bullet, index) => (
-                              <li key={index}>{renderFormattedText(bullet)}</li>
-                            ))}
-                          </ul>
+                          {highlight.bullets && highlight.bullets.length > 0 ? (
+                            <ul className="list-disc pl-5 space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
+                              {highlight.bullets.map((bullet, index) => (
+                                <li key={index}>{renderFormattedText(bullet)}</li>
+                              ))}
+                            </ul>
+                          ) : null}
                         </div>
                       </details>
                     );

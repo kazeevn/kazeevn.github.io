@@ -44,16 +44,19 @@
 {% for entry in workExperience %}
 \noindent \textbf{ {{ entry.organization }} } \hfill \textbf{ {{ entry.period }} } \\
 \textit{ {{ entry.role }} }{% if entry.note %} \\ \small {{ entry.note }}{% endif %}
+{% if entry.highlights %}
 \begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
 {% for h in entry.highlights %}
-  \item \textbf{ {{ h.title }} }: 
+  \item \textbf{ {{ h.title }} }{% if h.bullets %}:
   \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
   {% for bullet in h.bullets %}
     \item {{ bullet }}
   {% endfor %}
   \end{itemize}
+  {% endif %}
 {% endfor %}
 \end{itemize}
+{% endif %}
 \vspace{8pt}
 
 {% endfor %}

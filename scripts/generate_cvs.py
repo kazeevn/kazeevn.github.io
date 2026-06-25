@@ -90,8 +90,11 @@ def filter_cv_data(data, target_tag):
     # Filter experience
     filtered_exp = []
     for entry in data["workExperience"]:
-        filtered_highlights = [h for h in entry["highlights"] if target_tag in h.get("tags", [])]
-        if filtered_highlights:
+        highlights = entry.get("highlights", [])
+        filtered_highlights = [h for h in highlights if target_tag in h.get("tags", [])]
+        # Keep an entry if it has matching highlights, or if it has no highlights
+        # at all but its own tags match the variant.
+        if filtered_highlights or (not highlights and target_tag in entry.get("tags", [])):
             entry_copy = entry.copy()
             entry_copy["highlights"] = filtered_highlights
             filtered_exp.append(entry_copy)
