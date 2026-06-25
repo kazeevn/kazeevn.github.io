@@ -152,7 +152,7 @@ function CvStatCard({ stat }: { stat: Stat }) {
               placeholder="empty"
               className="h-9 w-9 object-contain"
             />
-            <span className="text-[10px] font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200">
+            <span className="text-xs font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200">
               {stat.value}
             </span>
           </>
@@ -349,7 +349,7 @@ export default function CvContent() {
               >
                 <div className="cv-entry-header">
                   <div>
-                    <h3 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+                    <h3 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
                       {entry.organization}
                     </h3>
                     <p className="cv-role">{entry.role}</p>

@@ -121,7 +121,7 @@ a {
 }
 
 .cv-stat-label {
-  @apply mt-1.5 text-[11px] leading-tight tracking-tight text-neutral-500 dark:text-neutral-400;
+  @apply mt-1.5 text-xs leading-tight tracking-tight text-neutral-500 dark:text-neutral-400;
 }
 
 .cv-stat-label--interactive {
@@ -216,7 +216,7 @@ a {
 }
 
 .cv-skill-detail {
-  @apply text-[11px] leading-tight text-neutral-500 dark:text-neutral-400;
+  @apply text-xs leading-tight text-neutral-500 dark:text-neutral-400;
 }
 
 /* ── Project skill tags ── */
@@ -226,7 +226,7 @@ a {
 }
 
 .cv-project-skill {
-  @apply rounded-md border border-neutral-200 px-1.5 py-0.5 text-[10px] leading-tight text-neutral-500 transition-all dark:border-neutral-700 dark:text-neutral-500;
+  @apply rounded-md border border-neutral-200 px-1.5 py-0.5 text-xs leading-tight text-neutral-500 transition-all dark:border-neutral-700 dark:text-neutral-500;
 }
 
 .cv-project-skill:hover {
