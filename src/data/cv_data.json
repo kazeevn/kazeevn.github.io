@@ -2,15 +2,18 @@
   "personal": {
     "name": "Nikita Kazeev",
     "title": "Research Scientist at the intersection of AI and Physics",
-    "email": "nikita@kazeev.ru",
+    "email": "kazeevn@gmail.com",
     "website": "https://kazeevn.github.io",
     "github": "https://github.com/kazeevn",
     "linkedin": "https://linkedin.com/in/nikita-kazeev",
     "scholar": "https://scholar.google.com/citations?user=vamy2okAAAAJ",
-    "orcid": "https://orcid.org/0000-0002-3843-0598"
+    "orcid": "https://orcid.org/0000-0002-5699-7634"
   },
   "stats": [
-    { "value": "12", "label": "years in research" },
+    {
+      "value": "12",
+      "label": "years in research"
+    },
     {
       "value": "≥78",
       "label": "h-index",
@@ -20,9 +23,18 @@
         "align": "right"
       }
     },
-    { "value": "9", "label": "students mentored" },
-    { "value": "$3.4M", "label": "grant co-PI" },
-    { "value": "20+", "label": "conference talks" },
+    {
+      "value": "9",
+      "label": "students mentored"
+    },
+    {
+      "value": "$3.4M",
+      "label": "grant co-PI"
+    },
+    {
+      "value": "20+",
+      "label": "conference talks"
+    },
     {
       "value": "Breakthrough Prize",
       "label": "Breakthrough Prize 2025",
@@ -30,14 +42,77 @@
     }
   ],
   "skills": [
-    { "label": "ML & AI", "detail": "Structured, non-text, domain-specific data", "tags": ["atomistic", "agents", "finance", "industry"] },
-    { "label": "Python", "detail": "Research coding", "tags": ["atomistic", "agents", "finance", "industry"] },
-    { "label": "PyTorch", "detail": "Deep learning", "tags": ["atomistic", "agents", "finance", "industry"] },
-    { "label": "C++", "detail": "Production", "tags": ["atomistic", "finance"] },
-    { "label": "Linux", "detail": "Administration", "tags": ["atomistic", "finance", "industry"] },
-    { "label": "Research Writing & Speaking", "tags": ["atomistic", "agents", "industry"] },
-    { "label": "Physics", "detail": "Deep domain understanding", "tags": ["atomistic", "finance"] },
-    { "label": "Leadership & Mentorship", "tags": ["atomistic", "agents", "industry"] }
+    {
+      "label": "ML & AI",
+      "detail": "Structured, non-text, domain-specific data",
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
+    },
+    {
+      "label": "Python",
+      "detail": "Research coding",
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
+    },
+    {
+      "label": "PyTorch",
+      "detail": "Deep learning",
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
+    },
+    {
+      "label": "C++",
+      "detail": "Production",
+      "tags": [
+        "atomistic",
+        "finance"
+      ]
+    },
+    {
+      "label": "Linux",
+      "detail": "Administration",
+      "tags": [
+        "atomistic",
+        "finance",
+        "industry"
+      ]
+    },
+    {
+      "label": "Research Writing & Speaking",
+      "tags": [
+        "atomistic",
+        "agents",
+        "industry"
+      ]
+    },
+    {
+      "label": "Physics",
+      "detail": "Deep domain understanding",
+      "tags": [
+        "atomistic",
+        "finance"
+      ]
+    },
+    {
+      "label": "Leadership & Mentorship",
+      "tags": [
+        "atomistic",
+        "agents",
+        "industry"
+      ]
+    }
   ],
   "workExperience": [
     {
@@ -45,15 +120,24 @@
       "role": "AI Advisor",
       "period": "May 2026–present",
       "url": "https://perfomax.io/",
-      "tags": ["agents", "industry"],
+      "tags": [
+        "agents",
+        "industry"
+      ],
       "highlights": [
         {
           "title": "AI Strategy & Platform Architecture",
-          "skills": ["Leadership & Mentorship", "Research Writing & Speaking"],
+          "skills": [
+            "Leadership & Mentorship",
+            "Research Writing & Speaking"
+          ],
           "bullets": [
             "Advised on AI/ML strategy, product implementation, and technical design for the platform."
           ],
-          "tags": ["agents", "industry"]
+          "tags": [
+            "agents",
+            "industry"
+          ]
         }
       ]
     },
@@ -61,27 +145,56 @@
       "organization": "National University of Singapore",
       "role": "Postdoc under Kostya Novoselov",
       "period": "2022–present",
-      "tags": ["atomistic", "agents", "finance", "industry"],
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ],
       "highlights": [
         {
           "title": "Leadership",
-          "skills": ["Leadership & Mentorship", "Research Writing & Speaking"],
+          "skills": [
+            "Leadership & Mentorship",
+            "Research Writing & Speaking"
+          ],
           "references": [
-            { "href": "https://ai4x.cc/", "label": "AI4X 2025 conference" },
-            { "href": "https://openreview.net/forum?id=uAtjhZW1QV", "label": "ICLR 2025 workshop" }
+            {
+              "href": "https://ai4x.cc/",
+              "label": "AI4X 2025 conference"
+            },
+            {
+              "href": "https://openreview.net/forum?id=uAtjhZW1QV",
+              "label": "ICLR 2025 workshop"
+            }
           ],
           "bullets": [
             "Speaker search and selection for the 500-person AI4X 2025 conference.",
             "Main organizer of the ICLR 2025 workshop on multiscale machine learning."
           ],
-          "tags": ["agents", "industry"]
+          "tags": [
+            "agents",
+            "industry"
+          ]
         },
         {
           "title": "Transformer for generating symmetric crystals",
-          "skills": ["ML & AI", "Python", "PyTorch", "Physics", "Leadership & Mentorship"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "PyTorch",
+            "Physics",
+            "Leadership & Mentorship"
+          ],
           "references": [
-            { "href": "https://icml.cc/virtual/2025/poster/44595", "label": "ICML 2025" },
-            { "href": "https://github.com/SymmetryAdvantage/WyckoffTransformer", "label": "code" }
+            {
+              "href": "https://icml.cc/virtual/2025/poster/44595",
+              "label": "ICML 2025"
+            },
+            {
+              "href": "https://github.com/SymmetryAdvantage/WyckoffTransformer",
+              "label": "code"
+            }
           ],
           "bullets": [
             "Created a generative model for material design based on symmetry inductive bias.",
@@ -89,24 +202,55 @@
             "Achieved the best generation quality and diversity among space-group-conditioned models.",
             "Led a team of 6."
           ],
-          "tags": ["atomistic", "agents", "finance", "industry"]
+          "tags": [
+            "atomistic",
+            "agents",
+            "finance",
+            "industry"
+          ]
         },
         {
           "title": "ML for predicting properties of defects in 2D crystals",
-          "skills": ["ML & AI", "Python", "PyTorch", "Physics", "Leadership & Mentorship", "Linux"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "PyTorch",
+            "Physics",
+            "Leadership & Mentorship",
+            "Linux"
+          ],
           "references": [
-            { "href": "https://www.nature.com/articles/s41699-023-00369-1", "label": "paper 1" },
-            { "href": "https://www.nature.com/articles/s41524-023-01062-z", "label": "paper 2" },
-            { "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vamy2okAAAAJ&sortby=pubdate&citation_for_view=vamy2okAAAAJ:uAPFzskPt0AC", "label": "patent" },
-            { "href": "https://web.archive.org/web/20221003090951/https://mh22-mrs.org.sg/", "label": "conference" },
-            { "href": "https://github.com/HSE-LAMBDA/ai4material_design", "label": "code" }
+            {
+              "href": "https://www.nature.com/articles/s41699-023-00369-1",
+              "label": "paper 1"
+            },
+            {
+              "href": "https://www.nature.com/articles/s41524-023-01062-z",
+              "label": "paper 2"
+            },
+            {
+              "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vamy2okAAAAJ&sortby=pubdate&citation_for_view=vamy2okAAAAJ:uAPFzskPt0AC",
+              "label": "patent"
+            },
+            {
+              "href": "https://web.archive.org/web/20221003090951/https://mh22-mrs.org.sg/",
+              "label": "conference"
+            },
+            {
+              "href": "https://github.com/HSE-LAMBDA/ai4material_design",
+              "label": "code"
+            }
           ],
           "bullets": [
             "Created a sparse representation of crystals with defects, achieving 4x energy prediction error reduction.",
             "Developed code for reproducible parallel running of machine learning experiments.",
             "Led a team of 3."
           ],
-          "tags": ["atomistic", "finance", "industry"]
+          "tags": [
+            "atomistic",
+            "finance",
+            "industry"
+          ]
         }
       ]
     },
@@ -115,15 +259,29 @@
       "role": "Machine Learning Consultant",
       "period": "February 2021–present",
       "url": "https://constructor.org/",
-      "tags": ["atomistic", "finance", "industry"],
+      "tags": [
+        "atomistic",
+        "finance",
+        "industry"
+      ],
       "highlights": [
         {
           "title": "AI/ML Consulting",
-          "skills": ["ML & AI", "Python", "C++", "Physics", "Research Writing & Speaking"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "C++",
+            "Physics",
+            "Research Writing & Speaking"
+          ],
           "bullets": [
             "Consulted on machine learning algorithms, deep learning applications, and architectural designs for scientific and industry-led projects."
           ],
-          "tags": ["atomistic", "finance", "industry"]
+          "tags": [
+            "atomistic",
+            "finance",
+            "industry"
+          ]
         }
       ]
     },
@@ -131,59 +289,136 @@
       "organization": "CERN [Yandex → HSE University]",
       "role": "Researcher",
       "period": "2014–2022",
-      "tags": ["atomistic", "agents", "finance", "industry"],
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ],
       "note": "[2025 Breakthrough Prize in Fundamental Physics](https://breakthroughprize.org/Laureates/1/L3995) as a member of LHCb.",
       "highlights": [
         {
           "title": "Generative models uncertainty estimation",
-          "skills": ["ML & AI", "Python", "PyTorch", "Physics", "Leadership & Mentorship"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "PyTorch",
+            "Physics",
+            "Leadership & Mentorship"
+          ],
           "references": [
-            { "href": "https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088", "label": "paper" },
-            { "href": "https://cds.cern.ch/record/2837844", "label": "conference" },
-            { "href": "https://gitlab.com/lambda-hse/lhcb-rich-gan-uncertainty", "label": "code 1" },
-            { "href": "https://gitlab.com/lambda-hse/gan-uncertainty-ensembles", "label": "code 2" }
+            {
+              "href": "https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088",
+              "label": "paper"
+            },
+            {
+              "href": "https://cds.cern.ch/record/2837844",
+              "label": "conference"
+            },
+            {
+              "href": "https://gitlab.com/lambda-hse/lhcb-rich-gan-uncertainty",
+              "label": "code 1"
+            },
+            {
+              "href": "https://gitlab.com/lambda-hse/gan-uncertainty-ensembles",
+              "label": "code 2"
+            }
           ],
           "bullets": [
             "Developed the first methods for estimating uncertainty of conditional GANs.",
             "Led a team of 3 students."
           ],
-          "tags": ["agents", "finance"]
+          "tags": [
+            "agents",
+            "finance"
+          ]
         },
         {
           "title": "Generative models for fast simulation",
-          "skills": ["ML & AI", "Python", "Physics", "Research Writing & Speaking"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "Physics",
+            "Research Writing & Speaking"
+          ],
           "references": [
-            { "href": "https://www.sciencedirect.com/science/article/pii/S0168900219300701", "label": "paper 1" },
-            { "href": "https://arxiv.org/abs/1905.11825", "label": "paper 2" },
-            { "href": "https://ml4physicalsciences.github.io/2019/files/NeurIPS_ML4PS_2019_40.pdf", "label": "paper 3" },
-            { "href": "https://github.com/yandexdataschool/QuantileTransformerTF", "label": "code" }
+            {
+              "href": "https://www.sciencedirect.com/science/article/pii/S0168900219300701",
+              "label": "paper 1"
+            },
+            {
+              "href": "https://arxiv.org/abs/1905.11825",
+              "label": "paper 2"
+            },
+            {
+              "href": "https://ml4physicalsciences.github.io/2019/files/NeurIPS_ML4PS_2019_40.pdf",
+              "label": "paper 3"
+            },
+            {
+              "href": "https://github.com/yandexdataschool/QuantileTransformerTF",
+              "label": "code"
+            }
           ],
           "bullets": [
             "Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data.",
             "Achieved approximately 10^5 speed-up compared to the ab-initio simulator."
           ],
-          "tags": ["atomistic", "agents"]
+          "tags": [
+            "atomistic",
+            "agents"
+          ]
         },
         {
           "title": "Machine learning on noisy data",
-          "skills": ["ML & AI", "Python", "PyTorch", "Physics"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "PyTorch",
+            "Physics"
+          ],
           "references": [
-            { "href": "http://doi.org/10.1088/1748-0221/14/08/P08020", "label": "paper 1" },
-            { "href": "https://ml4physicalsciences.github.io/2019/files/NeurIPS_ML4PS_2019_122.pdf", "label": "paper 2" },
-            { "href": "https://github.com/yandexdataschool/ML-sWeights-experiments/", "label": "code" }
+            {
+              "href": "http://doi.org/10.1088/1748-0221/14/08/P08020",
+              "label": "paper 1"
+            },
+            {
+              "href": "https://ml4physicalsciences.github.io/2019/files/NeurIPS_ML4PS_2019_122.pdf",
+              "label": "paper 2"
+            },
+            {
+              "href": "https://github.com/yandexdataschool/ML-sWeights-experiments/",
+              "label": "code"
+            }
           ],
           "bullets": [
             "Developed a rigorous way to train ML algorithms on data with the label-noise model common in high-energy physics."
           ],
-          "tags": ["atomistic", "finance"]
+          "tags": [
+            "atomistic",
+            "finance"
+          ]
         },
         {
           "title": "Muon identification at the LHCb experiment at CERN",
-          "skills": ["ML & AI", "Python", "C++", "Physics"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "C++",
+            "Physics"
+          ],
           "references": [
-            { "href": "https://iopscience.iop.org/article/10.1088/1742-6596/1525/1/012100/pdf", "label": "paper" },
-            { "href": "https://indico.cern.ch/event/708041/contributions/3272104/", "label": "poster" },
-            { "href": "https://web.archive.org/web/20260209172339/https://idao.world/history/#idao-2019", "label": "IDAO-2019" }
+            {
+              "href": "https://iopscience.iop.org/article/10.1088/1742-6596/1525/1/012100/pdf",
+              "label": "paper"
+            },
+            {
+              "href": "https://indico.cern.ch/event/708041/contributions/3272104/",
+              "label": "poster"
+            },
+            {
+              "href": "https://web.archive.org/web/20260209172339/https://idao.world/history/#idao-2019",
+              "label": "IDAO-2019"
+            }
           ],
           "bullets": [
             "Solved a classification problem over tabular data with noisy labels under timing constraints.",
@@ -191,19 +426,33 @@
             "Integrated the model into LHCb production, mostly in C++.",
             "Packaged the work as a data science competition problem for IDAO-2019."
           ],
-          "tags": ["atomistic", "finance", "industry"]
+          "tags": [
+            "atomistic",
+            "finance",
+            "industry"
+          ]
         },
         {
           "title": "CatBoost aka fighting biases with dynamic boosting",
-          "skills": ["ML & AI", "Python", "Linux"],
+          "skills": [
+            "ML & AI",
+            "Python",
+            "Linux"
+          ],
           "references": [
-            { "href": "https://arxiv.org/abs/1706.09516v1", "label": "paper" }
+            {
+              "href": "https://arxiv.org/abs/1706.09516v1",
+              "label": "paper"
+            }
           ],
           "bullets": [
             "Set up a distributed system for running experiments for the team with Bash and Python.",
             "Studied gradient boosting improvements with experiments on toy data."
           ],
-          "tags": ["finance", "industry"]
+          "tags": [
+            "finance",
+            "industry"
+          ]
         }
       ]
     }
@@ -237,107 +486,196 @@
   "mentorship": [
     {
       "body": "Mentored 9 students ([1](https://www.hse.ru/edu/vkr/219430466), [2](https://www.hse.ru/edu/vkr/296294066), [3](https://www.hse.ru/edu/vkr/219524130), [4](https://www.hse.ru/en/edu/vkr/470561417), [5](https://www.hse.ru/en/edu/vkr/470935224), [6](https://www.hse.ru/ma/datasci/students/diplomas/631565328), [7](https://www.hse.ru/ma/datasci/students/diplomas/631565422), [8](https://www.hse.ru/edu/vkr/624890096), [9](https://www.hse.ru/ba/ami/students/diplomas/834351454)), 3 interns, and student workshop projects ([1](https://sochisirius.ru/news/3148), [2](https://web.archive.org/web/20220512040654/https://academy.yandex.ru/posts/vossozdat-arkhitekturu-bazy-dannykh-i-nauchit-golosovogo-pomoschnika-predskazyvat-namereniya-polzovatelya)).",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
     },
     {
       "body": "Student council member from 2013 to 2016, leading several dormitory-scale IT projects.",
-      "tags": ["agents", "industry"]
+      "tags": [
+        "agents",
+        "industry"
+      ]
     },
     {
       "body": "Co-PI of a $3.4m AI Singapore grant on multiscale machine learning.",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "industry"
+      ]
     }
   ],
   "teachingAndOutreach": [
     {
       "body": "Pitch research to the general public through major newspaper coverage ([1](https://www.kommersant.ru/doc/7832307), [2](https://www.kommersant.ru/doc/6122817)), blog posts ([1](https://ifim.nus.edu.sg/tailor-made-2d-materials-became-closer-with-the-new-machine-learning-algorithm-developed-at-nus/), [2](https://communities.springernature.com/posts/sparse-representation-for-machine-learning-the-properties-of-defects-in-2d-materials)), a [science slam](https://elementy.ru/events/435506/IV_Nauchnye_boi_NIU_VShE_na_Dne_Vyshki), interviews ([1](https://web.archive.org/web/20210518043835/https://academy.yandex.ru/posts/beresh-i-razbiraeshsya), [2](https://habr.com/en/company/yandex/blog/422761/)), and a public [talk](https://www.youtube.com/watch?v=zLFZ_z-7-JI&feature=youtu.be&t=7779).",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "industry"
+      ]
     },
     {
       "body": "Taught at the Machine Learning in High Energy Physics Summer School in [2015](https://indico.cern.ch/event/439520/), [2016](https://indico.cern.ch/event/497368/), [2017](https://indico.cern.ch/event/613571/), [2018](https://indico.cern.ch/event/687473/), [2019](https://indico.cern.ch/event/768915/), [2020](https://indico.cern.ch/event/838377/), [2021](https://indico.cern.ch/event/1025052/), and [2023](https://indico.cern.ch/event/1229514/).",
-      "tags": ["atomistic", "finance", "industry"]
+      "tags": [
+        "atomistic",
+        "finance",
+        "industry"
+      ]
     },
     {
       "body": "Lecturer in the [Coursera Advanced Machine Learning specialisation](https://www.coursera.org/specializations/aml), which is [award-winning](https://www.hse.ru/en/news/edu/259378493.html).",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
     },
     {
       "body": "Taught and developed an introductory data analysis [course](https://we.hse.ru/en/) at HSE.",
-      "tags": ["finance", "industry"]
+      "tags": [
+        "finance",
+        "industry"
+      ]
     },
     {
       "body": "Delivered more than 20 [conference talks](https://docs.google.com/document/d/1IOlBse4q0YgEoL_RCJTvJfbFhFaD_YMAIJJ3W77B_X0/edit?usp=sharing).",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
     }
   ],
   "publications": [
     {
       "citation": "**Kazeev, Nikita**, and Ian Babich. [Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments](https://openreview.net/forum?id=GhUK6VGW67). OpenReview, June 2026.",
-      "tags": ["agents", "atomistic"]
+      "tags": [
+        "agents",
+        "atomistic"
+      ]
     },
     {
       "citation": "**Kazeev, Nikita**, and Phan Bui Nhat Huyen. [Position: Align AI to Our Aspirations, Not Our Flaws](https://openreview.net/forum?id=J3Vqv2fFse). Pluralistic Alignment Workshop at ICML 2026, June 2026.",
-      "tags": ["agents", "industry"]
+      "tags": [
+        "agents",
+        "industry"
+      ]
     },
     {
       "citation": "Artem Dembitskiy, Shuya Yamazaki, Artem Maevskiy, **Nikita Kazeev**, Roman A. Eremin, Semen Budennyy, Kedar Hippalgaonkar, Antonio Helio Castro Neto, and Andrey E. Ustyuzhanin. [Generative Pipeline for Discovering Solid-State Battery Materials with Universal Atomistic Potentials](https://openreview.net/forum?id=xFI6K4ZQDp). ICML 2026 AI for Science Workshop, May 2026.",
-      "tags": ["atomistic", "industry"]
+      "tags": [
+        "atomistic",
+        "industry"
+      ]
     },
     {
       "citation": "Nian Liu, **Nikita Kazeev**, Stephen Gregory Dale, Artem Maevskiy, Yuwei Zeng, Ryoji Kubo, Pengru Huang, Thomas Laurent, Yann LeCun, Kostya S. Novoselov, and Xavier Bresson. [Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement](https://arxiv.org/abs/2605.14759). arXiv preprint arXiv:2605.14759, May 2026.",
-      "tags": ["atomistic", "agents"]
+      "tags": [
+        "atomistic",
+        "agents"
+      ]
     },
     {
       "citation": "Nian Liu, Yuwei Zeng, Ryoji Kubo, **Nikita Kazeev**, Stephen Gregory Dale, Artem Maevskiy, Pengru Huang, Thomas Laurent, Kostya S. Novoselov, and Xavier Bresson. [Composable Crystals: Controllable Materials Discovery via Concept Learning](https://arxiv.org/abs/2605.14769). arXiv preprint arXiv:2605.14769, May 2026.",
-      "tags": ["atomistic", "agents"]
+      "tags": [
+        "atomistic",
+        "agents"
+      ]
     },
     {
       "citation": "Jose Recatala-Gomez, **Nikita Kazeev**, et al. [Generative design of inorganic materials](https://arxiv.org/abs/2604.14082). arXiv preprint arXiv:2604.14082, April 2026.",
-      "tags": ["atomistic", "industry"]
+      "tags": [
+        "atomistic",
+        "industry"
+      ]
     },
     {
       "citation": "Alexandre Duval, Siddharth Betala, Samuel P. Gleason, Andy Xu, Georgia Channing, Daniel Levy, Ali Ramlaoui, Clémentine Fourrier, Chaitanya K. Joshi, **Nikita Kazeev**, Sékou-Oumar Kaba, Félix Therrien, Alex Hernández-García, Rocío Mercado, N M Anoop Krishnan. [LeMat-GenBench: Bridging the gap between crystal generation and materials discovery](https://arxiv.org/abs/2512.04562). AI for Accelerated Materials Design - NeurIPS 2025 / arXiv preprint arXiv:2512.04562, October 2025.",
-      "tags": ["atomistic", "industry", "agents"]
+      "tags": [
+        "atomistic",
+        "industry",
+        "agents"
+      ]
     },
     {
       "citation": "Andrey Okhotin, Maksim Nakhodnov, **Nikita Kazeev**, Mikhail Lazarev, Andrey E. Ustyuzhanin, and Dmitry Vetrov. [MiAD: Mirage Atom Diffusion for De Novo Crystal Generation](https://arxiv.org/abs/2511.14426). arXiv preprint arXiv:2511.14426, November 2025.",
-      "tags": ["atomistic"]
+      "tags": [
+        "atomistic"
+      ]
     },
     {
       "citation": "Stephen G. Dale, **Nikita Kazeev**, et al. [AI4X Roadmap: Artificial Intelligence for the advancement of scientific pursuit and its future directions](https://arxiv.org/abs/2511.20976). arXiv preprint arXiv:2511.20976, November 2025.",
-      "tags": ["atomistic", "industry"]
+      "tags": [
+        "atomistic",
+        "industry"
+      ]
     },
     {
       "citation": "M. Y. Lukianov, A. Maevskiy, **N. Kazeev**, D. Mylnikov, D. A. Svintsov, K. S. Novoselov, A. Ustyuzhanin, and D. A. Bandurin. [Inverse design of broadband antennas for terahertz devices based on two-dimensional materials](https://doi.org/10.1103/gr2z-3qjp). *Physical Review Applied* 24, 054079, November 2025.",
-      "tags": ["atomistic", "finance"]
+      "tags": [
+        "atomistic",
+        "finance"
+      ]
     },
     {
       "citation": "**Kazeev, Nikita**, et al. [WyckoffTransformer: Generation of Symmetric Crystals](https://arxiv.org/abs/2503.02407). ICML 2025, May 2025.",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance",
+        "industry"
+      ]
     },
     {
       "citation": "**Kazeev, N.**, Al-Maeeni, A.R., Romanov, I. et al. [Sparse representation for machine learning the properties of defects in 2D materials](https://doi.org/10.1038/s41524-023-01062-z). npj Comput Mater 9, 113 (2023).",
-      "tags": ["atomistic", "finance", "industry"]
+      "tags": [
+        "atomistic",
+        "finance",
+        "industry"
+      ]
     },
     {
       "citation": "Anderlini, L., Chimpoesh, C., **Kazeev, N.**, Shishigina, A., & LHCb collaboration. [Generative models uncertainty estimation](https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088/meta). Journal of Physics: Conference Series, 2023. *I'm the corresponding author.*",
-      "tags": ["agents", "finance"]
+      "tags": [
+        "agents",
+        "finance"
+      ]
     },
     {
       "citation": "M. Borisyak and **N. Kazeev**. [Machine Learning on data with sPlot background subtraction](https://doi.org/10.1088%2F1748-0221%2F14%2F08%2Fp08020). Journal of Instrumentation 14.08 (2019). *I'm the corresponding author.*",
-      "tags": ["finance"]
+      "tags": [
+        "finance"
+      ]
     },
     {
       "citation": "Derkach, D., **Kazeev, N.**, Ratnikov, F., Ustyuzhanin, A., & Volokhova, A. (2019). [Cherenkov detectors fast simulation using neural networks](https://doi.org/10.1016/j.nima.2019.01.031). *Nuclear Instruments and Methods in Physics Research Section A*. *I'm the corresponding author.*",
-      "tags": ["atomistic", "agents", "finance"]
+      "tags": [
+        "atomistic",
+        "agents",
+        "finance"
+      ]
     }
   ],
   "service": [
-    { "body": "Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023–2025)." },
-    { "body": "Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing." }
+    {
+      "body": "Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023–2025)."
+    },
+    {
+      "body": "Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing."
+    }
   ],
   "otherItems": [
-    { "body": "Aspiring stand-up comedian; bombed more than 20 times at open mics." },
-    { "body": "International Junior Science Olympiad 2008 in Korea, silver medal." }
+    {
+      "body": "Aspiring stand-up comedian; bombed more than 20 times at open mics."
+    },
+    {
+      "body": "International Junior Science Olympiad 2008 in Korea, silver medal."
+    }
   ]
 }
