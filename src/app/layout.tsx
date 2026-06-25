@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Geist, Geist_Mono, Poiret_One } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,12 +11,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const poiretOne = Poiret_One({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-poiret-one",
 });
 
 export const metadata: Metadata = {
@@ -40,14 +34,14 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} ${poiretOne.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="mx-4 mt-8 flex min-h-full max-w-5xl flex-col bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 lg:mx-auto">
         <header className="sticky top-0 z-10 bg-neutral-50/92 backdrop-blur-sm dark:bg-neutral-900/92">
           <div className="flex w-full flex-wrap items-center justify-between gap-x-6 gap-y-2 px-2 py-2 md:px-0">
             <Link
               href="/"
-              className="font-[family:var(--font-poiret-one)] text-xl tracking-tight text-neutral-900 transition-colors hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300"
+              className="text-xl font-bold tracking-tight text-neutral-900 transition-colors hover:text-neutral-700 dark:text-neutral-100 dark:hover:text-neutral-300"
             >
               Nikita Kazeev
             </Link>
