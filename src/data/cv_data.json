@@ -123,22 +123,6 @@
       "tags": [
         "agents",
         "industry"
-      ],
-      "highlights": [
-        {
-          "title": "AI Strategy & Platform Architecture",
-          "skills": [
-            "Leadership & Mentorship",
-            "Research Writing & Speaking"
-          ],
-          "bullets": [
-            "Advised on AI/ML strategy, product implementation, and technical design for the platform."
-          ],
-          "tags": [
-            "agents",
-            "industry"
-          ]
-        }
       ]
     },
     {
@@ -161,7 +145,7 @@
           "references": [
             {
               "href": "https://ai4x.cc/",
-              "label": "AI4X 2025 conference"
+              "label": "AI4X 2025/6 conference"
             },
             {
               "href": "https://openreview.net/forum?id=uAtjhZW1QV",
@@ -169,7 +153,7 @@
             }
           ],
           "bullets": [
-            "Speaker search and selection for the 500-person AI4X 2025 conference.",
+            "Program Chair for the AI4X 2025/6 conferences.",
             "Main organizer of the ICLR 2025 workshop on multiscale machine learning."
           ],
           "tags": [
@@ -270,12 +254,7 @@
           "skills": [
             "ML & AI",
             "Python",
-            "C++",
-            "Physics",
             "Research Writing & Speaking"
-          ],
-          "bullets": [
-            "Consulted on machine learning algorithms, deep learning applications, and architectural designs for scientific and industry-led projects."
           ],
           "tags": [
             "atomistic",
