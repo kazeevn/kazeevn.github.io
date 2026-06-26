@@ -1,226 +1,155 @@
+% Compiled with LuaLaTeX. Default font is Latin Modern Roman (serif).
+% Layout based on the Rover Resume base template
+% (https://github.com/subidit/rover-resume): ruled section headers and a
+% strict single-level bullet hierarchy, with run-in project titles that each
+% collect their supporting artifacts as inline links.
 \documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{a4paper, margin=0.75in}
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+
+\usepackage[a4paper,margin=0.72in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{linkblue}{HTML}{1155CC}
+\usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{xcolor}
 
-% Set font to Helvetica or standard sans-serif
-\renewcommand{\familydefault}{\sfdefault}
+\setcounter{secnumdepth}{0}            % no section numbering
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{topsep=1pt,itemsep=0pt,parsep=0pt,leftmargin=1.4em,label=\textbullet}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
 
-% Section formatting
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{14pt}{6pt}
-
-\pagestyle{empty} % Suppress page numbers for a clean look
+% Run-in list of supporting artifacts after a project title.
+\newcommand{\artifacts}[1]{\hspace{0.45em}{\footnotesize #1}}
 
 \begin{document}
 
-% Header
+% ===== Header =====
 \begin{center}
-    {\LARGE \textbf{ Nikita Kazeev }} \\
-    \vspace{4pt}
-    \small
-    \href{mailto:kazeevn@gmail.com}{ kazeevn@gmail.com } $\cdot$ 
-    \href{ https://kazeevn.github.io }{Website} $\cdot$ 
-    \href{ https://github.com/kazeevn }{GitHub} $\cdot$ 
-    \href{ https://linkedin.com/in/nikita-kazeev }{LinkedIn} $\cdot$ 
-    \href{ https://scholar.google.com/citations?user=vamy2okAAAAJ }{Google Scholar} $\cdot$ 
-    \href{ https://orcid.org/0000-0002-5699-7634 }{ORCID}
+  {\LARGE\bfseries Nikita Kazeev}\\[3pt]
+  {\small
+    \href{mailto:kazeevn@gmail.com}{kazeevn@gmail.com} $\cdot$
+    \href{https://kazeevn.github.io}{Website} $\cdot$
+    \href{https://github.com/kazeevn}{GitHub} $\cdot$
+    \href{https://linkedin.com/in/nikita-kazeev}{LinkedIn} $\cdot$
+    \href{https://scholar.google.com/citations?user=vamy2okAAAAJ}{Google Scholar} $\cdot$
+    \href{https://orcid.org/0000-0002-5699-7634}{ORCID}%
+  }\\[5pt]
+  \textit{ Research Scientist at the intersection of AI and Physics }
 \end{center}
 
-\vspace{6pt}
+% ===== PAGE 1: Work Experience & Projects =====
+\section{Work Experience}
+\textbf{Perfomax}\hfill\textbf{May 2026--present}\par
+\textit{AI Advisor}\par
+\smallskip
 
-% Summary/Title
-\begin{center}
-    \textit{ Research Scientist at the intersection of AI and Physics }
-\end{center}
-
-% Work Experience Section
-\section*{Work Experience}
-
-\noindent \textbf{ Perfomax } \hfill \textbf{ May 2026--present } \\
-\textit{ AI Advisor }
-
-\vspace{8pt}
-
-
-\noindent \textbf{ National University of Singapore } \hfill \textbf{ 2022--present } \\
-\textit{ Postdoc under Kostya Novoselov }
-
-\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
-
-  \item \textbf{ Leadership }:
-  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
-  
-    \item Program Chair for the AI4X 2025/6 conferences.
-  
-    \item Main organizer of the ICLR 2025 workshop on multiscale machine learning.
-  
-  \end{itemize}
-  
-
-  \item \textbf{ Transformer for generating symmetric crystals }:
-  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
-  
-    \item Created a generative model for material design based on symmetry inductive bias.
-  
-    \item Implemented the model in PyTorch.
-  
-    \item Achieved the best generation quality and diversity among space-group-conditioned models.
-  
-    \item Led a team of 6.
-  
-  \end{itemize}
-  
-
+\textbf{National University of Singapore}\hfill\textbf{2022--present}\par
+\textit{Postdoc under Kostya Novoselov}\par
+\vspace{2pt}
+\textbf{Leadership}\artifacts{ \href{https://ai4x.cc/}{AI4X 2025/6 conference} $\cdot$ \href{https://openreview.net/forum?id=uAtjhZW1QV}{ICLR 2025 workshop} }\par
+\begin{itemize}
+  \item Program Chair for the AI4X 2025/6 conferences.
+  \item Main organizer of the ICLR 2025 workshop on multiscale machine learning.
 \end{itemize}
-
-\vspace{8pt}
-
-
-\noindent \textbf{ CERN [Yandex $\rightarrow$ HSE University] } \hfill \textbf{ 2014--2022 } \\
-\textit{ Researcher } \\ \small \href{https://breakthroughprize.org/Laureates/1/L3995}{2025 Breakthrough Prize in Fundamental Physics} as a member of LHCb.
-
-\begin{itemize}[leftmargin=*, noitemsep, topsep=3pt]
-
-  \item \textbf{ Generative models uncertainty estimation }:
-  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
-  
-    \item Developed the first methods for estimating uncertainty of conditional GANs.
-  
-    \item Led a team of 3 students.
-  
-  \end{itemize}
-  
-
-  \item \textbf{ Generative models for fast simulation }:
-  \begin{itemize}[leftmargin=*, label=$\cdot$, noitemsep, topsep=1pt]
-  
-    \item Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data.
-  
-    \item Achieved approximately $10^5$ speed-up compared to the ab-initio simulator.
-  
-  \end{itemize}
-  
-
+\vspace{2pt}
+\textbf{Transformer for generating symmetric crystals}\artifacts{ \href{https://icml.cc/virtual/2025/poster/44595}{ICML 2025} $\cdot$ \href{https://github.com/SymmetryAdvantage/WyckoffTransformer}{code} }\par
+\begin{itemize}
+  \item Created a generative model for material design based on symmetry inductive bias.
+  \item Implemented the model in PyTorch.
+  \item Achieved the best generation quality and diversity among space-group-conditioned models.
+  \item Led a team of 6.
 \end{itemize}
+\smallskip
 
-\vspace{8pt}
+\textbf{CERN [Yandex $\rightarrow$ HSE University]}\hfill\textbf{2014--2022}\par
+\textit{Researcher}\par
+{\small \href{https://breakthroughprize.org/Laureates/1/L3995}{2025 Breakthrough Prize in Fundamental Physics} as a member of LHCb. }\par
+\vspace{2pt}
+\textbf{Generative models uncertainty estimation}\artifacts{ \href{https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088}{paper} $\cdot$ \href{https://cds.cern.ch/record/2837844}{conference} $\cdot$ \href{https://gitlab.com/lambda-hse/lhcb-rich-gan-uncertainty}{code 1} $\cdot$ \href{https://gitlab.com/lambda-hse/gan-uncertainty-ensembles}{code 2} }\par
+\begin{itemize}
+  \item Developed the first methods for estimating uncertainty of conditional GANs.
+  \item Led a team of 3 students.
+\end{itemize}
+\vspace{2pt}
+\textbf{Generative models for fast simulation}\artifacts{ \href{https://www.sciencedirect.com/science/article/pii/S0168900219300701}{paper 1} $\cdot$ \href{https://arxiv.org/abs/1905.11825}{paper 2} $\cdot$ \href{https://ml4physicalsciences.github.io/2019/files/NeurIPS\_ML4PS\_2019\_40.pdf}{paper 3} $\cdot$ \href{https://github.com/yandexdataschool/QuantileTransformerTF}{code} }\par
+\begin{itemize}
+  \item Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data.
+  \item Achieved approximately $10^5$ speed-up compared to the ab-initio simulator.
+\end{itemize}
+\smallskip
 
+\newpage
 
+% ===== PAGE 2: Education & Activities =====
+\section{Education}
+\textbf{Higher School of Economics (HSE University)}\hfill\textbf{2016--2020}\par
+PhD in Computer Science, supervisor \href{https://www.linkedin.com/profile/view?id=2422149}{Andrey Ustyuzhanin}; \href{https://repository.cern/records/034yx-nt191}{Machine Learning for particle identification in the LHCb detector}.\par
+\smallskip
 
-% Education Section
-\section*{Education}
+\textbf{Sapienza --- Universita di Roma}\hfill\textbf{2016--2020}\par
+PhD in Physics (double degree with HSE), supervisor \href{https://it.linkedin.com/in/barbara-sciascia-234935a}{Barbara Sciascia}.\par
+\smallskip
 
-\noindent \textbf{ Higher School of Economics (HSE University) } \hfill \textbf{ 2016--2020 } \\
-PhD in Computer Science, supervisor \href{https://www.linkedin.com/profile/view?id=2422149}{Andrey Ustyuzhanin}; \href{https://repository.cern/records/034yx-nt191}{Machine Learning for particle identification in the LHCb detector}.
-\vspace{6pt}
+\textbf{Product Management course at Yandex}\hfill\textbf{Spring 2018}\par
+Focused coursework in product strategy and execution.\par
+\smallskip
 
+\textbf{Yandex School of Data Analysis}\hfill\textbf{2013--2015}\par
+Master's level CS course covering algorithms, machine learning, deep learning, and distributed systems.\par
+\smallskip
 
-\noindent \textbf{ Sapienza --- Universita di Roma } \hfill \textbf{ 2016--2020 } \\
-PhD in Physics (double degree with HSE), supervisor \href{https://it.linkedin.com/in/barbara-sciascia-234935a}{Barbara Sciascia}.
-\vspace{6pt}
-
-
-\noindent \textbf{ Product Management course at Yandex } \hfill \textbf{ Spring 2018 } \\
-Focused coursework in product strategy and execution.
-\vspace{6pt}
-
-
-\noindent \textbf{ Yandex School of Data Analysis } \hfill \textbf{ 2013--2015 } \\
-Master's level CS course covering algorithms, machine learning, deep learning, and distributed systems.
-\vspace{6pt}
-
-
-\noindent \textbf{ Moscow Institute of Physics and Technology } \hfill \textbf{  } \\
+\textbf{Moscow Institute of Physics and Technology}\par
 \textbf{MS in Physics} (2014--2016): Optimisation of data processing of the LHCb experiment.
 
-\textbf{BS in Physics} (2010--2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting.
-\vspace{6pt}
+\textbf{BS in Physics} (2010--2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting.\par
+\smallskip
 
 
-
-% Mentorship Section
-
-\section*{Mentorship}
-\begin{itemize}[leftmargin=*, noitemsep]
-
-  \item Mentored 9 students (\href{https://www.hse.ru/edu/vkr/219430466}{1}, \href{https://www.hse.ru/edu/vkr/296294066}{2}, \href{https://www.hse.ru/edu/vkr/219524130}{3}, \href{https://www.hse.ru/en/edu/vkr/470561417}{4}, \href{https://www.hse.ru/en/edu/vkr/470935224}{5}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565328}{6}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565422}{7}, \href{https://www.hse.ru/edu/vkr/624890096}{8}, \href{https://www.hse.ru/ba/ami/students/diplomas/834351454}{9}), 3 interns, and student workshop projects (\href{https://sochisirius.ru/news/3148}{1}, \href{https://www.hse.ru/edu/vkr/296294066}{2}0).
-
+\section{Mentorship}
+\begin{itemize}
+  \item Mentored 9 students (\href{https://www.hse.ru/edu/vkr/219430466}{1}, \href{https://www.hse.ru/edu/vkr/296294066}{2}, \href{https://www.hse.ru/edu/vkr/219524130}{3}, \href{https://www.hse.ru/en/edu/vkr/470561417}{4}, \href{https://www.hse.ru/en/edu/vkr/470935224}{5}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565328}{6}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565422}{7}, \href{https://www.hse.ru/edu/vkr/624890096}{8}, \href{https://www.hse.ru/ba/ami/students/diplomas/834351454}{9}), 3 interns, and student workshop projects (\href{https://sochisirius.ru/news/3148}{1}, \href{https://web.archive.org/web/20220512040654/https://academy.yandex.ru/posts/vossozdat-arkhitekturu-bazy-dannykh-i-nauchit-golosovogo-pomoschnika-predskazyvat-namereniya-polzovatelya}{2}).
   \item Student council member from 2013 to 2016, leading several dormitory-scale IT projects.
-
   \item Co-PI of a \$3.4m AI Singapore grant on multiscale machine learning.
-
 \end{itemize}
-
-
-% Teaching Section
-
-\section*{Teaching \& Outreach}
-\begin{itemize}[leftmargin=*, noitemsep]
-
+\section{Teaching \& Outreach}
+\begin{itemize}
   \item Pitch research to the general public through major newspaper coverage (\href{https://www.kommersant.ru/doc/7832307}{1}, \href{https://www.kommersant.ru/doc/6122817}{2}), blog posts (\href{https://ifim.nus.edu.sg/tailor-made-2d-materials-became-closer-with-the-new-machine-learning-algorithm-developed-at-nus/}{1}, \href{https://communities.springernature.com/posts/sparse-representation-for-machine-learning-the-properties-of-defects-in-2d-materials}{2}), a \href{https://elementy.ru/events/435506/IV\_Nauchnye\_boi\_NIU\_VShE\_na\_Dne\_Vyshki}{science slam}, interviews (\href{https://web.archive.org/web/20210518043835/https://academy.yandex.ru/posts/beresh-i-razbiraeshsya}{1}, \href{https://habr.com/en/company/yandex/blog/422761/}{2}), and a public \href{https://www.youtube.com/watch?v=zLFZ\_z-7-JI&feature=youtu.be&t=7779}{talk}.
-
   \item Lecturer in the \href{https://www.coursera.org/specializations/aml}{Coursera Advanced Machine Learning specialisation}, which is \href{https://www.hse.ru/en/news/edu/259378493.html}{award-winning}.
-
   \item Delivered more than 20 \href{https://docs.google.com/document/d/1IOlBse4q0YgEoL\_RCJTvJfbFhFaD\_YMAIJJ3W77B\_X0/edit?usp=sharing}{conference talks}.
-
 \end{itemize}
-
-
-% Service Section
-
-\section*{Service}
-\begin{itemize}[leftmargin=*, noitemsep]
-
+\section{Service}
+\begin{itemize}
   \item Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023--2025).
-
   \item Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing.
+\end{itemize}
+\section{Other}
+\begin{itemize}
+  \item Aspiring stand-up comedian; bombed more than 20 times at open mics.
+  \item International Junior Science Olympiad 2008 in Korea, silver medal.
+\end{itemize}
+\newpage
 
+% ===== PAGE 3: Skills & Publications =====
+\section{Skills}
+\begin{itemize}
+  \item \textbf{ML \& AI} --- Structured, non-text, domain-specific data
+  \item \textbf{Python} --- Research coding
+  \item \textbf{PyTorch} --- Deep learning
+  \item \textbf{Research Writing \& Speaking}
+  \item \textbf{Leadership \& Mentorship}
 \end{itemize}
 
-
-% Skills Section
-
-\section*{Skills}
-\noindent
-
-\textbf{ ML \& AI } (Structured, non-text, domain-specific data) $\cdot$ 
-
-\textbf{ Python } (Research coding) $\cdot$ 
-
-\textbf{ PyTorch } (Deep learning) $\cdot$ 
-
-\textbf{ Research Writing \& Speaking }  $\cdot$ 
-
-\textbf{ Leadership \& Mentorship } 
-
-
-
-% Publications Section
-\section*{Selected Publications}
-\begin{enumerate}[leftmargin=*, noitemsep]
-
+\section{Selected Publications}
+\begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
   \item \textbf{Kazeev, Nikita}, and Ian Babich. \href{https://openreview.net/forum?id=GhUK6VGW67}{Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments}. OpenReview, June 2026.
-
   \item \textbf{Kazeev, Nikita}, and Phan Bui Nhat Huyen. \href{https://openreview.net/forum?id=J3Vqv2fFse}{Position: Align AI to Our Aspirations, Not Our Flaws}. Pluralistic Alignment Workshop at ICML 2026, June 2026.
-
   \item Nian Liu, \textbf{Nikita Kazeev}, Stephen Gregory Dale, Artem Maevskiy, Yuwei Zeng, Ryoji Kubo, Pengru Huang, Thomas Laurent, Yann LeCun, Kostya S. Novoselov, and Xavier Bresson. \href{https://arxiv.org/abs/2605.14759}{Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement}. arXiv preprint arXiv:2605.14759, May 2026.
-
   \item Nian Liu, Yuwei Zeng, Ryoji Kubo, \textbf{Nikita Kazeev}, Stephen Gregory Dale, Artem Maevskiy, Pengru Huang, Thomas Laurent, Kostya S. Novoselov, and Xavier Bresson. \href{https://arxiv.org/abs/2605.14769}{Composable Crystals: Controllable Materials Discovery via Concept Learning}. arXiv preprint arXiv:2605.14769, May 2026.
-
   \item Alexandre Duval, Siddharth Betala, Samuel P. Gleason, Andy Xu, Georgia Channing, Daniel Levy, Ali Ramlaoui, Clémentine Fourrier, Chaitanya K. Joshi, \textbf{Nikita Kazeev}, Sékou-Oumar Kaba, Félix Therrien, Alex Hernández-García, Rocío Mercado, N M Anoop Krishnan. \href{https://arxiv.org/abs/2512.04562}{LeMat-GenBench: Bridging the gap between crystal generation and materials discovery}. AI for Accelerated Materials Design - NeurIPS 2025 / arXiv preprint arXiv:2512.04562, October 2025.
-
   \item \textbf{Kazeev, Nikita}, et al. \href{https://arxiv.org/abs/2503.02407}{WyckoffTransformer: Generation of Symmetric Crystals}. ICML 2025, May 2025.
-
   \item Anderlini, L., Chimpoesh, C., \textbf{Kazeev, N.}, Shishigina, A., \& LHCb collaboration. \href{https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088/meta}{Generative models uncertainty estimation}. Journal of Physics: Conference Series, 2023. \textit{I'm the corresponding author.}
-
   \item Derkach, D., \textbf{Kazeev, N.}, Ratnikov, F., Ustyuzhanin, A., \& Volokhova, A. (2019). \href{https://doi.org/10.1016/j.nima.2019.01.031}{Cherenkov detectors fast simulation using neural networks}. \textit{Nuclear Instruments and Methods in Physics Research Section A}. \textit{I'm the corresponding author.}
-
 \end{enumerate}
 
 \end{document}

@@ -45,9 +45,23 @@ def to_latex_inner(text):
     
     return text
 
+def escape_url(url):
+    # Escape the characters hyperref treats as special inside \href URLs.
+    # Mirrors the URL escaping used for inline markdown links below.
+    return url.replace('%', '\\%').replace('#', '\\#').replace('_', '\\_')
+
 def to_latex(val):
     if isinstance(val, dict):
-        return {k: to_latex(v) for k, v in val.items()}
+        # Reference entries carry a raw URL in "href"; escape it as a URL
+        # rather than running it through the generic text escaper, which
+        # would mangle it (e.g. turning "_" into "\_textbackslash ...").
+        result = {}
+        for k, v in val.items():
+            if k == "href" and isinstance(v, str):
+                result[k] = escape_url(v)
+            else:
+                result[k] = to_latex(v)
+        return result
     if isinstance(val, list):
         return [to_latex(item) for item in val]
     if not isinstance(val, str):
@@ -64,14 +78,15 @@ def to_latex(val):
         escaped_url = url.replace('%', '\\%').replace('#', '\\#').replace('_', '\\_')
         token_id = len(tokens)
         tokens.append(f"\\href{{{escaped_url}}}{{{to_latex_inner(label)}}}")
-        return f"LINKTOKEN{token_id}"
+        # Delimit the placeholder so e.g. token 1 is not a prefix of token 10.
+        return f"@@LINKTOKEN{token_id}@@"
         
     text = re.sub(r'\[([^\]]+?)\]\(([^)]+?)\)', repl_link, val)
     text = to_latex_inner(text)
     
     # Restore link tokens
     for i, token in enumerate(tokens):
-        text = text.replace(f"LINKTOKEN{i}", token)
+        text = text.replace(f"@@LINKTOKEN{i}@@", token)
         
     return text
 
@@ -162,7 +177,7 @@ def main():
         print(f"Compiling {name} variant to PDF...")
         try:
             result = subprocess.run(
-                ["xelatex", "-interaction=nonstopmode", "-output-directory=cv-variants", tex_path],
+                ["lualatex", "-interaction=nonstopmode", "-output-directory=cv-variants", tex_path],
                 check=True,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
