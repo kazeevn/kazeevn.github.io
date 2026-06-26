@@ -92,7 +92,7 @@
 % ===== PAGE 1: Work Experience & Projects =====
 \section{Work Experience}
 {% for entry in workExperience -%}
-\textsc{\textbf{ {{- entry.organization -}} }}\quad{\small\color{black!55}\itshape {{ entry.role }}} \hfill\textbf{ {{- entry.period -}} }\par
+\textsc{\textbf{\boldmath{}{{- entry.organization -}} }}\quad{\small\color{black!55}\itshape {{ entry.role }}} \hfill\textbf{ {{- entry.period -}} }\par
 {%- if entry.note %}
 {\small {{ entry.note }} }\par
 {%- endif %}
@@ -162,13 +162,18 @@
 \newpage
 
 % ===== PAGE 3: Skills & Publications =====
-{%- if skills %}
+{%- if differentiators or skills %}
 \section{Skills}
+{%- if differentiators %}
 \begin{itemize}
-{%- for skill in skills %}
-  \item \textbf{ {{- skill.label -}} }{% if skill.detail %} --- {{ skill.detail }}{% endif %}
+{%- for item in differentiators %}
+  \item {{ item.body }}
 {%- endfor %}
 \end{itemize}
+{%- endif %}
+{%- if skills %}
+{{ skills | map(attribute='label') | join(' \\textbullet\\ ') }}
+{%- endif %}
 {%- endif %}
 
 % Pull every entry from publications.bib into the bibliography; the filters

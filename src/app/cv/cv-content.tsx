@@ -54,6 +54,12 @@ type Publication = {
 type SkillTag = {
   label: string;
   detail?: string;
+  tags?: string[];
+};
+
+type Differentiator = {
+  body: string;
+  tags?: string[];
 };
 
 type Stat = {
@@ -69,6 +75,7 @@ type Stat = {
 
 const pdfHref = "/Nikita_Kazeev_CV.pdf";
 
+const differentiators: Differentiator[] = cvData.differentiators;
 const skillTags: SkillTag[] = cvData.skills;
 const workExperience: WorkEntry[] = cvData.workExperience;
 const education: EducationItem[] = cvData.education;
@@ -322,6 +329,11 @@ export default function CvContent() {
               )}
             </h2>
           </div>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+            {differentiators.map((item, index) => (
+              <li key={index}>{renderFormattedText(item.body)}</li>
+            ))}
+          </ul>
           <div className="flex flex-wrap gap-2">
             {skillTags.map((skill) => {
               const hasProjects = skillsWithProjects.has(skill.label);

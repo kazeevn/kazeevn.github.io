@@ -41,40 +41,60 @@
       "icon": "/Breakthrough_Prize_logo.webp"
     }
   ],
+  "differentiators": [
+    {
+      "body": "**Generative modeling for scientific data** — GANs, autoregressive transformers, and diffusion; from fast detector simulation to symmetry-aware crystal generation.",
+      "tags": ["atomistic", "agents"]
+    },
+    {
+      "body": "**Uncertainty quantification** — built the first methods for estimating the uncertainty of conditional GANs; calibrated generative and discriminative models.",
+      "tags": ["atomistic", "agents", "finance"]
+    },
+    {
+      "body": "**ML on structured, non-text data** — tabular, graph, and atomistic representations, spanning gradient boosting to transformers.",
+      "tags": ["atomistic", "agents", "finance", "industry"]
+    },
+    {
+      "body": "**Inference and systems at scale** — C++ production integration, large-scale DFT/VASP on HPC clusters, and reproducible experiment pipelines.",
+      "tags": ["atomistic", "finance", "industry"]
+    },
+    {
+      "body": "**Physics domain depth** — high-energy and condensed-matter physics; first-principles intuition that shapes model design.",
+      "tags": ["atomistic", "finance"]
+    },
+    {
+      "body": "**Research leadership** — lead multidisciplinary teams, chair conferences, and mentor students from idea to publication.",
+      "tags": ["atomistic", "agents", "industry"]
+    }
+  ],
   "skills": [
     {
       "label": "ML & AI",
-      "detail": "Structured, non-text, domain-specific data",
       "tags": ["atomistic", "agents", "finance", "industry"]
     },
     {
       "label": "Python",
-      "detail": "Research coding",
       "tags": ["atomistic", "agents", "finance", "industry"]
     },
     {
       "label": "PyTorch",
-      "detail": "Deep learning",
       "tags": ["atomistic", "agents", "finance", "industry"]
     },
     {
       "label": "C++",
-      "detail": "Production",
-      "tags": ["atomistic", "finance"]
-    },
-    {
-      "label": "Linux",
-      "detail": "Administration",
       "tags": ["atomistic", "finance", "industry"]
     },
     {
-      "label": "Research Writing & Speaking",
+      "label": "HPC",
       "tags": ["atomistic", "agents", "industry"]
     },
     {
       "label": "Physics",
-      "detail": "Deep domain understanding",
-      "tags": ["atomistic", "finance"]
+      "tags": ["atomistic", "agents", "finance"]
+    },
+    {
+      "label": "Research Writing & Speaking",
+      "tags": ["atomistic", "agents", "industry"]
     },
     {
       "label": "Leadership & Mentorship",
@@ -116,12 +136,13 @@
           "tags": ["agents", "industry"]
         },
         {
-          "title": "Wyckoff Transformer for generating symmetric crystals",
+          "title": "Wyckoff Transformer, a generative model for materials",
           "skills": [
             "ML & AI",
             "Python",
             "PyTorch",
             "Physics",
+            "HPC",
             "Leadership & Mentorship"
           ],
           "references": [
@@ -152,7 +173,7 @@
             "PyTorch",
             "Physics",
             "Leadership & Mentorship",
-            "Linux"
+            "HPC"
           ],
           "references": [
             {
@@ -184,7 +205,7 @@
       ]
     },
     {
-      "organization": "CERN [Yandex → HSE University]",
+      "organization": "⟨CERN ∣ Yandex → HSE University⟩",
       "role": "Researcher",
       "period": "2014–2022",
       "tags": ["atomistic", "agents", "finance", "industry"],
@@ -304,7 +325,7 @@
         },
         {
           "title": "CatBoost aka fighting biases with dynamic boosting",
-          "skills": ["ML & AI", "Python", "Linux"],
+          "skills": ["ML & AI", "Python", "HPC"],
           "references": [
             {
               "href": "https://arxiv.org/abs/1706.09516v1",

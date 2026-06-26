@@ -199,6 +199,9 @@ def to_latex_inner(text):
     # Mathematical and common unicode symbols
     text = text.replace('≥', '$\\ge$')
     text = text.replace('→', '$\\rightarrow$')
+    text = text.replace('⟨', '$\\langle$')
+    text = text.replace('⟩', '$\\rangle$')
+    text = text.replace('∣', '$\\mid$')
     text = text.replace('–', '--')  # en-dash
     text = text.replace('—', '---') # em-dash
     
@@ -270,6 +273,9 @@ def filter_cv_data(data, target_tag):
     filtered["personal"] = data["personal"]
     filtered["stats"] = data["stats"]
     
+    # Filter differentiators
+    filtered["differentiators"] = [d for d in data.get("differentiators", []) if target_tag in d.get("tags", [])]
+
     # Filter skills
     filtered["skills"] = [s for s in data["skills"] if target_tag in s.get("tags", [])]
     
@@ -370,6 +376,7 @@ def main():
             mentorship=latex_data["mentorship"],
             teachingAndOutreach=latex_data["teachingAndOutreach"],
             service=latex_data["service"],
+            differentiators=latex_data.get("differentiators", []),
             skills=latex_data["skills"],
             variant_tag=variant_tag,
             has_icml=has_icml
