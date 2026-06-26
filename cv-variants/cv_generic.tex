@@ -107,24 +107,25 @@
 \begin{itemize}[leftmargin=\projbulletindent]
   \item Program Chair for the \href{https://ai4x.cc/}{AI4X 2025/6 conferences}
   \item Main organiser of the \href{https://multiscale-ai.github.io/}{ICLR 2025 Workshop on Machine Learning Multiscale Processes}
+  \item Co-PI of a US\$3.4m AI Singapore grant on multiscale machine learning
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{Wyckoff Transformer, a generative model for materials}\artifacts{ \href{https://icml.cc/virtual/2025/poster/44595}{ICML 2025} \textperiodcentered{} \href{https://github.com/SymmetryAdvantage/WyckoffTransformer}{GitHub} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
   \item Developed a coordinate-free permutation-invariant autoregressive Transformer encoder model for material generation and property prediction based on symmetry inductive bias
   \item Increased materials discovery yield (S.U.N.) by 1.24x
-  \item Accelerated inference by 4 orders of magnitude, to 0.05 GPU ms per structure
+  \item Cut inference to 0.05 GPU-ms/structure --- 4 orders of magnitude faster than prior models
   \item Implemented the model in PyTorch; production-ready package published on \href{https://pypi.org/project/wyckoff-transformer/}{PyPI}
-  \item Orchestrated large-scale (10k structures) DFT computations with VASP at an HPC cluster
+  \item Orchestrated large-scale (10k structures) DFT computations with VASP on an HPC cluster
   \item Led a team of 6
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{ML for defects in 2D crystals}\artifacts{ \href{https://www.nature.com/articles/s41699-023-00369-1}{npj 2D Mater. Appl.} \textperiodcentered{} \href{https://www.nature.com/articles/s41524-023-01062-z}{npj Comput. Mater.} \textperiodcentered{} \href{https://scholar.google.com/citations?view\_op=view\_citation&hl=en&user=vamy2okAAAAJ&sortby=pubdate&citation\_for\_view=vamy2okAAAAJ:uAPFzskPt0AC}{patent} \textperiodcentered{} \href{https://github.com/HSE-LAMBDA/ai4material\_design}{GitHub} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
   \item Conceived a novel sparse representation of crystals with defects
-  \item Achieved a 3.7x energy prediction error reduction
+  \item Cut energy-prediction error 3.7× vs. the best prior model
   \item Optimised training and inference: 4x less memory, 8x fewer GPU operations
-  \item Developed code for reproducible parallel running of machine learning experiments
+  \item Built a reproducible pipeline for parallel ML experiments
   \item Led a team of 3
 \end{itemize}
 \smallskip
@@ -134,33 +135,33 @@
 \vspace{2pt}
 {\leftskip\projindent\textbf{Generative models uncertainty estimation}\artifacts{ \href{https://iopscience.iop.org/article/10.1088/1742-6596/2438/1/012088}{paper} \textperiodcentered{} \href{https://cds.cern.ch/record/2837844}{conference} \textperiodcentered{} \href{https://gitlab.com/lambda-hse/lhcb-rich-gan-uncertainty}{code 1} \textperiodcentered{} \href{https://gitlab.com/lambda-hse/gan-uncertainty-ensembles}{code 2} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Developed the first methods for estimating uncertainty of conditional GANs.
-  \item Led a team of 3 students.
+  \item Developed the first methods for estimating uncertainty of conditional GANs
+  \item Led a team of 3 students
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{Generative models for fast simulation}\artifacts{ \href{https://www.sciencedirect.com/science/article/pii/S0168900219300701}{paper 1} \textperiodcentered{} \href{https://arxiv.org/abs/1905.11825}{paper 2} \textperiodcentered{} \href{https://ml4physicalsciences.github.io/2019/files/NeurIPS\_ML4PS\_2019\_40.pdf}{paper 3} \textperiodcentered{} \href{https://github.com/yandexdataschool/QuantileTransformerTF}{code} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data.
-  \item Achieved approximately $10^5$ speed-up compared to the ab-initio simulator.
+  \item Built a GAN for high-fidelity, tabular-data simulation of a Cherenkov detector
+  \item Reached ~10⁵× speed-up over the full Geant4 simulation
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{Machine learning on noisy data}\artifacts{ \href{http://doi.org/10.1088/1748-0221/14/08/P08020}{paper 1} \textperiodcentered{} \href{https://ml4physicalsciences.github.io/2019/files/NeurIPS\_ML4PS\_2019\_122.pdf}{paper 2} \textperiodcentered{} \href{https://github.com/yandexdataschool/ML-sWeights-experiments/}{code} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Developed a rigorous way to train ML algorithms on data with the label-noise model common in high-energy physics.
+  \item Derived a statistically rigorous method to train classifiers on sPlot-weighted (label-noisy) data, standard in high-energy physics
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{Muon identification at the LHCb experiment at CERN}\artifacts{ \href{https://iopscience.iop.org/article/10.1088/1742-6596/1525/1/012100/pdf}{paper} \textperiodcentered{} \href{https://indico.cern.ch/event/708041/contributions/3272104/}{poster} \textperiodcentered{} \href{https://web.archive.org/web/20260209172339/https://idao.world/history/\#idao-2019}{IDAO-2019} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Solved a classification problem over tabular data with noisy labels under timing constraints.
-  \item Developed a gradient boosting model that reduced the false positive rate by 30\% in the critical low-track-momentum region.
-  \item Integrated the model into LHCb production, mostly in C++.
-  \item Packaged the work as a data science competition problem for IDAO-2019.
+  \item Solved a classification problem over tabular data with noisy labels under timing constraints
+  \item Built a CatBoost model that cut the false-positive rate ~30\% in the critical low-momentum region
+  \item Shipped the model into the LHCb trigger (C++ \& Python)
+  \item Packaged the work as a data science competition problem for IDAO-2019
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{CatBoost aka fighting biases with dynamic boosting}\artifacts{ \href{https://arxiv.org/abs/1706.09516v1}{paper} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Set up a distributed system for running experiments for the team with Bash and Python.
-  \item Studied gradient boosting improvements with experiments on toy data.
+  \item Built the team's distributed experiment infrastructure (Bash/Python)
+  \item Studied gradient boosting improvements with experiments on toy data
 \end{itemize}
 \smallskip
 
@@ -198,8 +199,6 @@
 \section{Mentorship}
 \begin{itemize}
   \item Mentored 9 students (\href{https://www.hse.ru/edu/vkr/219430466}{1}, \href{https://www.hse.ru/edu/vkr/296294066}{2}, \href{https://www.hse.ru/edu/vkr/219524130}{3}, \href{https://www.hse.ru/en/edu/vkr/470561417}{4}, \href{https://www.hse.ru/en/edu/vkr/470935224}{5}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565328}{6}, \href{https://www.hse.ru/ma/datasci/students/diplomas/631565422}{7}, \href{https://www.hse.ru/edu/vkr/624890096}{8}, \href{https://www.hse.ru/ba/ami/students/diplomas/834351454}{9}), 3 interns, and student workshop projects (\href{https://sochisirius.ru/news/3148}{1}, \href{https://web.archive.org/web/20220512040654/https://academy.yandex.ru/posts/vossozdat-arkhitekturu-bazy-dannykh-i-nauchit-golosovogo-pomoschnika-predskazyvat-namereniya-polzovatelya}{2}).
-  \item Student council member from 2013 to 2016, leading several dormitory-scale IT projects.
-  \item Co-PI of a \$3.4m AI Singapore grant on multiscale machine learning.
 \end{itemize}
 \section{Teaching \& Outreach}
 \begin{itemize}

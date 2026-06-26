@@ -131,7 +131,8 @@
           ],
           "bullets": [
             "Program Chair for the [AI4X 2025/6 conferences](https://ai4x.cc/)",
-            "Main organiser of the [ICLR 2025 Workshop on Machine Learning Multiscale Processes](https://multiscale-ai.github.io/)"
+            "Main organiser of the [ICLR 2025 Workshop on Machine Learning Multiscale Processes](https://multiscale-ai.github.io/)",
+            "Co-PI of a US$3.4m AI Singapore grant on multiscale machine learning"
           ],
           "tags": ["agents", "industry"]
         },
@@ -158,9 +159,9 @@
           "bullets": [
             "Developed a coordinate-free permutation-invariant autoregressive Transformer encoder model for material generation and property prediction based on symmetry inductive bias",
             "Increased materials discovery yield (S.U.N.) by 1.24x",
-            "Accelerated inference by 4 orders of magnitude, to 0.05 GPU ms per structure",
+            "Cut inference to 0.05 GPU-ms/structure — 4 orders of magnitude faster than prior models",
             "Implemented the model in PyTorch; production-ready package published on [PyPI](https://pypi.org/project/wyckoff-transformer/)",
-            "Orchestrated large-scale (10k structures) DFT computations with VASP at an HPC cluster",
+            "Orchestrated large-scale (10k structures) DFT computations with VASP on an HPC cluster",
             "Led a team of 6"
           ],
           "tags": ["atomistic", "agents", "finance", "industry"]
@@ -195,9 +196,9 @@
           ],
           "bullets": [
             "Conceived a novel sparse representation of crystals with defects",
-            "Achieved a 3.7x energy prediction error reduction",
+            "Cut energy-prediction error 3.7× vs. the best prior model",
             "Optimised training and inference: 4x less memory, 8x fewer GPU operations",
-            "Developed code for reproducible parallel running of machine learning experiments",
+            "Built a reproducible pipeline for parallel ML experiments",
             "Led a team of 3"
           ],
           "tags": ["atomistic", "finance", "industry"]
@@ -271,8 +272,8 @@
             }
           ],
           "bullets": [
-            "Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data",
-            "Achieved approximately 10^5 speed-up compared to the ab-initio simulator"
+            "Built a GAN for high-fidelity, tabular-data simulation of a Cherenkov detector",
+            "Reached ~10⁵× speed-up over the full Geant4 simulation"
           ],
           "tags": ["atomistic", "agents"]
         },
@@ -294,7 +295,7 @@
             }
           ],
           "bullets": [
-            "Developed a rigorous way to train ML algorithms on data with the label-noise model common in high-energy physics"
+            "Derived a statistically rigorous method to train classifiers on sPlot-weighted (label-noisy) data, standard in high-energy physics"
           ],
           "tags": ["atomistic", "finance"]
         },
@@ -317,8 +318,8 @@
           ],
           "bullets": [
             "Solved a classification problem over tabular data with noisy labels under timing constraints",
-            "Developed a gradient boosting model that reduced the false positive rate by 30% in the critical low-track-momentum region",
-            "Integrated the model into LHCb production, mostly in C++",
+            "Built a CatBoost model that cut the false-positive rate ~30% in the critical low-momentum region",
+            "Shipped the model into the LHCb trigger (C++ & Python)",
             "Packaged the work as a data science competition problem for IDAO-2019"
           ],
           "tags": ["atomistic", "finance", "industry"]
@@ -333,7 +334,7 @@
             }
           ],
           "bullets": [
-            "Set up a distributed system for running experiments for the team with Bash and Python",
+            "Built the team's distributed experiment infrastructure (Bash/Python)",
             "Studied gradient boosting improvements with experiments on toy data"
           ],
           "tags": ["finance", "industry"]
@@ -389,14 +390,6 @@
     {
       "body": "Mentored 9 students ([1](https://www.hse.ru/edu/vkr/219430466), [2](https://www.hse.ru/edu/vkr/296294066), [3](https://www.hse.ru/edu/vkr/219524130), [4](https://www.hse.ru/en/edu/vkr/470561417), [5](https://www.hse.ru/en/edu/vkr/470935224), [6](https://www.hse.ru/ma/datasci/students/diplomas/631565328), [7](https://www.hse.ru/ma/datasci/students/diplomas/631565422), [8](https://www.hse.ru/edu/vkr/624890096), [9](https://www.hse.ru/ba/ami/students/diplomas/834351454)), 3 interns, and student workshop projects ([1](https://sochisirius.ru/news/3148), [2](https://web.archive.org/web/20220512040654/https://academy.yandex.ru/posts/vossozdat-arkhitekturu-bazy-dannykh-i-nauchit-golosovogo-pomoschnika-predskazyvat-namereniya-polzovatelya)).",
       "tags": ["atomistic", "agents", "finance", "industry"]
-    },
-    {
-      "body": "Student council member from 2013 to 2016, leading several dormitory-scale IT projects.",
-      "tags": ["agents", "industry"]
-    },
-    {
-      "body": "Co-PI of a $3.4m AI Singapore grant on multiscale machine learning.",
-      "tags": ["atomistic", "agents", "industry"]
     }
   ],
   "teachingAndOutreach": [
