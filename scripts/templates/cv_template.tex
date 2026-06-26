@@ -133,9 +133,18 @@
 \end{itemize}
 {%- endif %}
 
+{%- if publications | selectattr('category', 'equalto', 'icml2026') | list %}
+\section{Presenting at ICML 2026}
+\begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
+{%- for pub in publications if pub.category == 'icml2026' %}
+  \item {{ pub.citation }}
+{%- endfor %}
+\end{enumerate}
+{%- endif %}
+
 \section{Selected Publications}
 \begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
-{%- for pub in publications %}
+{%- for pub in publications if pub.category != 'icml2026' %}
   \item {{ pub.citation }}
 {%- endfor %}
 \end{enumerate}

@@ -361,9 +361,7 @@
     {
       "title": "International Junior Science Olympiad (IJSO)",
       "period": "Korea, 2008",
-      "details": [
-        "Silver medal"
-      ]
+      "details": ["Silver medal"]
     }
   ],
   "mentorship": [
@@ -404,28 +402,29 @@
   ],
   "publications": [
     {
-      "citation": "**Kazeev, Nikita**, and Ian Babich. [Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments](https://openreview.net/forum?id=GhUK6VGW67). Forecasting as a New Frontier of Intelligence Workshop at ICML 2026",
+      "citation": "**Kazeev, Nikita**, and Ian Babich. [Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments](https://openreview.net/forum?id=GhUK6VGW67). Forecasting as a New Frontier of Intelligence Workshop at ICML 2026. [July 11, 12:15–13:30](https://icml.cc/virtual/2026/workshop/54091)",
+      "category": "icml2026",
       "tags": ["agents", "atomistic"]
     },
     {
-      "citation": "**Kazeev, Nikita**, and Phan Bui Nhat Huyen. [Position: Align AI to Our Aspirations, Not Our Flaws](https://openreview.net/forum?id=J3Vqv2fFse). Pluralistic Alignment Workshop at ICML 2026",
+      "citation": "**Kazeev, Nikita**, and Phan Bui Nhat Huyen. [Position: Align AI to Our Aspirations, Not Our Flaws](https://openreview.net/forum?id=J3Vqv2fFse). Pluralistic Alignment Workshop [July 11, 15:00–16:30](https://icml.cc/virtual/2026/workshop/54064)",
+      "category": "icml2026",
       "tags": ["agents", "industry"]
     },
     {
-      "citation": "Kazeev, Nikita and Ustyuzhanin, Andrey. [The Geometry of Reasoning Failure: Predicting Agent Errors from Semantic Scale Trajectories](https://openreview.net/forum?id=zqShTtnTZc). Statistical Frameworks for Uncertainty in Agentic Systems Workshop at ICML 2026",
+      "citation": "**Kazeev, Nikita** and Ustyuzhanin, Andrey. [The Geometry of Reasoning Failure: Predicting Agent Errors from Semantic Scale Trajectories](https://openreview.net/forum?id=zqShTtnTZc). Statistical Frameworks for Uncertainty in Agentic Systems Workshop [July 11, 15:30–17:00](https://icml.cc/virtual/2026/workshop/54054)",
+      "category": "icml2026",
       "tags": ["agents"]
     },
     {
-      "citation": "Artem Dembitskiy, Shuya Yamazaki, Artem Maevskiy, **Nikita Kazeev**, Roman A. Eremin, Semen Budennyy, Kedar Hippalgaonkar, Antonio Helio Castro Neto, and Andrey E. Ustyuzhanin. [Generative Pipeline for Discovering Solid-State Battery Materials with Universal Atomistic Potentials](https://openreview.net/forum?id=xFI6K4ZQDp). AI for Science Workshop at ICML 2026",
+      "citation": "Artem Dembitskiy, Shuya Yamazaki, Artem Maevskiy, **Nikita Kazeev**, Roman A. Eremin, Semen Budennyy, Kedar Hippalgaonkar, Antonio Helio Castro Neto, and Andrey E. Ustyuzhanin. [Generative Pipeline for Discovering Solid-State Battery Materials with Universal Atomistic Potentials](https://openreview.net/forum?id=xFI6K4ZQDp). AI for Science Workshop [July 11, 10:50–11:50 & 15:55–16:55](https://icml.cc/virtual/2026/workshop/54099)",
+      "category": "icml2026",
       "tags": ["atomistic", "industry"]
     },
     {
-      "citation": "Nian Liu, **Nikita Kazeev**, Stephen Gregory Dale, Artem Maevskiy, Yuwei Zeng, Ryoji Kubo, Pengru Huang, Thomas Laurent, Yann LeCun, Kostya S. Novoselov, and Xavier Bresson. [Crys-JEPA: Accelerating Crystal Discovery via Embedding Screening and Generative Refinement](https://arxiv.org/abs/2605.14759). arXiv preprint arXiv:2605.14759, May 2026.",
-      "tags": ["atomistic", "agents"]
-    },
-    {
-      "citation": "Alexandre Duval, Siddharth Betala, Samuel P. Gleason, Andy Xu, Georgia Channing, Daniel Levy, Ali Ramlaoui, Clémentine Fourrier, Chaitanya K. Joshi, **Nikita Kazeev**, Sékou-Oumar Kaba, Félix Therrien, Alex Hernández-García, Rocío Mercado, N M Anoop Krishnan. [LeMat-GenBench: Bridging the gap between crystal generation and materials discovery](https://arxiv.org/abs/2512.04562). AI for Accelerated Materials Design - NeurIPS 2025 / arXiv preprint arXiv:2512.04562, October 2025.",
-      "tags": ["atomistic", "industry", "agents"]
+      "citation": "**Kazeev, Nikita** and Ustyuzhanin, Andrey. [Uncertainty Quantification for LLM Agents via Semantic Abstraction Trajectories](https://openreview.net/forum?id=ZsThsDtfaA) Structured Probabilistic Inference & Generative Modeling Workshop [July 11, 11:40–13:30 & 16:10–17:00](https://icml.cc/virtual/2026/workshop/54089)",
+      "category": "icml2026",
+      "tags": ["agents"]
     },
     {
       "citation": "**Kazeev, Nikita**, et al. [WyckoffTransformer: Generation of Symmetric Crystals](https://arxiv.org/abs/2503.02407). ICML 2025, May 2025.",

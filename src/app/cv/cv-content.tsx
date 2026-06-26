@@ -47,6 +47,7 @@ type EducationItem = {
 
 type Publication = {
   citation: string;
+  category?: string;
 };
 
 type SkillTag = {
@@ -75,6 +76,8 @@ const teachingAndOutreach = cvData.teachingAndOutreach;
 const service = cvData.service;
 const stats: Stat[] = cvData.stats;
 const publications: Publication[] = cvData.publications;
+const icmlPapers = publications.filter((p) => p.category === "icml2026");
+const selectedPubs = publications.filter((p) => p.category !== "icml2026");
 
 const sectionNav = [
   { label: "Skills", href: "#skills" },
@@ -82,6 +85,7 @@ const sectionNav = [
   { label: "Education", href: "#education" },
   { label: "Mentorship", href: "#mentorship" },
   { label: "Teaching", href: "#teaching" },
+  ...(icmlPapers.length > 0 ? [{ label: "ICML 2026", href: "#icml2026" }] : []),
   { label: "Publications", href: "#publications" },
 ];
 
@@ -479,6 +483,22 @@ export default function CvContent() {
           </ul>
         </section>
 
+        {/* ── Presenting at ICML 2026 ── */}
+        {icmlPapers.length > 0 && (
+          <section id="icml2026" className="space-y-4">
+            <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-neutral-200 pb-2 dark:border-neutral-800">
+              <h2 className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+                Presenting at ICML 2026
+              </h2>
+            </div>
+            <ol className="cv-publications space-y-3 text-sm text-neutral-700 dark:text-neutral-300">
+              {icmlPapers.map((publication, index) => (
+                <li key={index}>{renderFormattedText(publication.citation)}</li>
+              ))}
+            </ol>
+          </section>
+        )}
+
         {/* ── Publications ── */}
         <section id="publications" className="space-y-4">
           <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-neutral-200 pb-2 dark:border-neutral-800">
@@ -490,7 +510,7 @@ export default function CvContent() {
             </a>
           </div>
           <ol className="cv-publications space-y-3 text-sm text-neutral-700 dark:text-neutral-300">
-            {publications.map((publication, index) => (
+            {selectedPubs.map((publication, index) => (
               <li key={index}>{renderFormattedText(publication.citation)}</li>
             ))}
           </ol>
