@@ -14,6 +14,10 @@
   ItalicFont={Roboto Italic},
   BoldItalicFont={Roboto Medium Italic},
 ]
+% Math is set in Fira Math (loaded from the system OTF), which pairs with the
+% geometric-humanist Roboto text. unicode-math must follow fontspec.
+\usepackage{unicode-math}
+\setmathfont{Fira Math}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{linkblue}{HTML}{1155CC}
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
@@ -110,7 +114,7 @@
 \begin{itemize}[leftmargin=\projbulletindent]
   \item Conceived a novel sparse representation of crystals with defects
   \item Achieved a 3.7x energy prediction error reduction
-  \item Optimized training and inference: 4x less memory, 8x fewer GPU operations
+  \item Optimised training and inference: 4x less memory, 8x fewer GPU operations
   \item Developed code for reproducible parallel running of machine learning experiments
   \item Led a team of 3
 \end{itemize}
@@ -203,7 +207,7 @@
   \item \textbf{Inference and systems at scale} --- C++ production integration, large-scale DFT/VASP on HPC clusters, and reproducible experiment pipelines.
   \item \textbf{Physics domain depth} --- high-energy and condensed-matter physics; first-principles intuition that shapes model design.
 \end{itemize}
-ML \& AI \textbullet\ Python \textbullet\ PyTorch \textbullet\ C++ \textbullet\ Physics
+{\small\centering ML \& AI \textbullet\ Python \textbullet\ PyTorch \textbullet\ C++ \textbullet\ Physics\par}
 
 % Pull every entry from publications.bib into the bibliography; the filters
 % below split them into the two sections.

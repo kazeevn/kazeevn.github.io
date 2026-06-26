@@ -14,6 +14,10 @@
   ItalicFont={Roboto Italic},
   BoldItalicFont={Roboto Medium Italic},
 ]
+% Math is set in Fira Math (loaded from the system OTF), which pairs with the
+% geometric-humanist Roboto text. unicode-math must follow fontspec.
+\usepackage{unicode-math}
+\setmathfont{Fira Math}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{linkblue}{HTML}{1155CC}
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
@@ -172,7 +176,7 @@
 \end{itemize}
 {%- endif %}
 {%- if skills %}
-{{ skills | map(attribute='label') | join(' \\textbullet\\ ') }}
+{\small\centering {{ skills | map(attribute='label') | join(' \\textbullet\\ ') }}\par}
 {%- endif %}
 {%- endif %}
 

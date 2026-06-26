@@ -43,7 +43,7 @@
   ],
   "differentiators": [
     {
-      "body": "**Generative modeling for scientific data** — GANs, autoregressive transformers, and diffusion; from fast detector simulation to symmetry-aware crystal generation.",
+      "body": "**Generative modelling for scientific data** — GANs, autoregressive transformers, and diffusion; from fast detector simulation to symmetry-aware crystal generation.",
       "tags": ["atomistic", "agents"]
     },
     {
@@ -131,7 +131,7 @@
           ],
           "bullets": [
             "Program Chair for the [AI4X 2025/6 conferences](https://ai4x.cc/)",
-            "Main organizer of the [ICLR 2025 Workshop on Machine Learning Multiscale Processes](https://multiscale-ai.github.io/)"
+            "Main organiser of the [ICLR 2025 Workshop on Machine Learning Multiscale Processes](https://multiscale-ai.github.io/)"
           ],
           "tags": ["agents", "industry"]
         },
@@ -196,7 +196,7 @@
           "bullets": [
             "Conceived a novel sparse representation of crystals with defects",
             "Achieved a 3.7x energy prediction error reduction",
-            "Optimized training and inference: 4x less memory, 8x fewer GPU operations",
+            "Optimised training and inference: 4x less memory, 8x fewer GPU operations",
             "Developed code for reproducible parallel running of machine learning experiments",
             "Led a team of 3"
           ],
@@ -239,8 +239,8 @@
             }
           ],
           "bullets": [
-            "Developed the first methods for estimating uncertainty of conditional GANs.",
-            "Led a team of 3 students."
+            "Developed the first methods for estimating uncertainty of conditional GANs",
+            "Led a team of 3 students"
           ],
           "tags": ["agents", "finance"]
         },
@@ -271,8 +271,8 @@
             }
           ],
           "bullets": [
-            "Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data.",
-            "Achieved approximately 10^5 speed-up compared to the ab-initio simulator."
+            "Developed a GAN-based machine learning model for high-fidelity simulation of a Cherenkov detector trained on tabular data",
+            "Achieved approximately 10^5 speed-up compared to the ab-initio simulator"
           ],
           "tags": ["atomistic", "agents"]
         },
@@ -294,7 +294,7 @@
             }
           ],
           "bullets": [
-            "Developed a rigorous way to train ML algorithms on data with the label-noise model common in high-energy physics."
+            "Developed a rigorous way to train ML algorithms on data with the label-noise model common in high-energy physics"
           ],
           "tags": ["atomistic", "finance"]
         },
@@ -316,10 +316,10 @@
             }
           ],
           "bullets": [
-            "Solved a classification problem over tabular data with noisy labels under timing constraints.",
-            "Developed a gradient boosting model that reduced the false positive rate by 30% in the critical low-track-momentum region.",
-            "Integrated the model into LHCb production, mostly in C++.",
-            "Packaged the work as a data science competition problem for IDAO-2019."
+            "Solved a classification problem over tabular data with noisy labels under timing constraints",
+            "Developed a gradient boosting model that reduced the false positive rate by 30% in the critical low-track-momentum region",
+            "Integrated the model into LHCb production, mostly in C++",
+            "Packaged the work as a data science competition problem for IDAO-2019"
           ],
           "tags": ["atomistic", "finance", "industry"]
         },
@@ -333,8 +333,8 @@
             }
           ],
           "bullets": [
-            "Set up a distributed system for running experiments for the team with Bash and Python.",
-            "Studied gradient boosting improvements with experiments on toy data."
+            "Set up a distributed system for running experiments for the team with Bash and Python",
+            "Studied gradient boosting improvements with experiments on toy data"
           ],
           "tags": ["finance", "industry"]
         }

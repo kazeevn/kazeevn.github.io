@@ -14,6 +14,10 @@
   ItalicFont={Roboto Italic},
   BoldItalicFont={Roboto Medium Italic},
 ]
+% Math is set in Fira Math (loaded from the system OTF), which pairs with the
+% geometric-humanist Roboto text. unicode-math must follow fontspec.
+\usepackage{unicode-math}
+\setmathfont{Fira Math}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{linkblue}{HTML}{1155CC}
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
@@ -99,7 +103,7 @@
 {\leftskip\projindent\textbf{Leadership}\par}
 \begin{itemize}[leftmargin=\projbulletindent]
   \item Program Chair for the \href{https://ai4x.cc/}{AI4X 2025/6 conferences}
-  \item Main organizer of the \href{https://multiscale-ai.github.io/}{ICLR 2025 Workshop on Machine Learning Multiscale Processes}
+  \item Main organiser of the \href{https://multiscale-ai.github.io/}{ICLR 2025 Workshop on Machine Learning Multiscale Processes}
 \end{itemize}
 \vspace{2pt}
 {\leftskip\projindent\textbf{Wyckoff Transformer, a generative model for materials}\artifacts{ \href{https://icml.cc/virtual/2025/poster/44595}{ICML 2025} \textperiodcentered{} \href{https://github.com/SymmetryAdvantage/WyckoffTransformer}{GitHub} }\par}
@@ -183,12 +187,12 @@
 % ===== PAGE 3: Skills & Publications =====
 \section{Skills}
 \begin{itemize}
-  \item \textbf{Generative modeling for scientific data} --- GANs, autoregressive transformers, and diffusion; from fast detector simulation to symmetry-aware crystal generation.
+  \item \textbf{Generative modelling for scientific data} --- GANs, autoregressive transformers, and diffusion; from fast detector simulation to symmetry-aware crystal generation.
   \item \textbf{Uncertainty quantification} --- built the first methods for estimating the uncertainty of conditional GANs; calibrated generative and discriminative models.
   \item \textbf{ML on structured, non-text data} --- tabular, graph, and atomistic representations, spanning gradient boosting to transformers.
   \item \textbf{Research leadership} --- lead multidisciplinary teams, chair conferences, and mentor students from idea to publication.
 \end{itemize}
-ML \& AI \textbullet\ Python \textbullet\ PyTorch \textbullet\ HPC \textbullet\ Physics \textbullet\ Research Writing \& Speaking \textbullet\ Leadership \& Mentorship
+{\small\centering ML \& AI \textbullet\ Python \textbullet\ PyTorch \textbullet\ HPC \textbullet\ Physics \textbullet\ Research Writing \& Speaking \textbullet\ Leadership \& Mentorship\par}
 
 % Pull every entry from publications.bib into the bibliography; the filters
 % below split them into the two sections.
