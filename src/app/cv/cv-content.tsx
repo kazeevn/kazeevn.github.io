@@ -31,6 +31,20 @@ type SimpleSectionItem = {
   body: string;
 };
 
+type EducationDegree = {
+  degree: string;
+  period?: string;
+  detail?: string;
+};
+
+type EducationItem = {
+  title: string;
+  period?: string;
+  degree?: string;
+  details?: string[];
+  degrees?: EducationDegree[];
+};
+
 type Publication = {
   citation: string;
 };
@@ -55,7 +69,7 @@ const pdfHref = "/Nikita_Kazeev_CV.pdf";
 
 const skillTags: SkillTag[] = cvData.skills;
 const workExperience: WorkEntry[] = cvData.workExperience;
-const education: SimpleSectionItem[] = cvData.education;
+const education: EducationItem[] = cvData.education;
 const mentorship = cvData.mentorship;
 const teachingAndOutreach = cvData.teachingAndOutreach;
 const service = cvData.service;
@@ -423,7 +437,19 @@ export default function CvContent() {
                     {item.title ? <p className="font-semibold text-neutral-900 dark:text-neutral-100">{item.title}</p> : null}
                     {item.period ? <p className="cv-period">{item.period}</p> : null}
                   </div>
-                  <p className="mt-1 text-sm text-neutral-700 dark:text-neutral-300">{renderFormattedText(item.body)}</p>
+                  {item.degree ? <p className="mt-1 text-sm italic text-neutral-700 dark:text-neutral-300">{renderFormattedText(item.degree)}</p> : null}
+                  {item.details?.map((detail, detailIndex) => (
+                    <p key={detailIndex} className="mt-1 pl-4 text-sm text-neutral-700 dark:text-neutral-300">{renderFormattedText(detail)}</p>
+                  ))}
+                  {item.degrees?.map((deg, degIndex) => (
+                    <div key={degIndex} className="mt-2">
+                      <div className="flex flex-wrap items-baseline justify-between gap-x-3">
+                        <p className="text-sm italic text-neutral-700 dark:text-neutral-300">{renderFormattedText(deg.degree)}</p>
+                        {deg.period ? <p className="cv-period">{deg.period}</p> : null}
+                      </div>
+                      {deg.detail ? <p className="mt-1 pl-4 text-sm text-neutral-700 dark:text-neutral-300">{renderFormattedText(deg.detail)}</p> : null}
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}

@@ -78,7 +78,18 @@
 \section{Education}
 {% for item in education -%}
 \textbf{ {{- item.title -}} }{% if item.period %}\hfill\textbf{ {{- item.period -}} }{% endif %}\par
-{{ item.body }}\par
+{%- if item.degree %}
+\textit{ {{- item.degree -}} }\par
+{%- endif %}
+{%- for d in item.details %}
+{\leftskip\projindent {{ d }}\par}
+{%- endfor %}
+{%- for deg in item.degrees %}
+\textit{ {{- deg.degree -}} }{% if deg.period %}\hfill\textbf{ {{- deg.period -}} }{% endif %}\par
+{%- if deg.detail %}
+{\leftskip\projindent {{ deg.detail }}\par}
+{%- endif %}
+{%- endfor %}
 \smallskip
 
 {% endfor -%}

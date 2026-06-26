@@ -43,6 +43,9 @@ def to_latex_inner(text):
     # Translate italic *text* to \textit{text}
     text = re.sub(r'\*(.*?)\*', r'\\textit{\1}', text)
     
+    # Translate literal bullet points to indented LaTeX bullets
+    text = text.replace('• ', '\\hspace{1.3em}\\textbullet\\ ')
+    
     return text
 
 def escape_url(url):

@@ -322,33 +322,48 @@
   ],
   "education": [
     {
-      "title": "Higher School of Economics (HSE University)",
+      "title": "HSE University & Sapienza Università di Roma",
       "period": "2016–2020",
-      "body": "*PhD in Computer Science*, supervisor [Andrey Ustyuzhanin](https://www.linkedin.com/profile/view?id=2422149); [Machine Learning for particle identification in the LHCb detector](https://repository.cern/records/034yx-nt191)."
-    },
-    {
-      "title": "Sapienza — Universita di Roma",
-      "period": "2016–2020",
-      "body": "*PhD in Physics* (double degree with HSE), supervisor [Barbara Sciascia](https://it.linkedin.com/in/barbara-sciascia-234935a)."
+      "degree": "PhD in Computer Science and Physics (Double Degree)",
+      "details": [
+        "Supervisors: [Andrey Ustyuzhanin](https://www.linkedin.com/in/andreyustyuzhanin/) & [Barbara Sciascia](https://it.linkedin.com/in/barbara-sciascia-234935a)",
+        "Thesis: [Machine Learning for particle identification in the LHCb detector](https://repository.cern/records/034yx-nt191)"
+      ]
     },
     {
       "title": "Product Management course at Yandex",
       "period": "2018",
-      "body": "Focused coursework in product strategy and execution."
+      "degree": "Focused coursework in product strategy and execution."
     },
     {
       "title": "Yandex School of Data Analysis",
       "period": "2013–2015",
-      "body": "Master's level CS course covering algorithms, machine learning, deep learning, and distributed systems."
+      "degree": "Master's-level CS programme",
+      "details": [
+        "Algorithms, machine learning, deep learning, and distributed systems."
+      ]
     },
     {
       "title": "Moscow Institute of Physics and Technology",
-      "body": "*MS in Physics* (2014–2016): Optimisation of data processing of the LHCb experiment.\n\n*BS in Physics* (2010–2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting."
+      "degrees": [
+        {
+          "degree": "MS in Physics",
+          "period": "2014–2016",
+          "detail": "Optimisation of data processing of the LHCb experiment."
+        },
+        {
+          "degree": "BS in Physics",
+          "period": "2010–2014",
+          "detail": "Wave-packet molecular dynamics of electrons in nonideal plasma."
+        }
+      ]
     },
     {
       "title": "International Junior Science Olympiad (IJSO)",
-      "period": "2008",
-      "body": "Silver medal (held in Korea)."
+      "period": "Korea, 2008",
+      "details": [
+        "Silver medal"
+      ]
     }
   ],
   "mentorship": [
@@ -431,7 +446,7 @@
   ],
   "service": [
     {
-      "body": "Reviewer for NeurIPS, RSC Advances, Machine Learning: Science and Technology"
+      "body": "Reviewer for NeurIPS, RSC Advances, Machine Learning: Science and Technology, Digital Discovery"
     },
     {
       "body": "Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing."
