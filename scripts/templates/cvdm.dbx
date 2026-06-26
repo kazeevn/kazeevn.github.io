@@ -1,0 +1,11 @@
+% Custom biblatex data-model fields for the CV bibliography.
+% Loaded via the `datamodel=cvdm` option of \usepackage{biblatex}; in current
+% biblatex these declarations are only permitted in a .dbx file, not the
+% document preamble.
+%
+%   sessionurl  ICML virtual-session link (consumed by the website generator).
+%   eqcontrib   comma-separated family names sharing equal first authorship;
+%               each gets a superscript star in the typeset author list.
+\DeclareDatamodelFields[type=field,datatype=uri,nullok=true]{sessionurl}
+\DeclareDatamodelFields[type=field,datatype=literal,nullok=true]{eqcontrib}
+\DeclareDatamodelEntryfields{sessionurl,eqcontrib}

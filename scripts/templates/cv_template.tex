@@ -19,6 +19,44 @@
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{xstring}        % substring test for the equal-contribution marker
+
+% Publications are stored in BibLaTeX format (src/data/publications.bib) and
+% typeset with biber. A numeric style with file-order sorting reproduces the
+% manually numbered list the CV used previously.
+% url/doi/eprint are suppressed from standalone printing (url=false etc.); the
+% title hyperlinks to the entry's url instead (see \DeclareFieldFormat below).
+% Custom fields (sessionurl, eqcontrib) are declared in cvdm.dbx, loaded via the
+% datamodel option — current biblatex forbids \DeclareDatamodel* in the preamble.
+\usepackage[backend=biber,datamodel=cvdm,style=numeric,sorting=none,maxbibnames=99,giveninits=false,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\addbibresource{publications.bib}
+\renewcommand*{\bibfont}{\small}
+\setlength{\bibitemsep}{3pt}
+\setlength{\bibparsep}{0pt}
+\defbibheading{none}{}
+
+{% raw %}
+% Unnumbered publication list: a flush-left hanging list with no [n] labels.
+\defbibenvironment{bibliography}
+  {\list{}{\setlength{\leftmargin}{1.2em}\setlength{\itemindent}{-\leftmargin}\setlength{\itemsep}{\bibitemsep}\setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+% Boldface my own name wherever it appears in an author list, and append a
+% superscript star to any author named in the entry's eqcontrib field.
+\renewcommand*{\mkbibcompletename}[1]{\ifboolexpr{ test {\ifdefstring{\namepartfamily}{Kazeev}} }{\textbf{#1}}{#1}\iffieldundef{eqcontrib}{}{\IfSubStr{\thefield{eqcontrib}}{\namepartfamily}{\textsuperscript{*}}{}}}
+\DeclareFieldFormat{addendum}{\textbf{#1}}
+% Make the (quoted) title the clickable link to the publication.
+\DeclareFieldFormat[article,inproceedings]{title}{\iffieldundef{url}{\mkbibquote{#1\isdot}}{\href{\thefield{url}}{\mkbibquote{#1\isdot}}}}
+% ICML 2026 entries: lead with the session time (bold) so a reader sees when
+% to attend, drop the redundant standalone "July 2026" date, and remove the
+% note from its usual trailing position. Other entries are untouched.
+\AtEveryBibitem{\ifkeyword{icml2026}{\clearfield{year}\clearfield{month}\clearfield{day}\printtext{\textbf{\thefield{note}}\addspace\textemdash\addspace}\clearfield{note}}{}}
+{% endraw %}
+% Variant filters: the build script bakes the current variant tag into the
+% template, so `{{ variant_tag }}` is a literal keyword here (empty for the
+% generic CV, which prints everything).
+\defbibfilter{cvicml}{ \keyword{icml2026}{% if variant_tag %} and \keyword{ {{- variant_tag -}} }{% endif %} }
+\defbibfilter{cvselected}{ not \keyword{icml2026}{% if variant_tag %} and \keyword{ {{- variant_tag -}} }{% endif %} }
 
 \setcounter{secnumdepth}{0}            % no section numbering
 \titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
@@ -133,20 +171,16 @@
 \end{itemize}
 {%- endif %}
 
-{%- if publications | selectattr('category', 'equalto', 'icml2026') | list %}
+% Pull every entry from publications.bib into the bibliography; the filters
+% below split them into the two sections.
+\nocite{*}
+
+{%- if has_icml %}
 \section{Presenting at ICML 2026}
-\begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
-{%- for pub in publications if pub.category == 'icml2026' %}
-  \item {{ pub.citation }}
-{%- endfor %}
-\end{enumerate}
+\printbibliography[filter=cvicml,heading=none,resetnumbers=true]
 {%- endif %}
 
 \section{Selected Publications}
-\begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
-{%- for pub in publications if pub.category != 'icml2026' %}
-  \item {{ pub.citation }}
-{%- endfor %}
-\end{enumerate}
+\printbibliography[filter=cvselected,heading=none,resetnumbers=true]
 
 \end{document}

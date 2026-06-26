@@ -1,0 +1,34 @@
+[
+  {
+    "citation": "[July 11, 12:15–13:30](https://icml.cc/virtual/2026/workshop/54091) — **Kazeev, Nikita**, and Ian Babich. [Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments](https://openreview.net/forum?id=GhUK6VGW67). Forecasting as a New Frontier of Intelligence Workshop at ICML 2026.",
+    "category": "icml2026"
+  },
+  {
+    "citation": "[July 11, 15:00–16:30](https://icml.cc/virtual/2026/workshop/54064) — **Kazeev, Nikita**, and Phan Bui Nhat Huyen. [Position: Align AI to Our Aspirations, Not Our Flaws](https://openreview.net/forum?id=J3Vqv2fFse). Pluralistic Alignment Workshop at ICML 2026.",
+    "category": "icml2026"
+  },
+  {
+    "citation": "[July 11, 15:30–17:00](https://icml.cc/virtual/2026/workshop/54054) — **Kazeev, Nikita**, and Andrey Ustyuzhanin. [The Geometry of Reasoning Failure: Predicting Agent Errors from Semantic Scale Trajectories](https://openreview.net/forum?id=zqShTtnTZc). Statistical Frameworks for Uncertainty in Agentic Systems Workshop at ICML 2026.",
+    "category": "icml2026"
+  },
+  {
+    "citation": "[July 11, 10:50–11:50 & 15:55–16:55](https://icml.cc/virtual/2026/workshop/54099) — Dembitskiy, Artem*, Shuya Yamazaki*, Artem Maevskiy*, **Nikita Kazeev***, Roman A. Eremin, Semen Budennyy, Kedar Hippalgaonkar, Antonio Helio Castro Neto, and Andrey E. Ustyuzhanin. [Generative Pipeline for Discovering Solid-State Battery Materials with Universal Atomistic Potentials](https://openreview.net/forum?id=xFI6K4ZQDp). AI for Science Workshop at ICML 2026. ***Equal Contribution**",
+    "category": "icml2026"
+  },
+  {
+    "citation": "[July 11, 11:40–13:30 & 16:10–17:00](https://icml.cc/virtual/2026/workshop/54089) — **Kazeev, Nikita**, and Andrey Ustyuzhanin. [Uncertainty Quantification for LLM Agents via Semantic Abstraction Trajectories](https://openreview.net/forum?id=ZsThsDtfaA). Structured Probabilistic Inference & Generative Modeling Workshop at ICML 2026.",
+    "category": "icml2026"
+  },
+  {
+    "citation": "**Kazeev, Nikita**, Wei Nong, Ignat Romanov, Ruiming Zhu, Andrey E Ustyuzhanin, Shuya Yamazaki, and Kedar Hippalgaonkar. [Wyckoff Transformer: Generation of Symmetric Crystals](https://proceedings.mlr.press/v267/kazeev25a.html). Proceedings of the 42nd International Conference on Machine Learning, 2025."
+  },
+  {
+    "citation": "**Kazeev, Nikita**, A. R. Al-Maeeni, I. Romanov, et al. [Sparse representation for machine learning the properties of defects in 2D materials](https://doi.org/10.1038/s41524-023-01062-z). npj Computational Materials 9, 113 (2023)."
+  },
+  {
+    "citation": "Borisyak, Maxim, and **Nikita Kazeev**. [Machine Learning on data with sPlot background subtraction](https://doi.org/10.1088/1748-0221/14/08/P08020). Journal of Instrumentation 14.08 (2019). **Alphabetic order, I'm the corresponding author.**"
+  },
+  {
+    "citation": "Derkach, Denis, **Nikita Kazeev**, Fedor Ratnikov, Andrey Ustyuzhanin, and Alexandra Volokhova. [Cherenkov detectors fast simulation using neural networks](https://doi.org/10.1016/j.nima.2019.01.031). Nuclear Instruments and Methods in Physics Research Section A (2019). **Alphabetic order, I'm the corresponding author.**"
+  }
+]

@@ -1,0 +1,133 @@
+% Bibliographic source of truth for the CV publications.
+%
+% This file drives BOTH the LaTeX CVs (via biblatex + biber) and the website.
+% After editing it, run `python scripts/generate_cvs.py`, which
+%   1. compiles the per-variant CV PDFs with biblatex/biber, and
+%   2. regenerates src/data/publications.json that the website consumes.
+%
+% Conventions
+%   keywords    CV-variant filtering (atomistic / agents / finance / industry)
+%               plus the literal `icml2026` marker for the "Presenting at
+%               ICML 2026" section. biblatex filters on these; the website
+%               generator reads them to split the sections.
+%   url         primary link the title points to on the website.
+%   note        for ICML workshop posters, the session time; printed by
+%               biblatex and used as the link text for `sessionurl` on the web.
+%   sessionurl  custom field (declared in the CV template's data model): the
+%               ICML virtual session page. Website-only; not printed in the PDF.
+%   addendum    trailing remark (e.g. authorship order), printed by biblatex
+%               and bolded on the website.
+
+@inproceedings{kazeev2026foresight,
+  author      = {Kazeev, Nikita and Babich, Ian},
+  title       = {Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments},
+  booktitle   = {Forecasting as a New Frontier of Intelligence Workshop at ICML 2026},
+  date        = {2026-07},
+  url         = {https://openreview.net/forum?id=GhUK6VGW67},
+  note        = {July 11, 12:15–13:30},
+  sessionurl  = {https://icml.cc/virtual/2026/workshop/54091},
+  keywords    = {icml2026, agents, atomistic},
+}
+
+@inproceedings{kazeev2026aspirations,
+  author      = {Kazeev, Nikita and {Phan Bui Nhat Huyen}},
+  title       = {Position: Align AI to Our Aspirations, Not Our Flaws},
+  booktitle   = {Pluralistic Alignment Workshop at ICML 2026},
+  date        = {2026-07},
+  url         = {https://openreview.net/forum?id=J3Vqv2fFse},
+  note        = {July 11, 15:00–16:30},
+  sessionurl  = {https://icml.cc/virtual/2026/workshop/54064},
+  keywords    = {icml2026, agents, industry},
+}
+
+@inproceedings{kazeev2026geometry,
+  author      = {Kazeev, Nikita and Ustyuzhanin, Andrey},
+  title       = {The Geometry of Reasoning Failure: Predicting Agent Errors from Semantic Scale Trajectories},
+  booktitle   = {Statistical Frameworks for Uncertainty in Agentic Systems Workshop at ICML 2026},
+  date        = {2026-07},
+  url         = {https://openreview.net/forum?id=zqShTtnTZc},
+  note        = {July 11, 15:30–17:00},
+  sessionurl  = {https://icml.cc/virtual/2026/workshop/54054},
+  keywords    = {icml2026, agents},
+}
+
+@inproceedings{dembitskiy2026generative,
+  author      = {Dembitskiy, Artem and Yamazaki, Shuya and Maevskiy, Artem and
+                 Kazeev, Nikita and Eremin, Roman A. and Budennyy, Semen and
+                 Hippalgaonkar, Kedar and {Castro Neto}, Antonio Helio and
+                 Ustyuzhanin, Andrey E.},
+  title       = {Generative Pipeline for Discovering Solid-State Battery Materials with Universal Atomistic Potentials},
+  booktitle   = {AI for Science Workshop at ICML 2026},
+  date        = {2026-07},
+  url         = {https://openreview.net/forum?id=xFI6K4ZQDp},
+  note        = {July 11, 10:50–11:50 \& 15:55–16:55},
+  sessionurl  = {https://icml.cc/virtual/2026/workshop/54099},
+  eqcontrib   = {Dembitskiy, Yamazaki, Maevskiy, Kazeev},
+  addendum    = {*Equal Contribution},
+  keywords    = {icml2026, atomistic, industry},
+}
+
+@inproceedings{kazeev2026uncertainty,
+  author      = {Kazeev, Nikita and Ustyuzhanin, Andrey},
+  title       = {Uncertainty Quantification for LLM Agents via Semantic Abstraction Trajectories},
+  booktitle   = {Structured Probabilistic Inference \& Generative Modeling Workshop at ICML 2026},
+  date        = {2026-07},
+  url         = {https://openreview.net/forum?id=ZsThsDtfaA},
+  note        = {July 11, 11:40–13:30 \& 16:10–17:00},
+  sessionurl  = {https://icml.cc/virtual/2026/workshop/54089},
+  keywords    = {icml2026, agents},
+}
+
+@inproceedings{kazeev2025wyckoff,
+  title = 	 {Wyckoff Transformer: Generation of Symmetric Crystals},
+  author =       {Kazeev, Nikita and Nong, Wei and Romanov, Ignat and Zhu, Ruiming and Ustyuzhanin, Andrey E and Yamazaki, Shuya and Hippalgaonkar, Kedar},
+  booktitle = 	 {Proceedings of the 42nd International Conference on Machine Learning},
+  pages = 	 {29495--29526},
+  year = 	 {2025},
+  editor = 	 {Singh, Aarti and Fazel, Maryam and Hsu, Daniel and Lacoste-Julien, Simon and Berkenkamp, Felix and Maharaj, Tegan and Wagstaff, Kiri and Zhu, Jerry},
+  volume = 	 {267},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {13--19 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v267/main/assets/kazeev25a/kazeev25a.pdf},
+  url = 	 {https://proceedings.mlr.press/v267/kazeev25a.html},
+  abstract = 	 {Crystal symmetry plays a fundamental role in determining its physical, chemical, and electronic properties such as electrical and thermal conductivity, optical and polarization behavior, and mechanical strength. Almost all known crystalline materials have internal symmetry. However, this is often inadequately addressed by existing generative models, making the consistent generation of stable and symmetrically valid crystal structures a significant challenge. We introduce WyFormer, a generative model that directly tackles this by formally conditioning on space group symmetry. It achieves this by using Wyckoff positions as the basis for an elegant, compressed, and discrete structure representation. To model the distribution, we develop a permutation-invariant autoregressive model based on the Transformer encoder and an absence of positional encoding. Extensive experimentation demonstrates WyFormer’s compelling combination of attributes: it achieves best-in-class symmetry-conditioned generation, incorporates a physics-motivated inductive bias, produces structures with competitive stability, predicts material properties with competitive accuracy even without atomic coordinates, and exhibits unparalleled inference speed.},
+  keywords    = {atomistic, agents, finance, industry},
+}
+
+@article{kazeev2023sparse,
+  author      = {Kazeev, Nikita and Al-Maeeni, A. R. and Romanov, I. and others},
+  title       = {Sparse representation for machine learning the properties of defects in 2D materials},
+  journaltitle = {npj Computational Materials},
+  volume      = {9},
+  pages       = {113},
+  date        = {2023},
+  doi         = {10.1038/s41524-023-01062-z},
+  url         = {https://doi.org/10.1038/s41524-023-01062-z},
+  keywords    = {atomistic, finance, industry},
+}
+
+@article{borisyak2019splot,
+  author      = {Borisyak, Maxim and Kazeev, Nikita},
+  title       = {Machine Learning on data with sPlot background subtraction},
+  journaltitle = {Journal of Instrumentation},
+  volume      = {14},
+  number      = {08},
+  date        = {2019},
+  doi         = {10.1088/1748-0221/14/08/P08020},
+  url         = {https://doi.org/10.1088/1748-0221/14/08/P08020},
+  addendum    = {Alphabetic order, I'm the corresponding author.},
+  keywords    = {finance},
+}
+
+@article{derkach2019cherenkov,
+  author      = {Derkach, Denis and Kazeev, Nikita and Ratnikov, Fedor and
+                 Ustyuzhanin, Andrey and Volokhova, Alexandra},
+  title       = {Cherenkov detectors fast simulation using neural networks},
+  journaltitle = {Nuclear Instruments and Methods in Physics Research Section A},
+  date        = {2019},
+  doi         = {10.1016/j.nima.2019.01.031},
+  url         = {https://doi.org/10.1016/j.nima.2019.01.031},
+  addendum    = {Alphabetic order, I'm the corresponding author.},
+  keywords    = {atomistic, agents, finance},
+}

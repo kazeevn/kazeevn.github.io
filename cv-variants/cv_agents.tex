@@ -19,6 +19,44 @@
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{xstring}        % substring test for the equal-contribution marker
+
+% Publications are stored in BibLaTeX format (src/data/publications.bib) and
+% typeset with biber. A numeric style with file-order sorting reproduces the
+% manually numbered list the CV used previously.
+% url/doi/eprint are suppressed from standalone printing (url=false etc.); the
+% title hyperlinks to the entry's url instead (see \DeclareFieldFormat below).
+% Custom fields (sessionurl, eqcontrib) are declared in cvdm.dbx, loaded via the
+% datamodel option — current biblatex forbids \DeclareDatamodel* in the preamble.
+\usepackage[backend=biber,datamodel=cvdm,style=numeric,sorting=none,maxbibnames=99,giveninits=false,doi=false,url=false,isbn=false,eprint=false]{biblatex}
+\addbibresource{publications.bib}
+\renewcommand*{\bibfont}{\small}
+\setlength{\bibitemsep}{3pt}
+\setlength{\bibparsep}{0pt}
+\defbibheading{none}{}
+
+
+% Unnumbered publication list: a flush-left hanging list with no [n] labels.
+\defbibenvironment{bibliography}
+  {\list{}{\setlength{\leftmargin}{1.2em}\setlength{\itemindent}{-\leftmargin}\setlength{\itemsep}{\bibitemsep}\setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+% Boldface my own name wherever it appears in an author list, and append a
+% superscript star to any author named in the entry's eqcontrib field.
+\renewcommand*{\mkbibcompletename}[1]{\ifboolexpr{ test {\ifdefstring{\namepartfamily}{Kazeev}} }{\textbf{#1}}{#1}\iffieldundef{eqcontrib}{}{\IfSubStr{\thefield{eqcontrib}}{\namepartfamily}{\textsuperscript{*}}{}}}
+\DeclareFieldFormat{addendum}{\textbf{#1}}
+% Make the (quoted) title the clickable link to the publication.
+\DeclareFieldFormat[article,inproceedings]{title}{\iffieldundef{url}{\mkbibquote{#1\isdot}}{\href{\thefield{url}}{\mkbibquote{#1\isdot}}}}
+% ICML 2026 entries: lead with the session time (bold) so a reader sees when
+% to attend, drop the redundant standalone "July 2026" date, and remove the
+% note from its usual trailing position. Other entries are untouched.
+\AtEveryBibitem{\ifkeyword{icml2026}{\clearfield{year}\clearfield{month}\clearfield{day}\printtext{\textbf{\thefield{note}}\addspace\textemdash\addspace}\clearfield{note}}{}}
+
+% Variant filters: the build script bakes the current variant tag into the
+% template, so `agents` is a literal keyword here (empty for the
+% generic CV, which prints everything).
+\defbibfilter{cvicml}{ \keyword{icml2026} and \keyword{agents} }
+\defbibfilter{cvselected}{ not \keyword{icml2026} and \keyword{agents} }
 
 \setcounter{secnumdepth}{0}            % no section numbering
 \titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
@@ -151,18 +189,14 @@
   \item \textbf{Research Writing \& Speaking}
   \item \textbf{Leadership \& Mentorship}
 \end{itemize}
+
+% Pull every entry from publications.bib into the bibliography; the filters
+% below split them into the two sections.
+\nocite{*}
 \section{Presenting at ICML 2026}
-\begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
-  \item \textbf{Kazeev, Nikita}, and Ian Babich. \href{https://openreview.net/forum?id=GhUK6VGW67}{Foresight-Phys: A Benchmark for Forecasting the Results of Physical Experiments}. Forecasting as a New Frontier of Intelligence Workshop at ICML 2026. \href{https://icml.cc/virtual/2026/workshop/54091}{July 11, 12:15--13:30}
-  \item \textbf{Kazeev, Nikita}, and Phan Bui Nhat Huyen. \href{https://openreview.net/forum?id=J3Vqv2fFse}{Position: Align AI to Our Aspirations, Not Our Flaws}. Pluralistic Alignment Workshop \href{https://icml.cc/virtual/2026/workshop/54064}{July 11, 15:00--16:30}
-  \item \textbf{Kazeev, Nikita} and Ustyuzhanin, Andrey. \href{https://openreview.net/forum?id=zqShTtnTZc}{The Geometry of Reasoning Failure: Predicting Agent Errors from Semantic Scale Trajectories}. Statistical Frameworks for Uncertainty in Agentic Systems Workshop \href{https://icml.cc/virtual/2026/workshop/54054}{July 11, 15:30--17:00}
-  \item \textbf{Kazeev, Nikita} and Ustyuzhanin, Andrey. \href{https://openreview.net/forum?id=ZsThsDtfaA}{Uncertainty Quantification for LLM Agents via Semantic Abstraction Trajectories} Structured Probabilistic Inference \& Generative Modeling Workshop \href{https://icml.cc/virtual/2026/workshop/54089}{July 11, 11:40--13:30 \& 16:10--17:00}
-\end{enumerate}
+\printbibliography[filter=cvicml,heading=none,resetnumbers=true]
 
 \section{Selected Publications}
-\begin{enumerate}[leftmargin=1.5em,topsep=1pt,itemsep=1pt,parsep=0pt]
-  \item \textbf{Kazeev, Nikita}, et al. \href{https://arxiv.org/abs/2503.02407}{WyckoffTransformer: Generation of Symmetric Crystals}. ICML 2025, May 2025.
-  \item Derkach, D., \textbf{Kazeev, N.}, Ratnikov, F., Ustyuzhanin, A., \& Volokhova, A. (2019). \href{https://doi.org/10.1016/j.nima.2019.01.031}{Cherenkov detectors fast simulation using neural networks}. \textit{Nuclear Instruments and Methods in Physics Research Section A}. \textbf{Alphabetic order, I'm the corresponding author.}
-\end{enumerate}
+\printbibliography[filter=cvselected,heading=none,resetnumbers=true]
 
 \end{document}

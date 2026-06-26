@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from 
 import ExportedImage from "next-image-export-optimizer";
 import { renderFormattedText } from "@/utils/format";
 import cvData from "@/data/cv_data.json";
+import publicationsData from "@/data/publications.json";
 
 type ReferenceLink = {
   href: string;
@@ -75,7 +76,7 @@ const mentorship = cvData.mentorship;
 const teachingAndOutreach = cvData.teachingAndOutreach;
 const service = cvData.service;
 const stats: Stat[] = cvData.stats;
-const publications: Publication[] = cvData.publications;
+const publications: Publication[] = publicationsData;
 const icmlPapers = publications.filter((p) => p.category === "icml2026");
 const selectedPubs = publications.filter((p) => p.category !== "icml2026");
 

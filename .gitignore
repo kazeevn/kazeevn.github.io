@@ -42,4 +42,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+*.aux
+*.bbl
+*.bcf
+*.log
+*.out
+*.blg
+*.run.xml
+
 /papers/
