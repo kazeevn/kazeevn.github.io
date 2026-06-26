@@ -1,4 +1,5 @@
-% Compiled with LuaLaTeX. Default font is Latin Modern Roman (serif).
+% Compiled with LuaLaTeX. Main font is Roboto, loaded from the system TTFs via
+% fontspec/fontconfig (the roboto LaTeX package is not installed here).
 % Layout based on the Rover Resume base template
 % (https://github.com/subidit/rover-resume): ruled section headers and a
 % strict single-level bullet hierarchy, with run-in project titles that each
@@ -6,6 +7,13 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[a4paper,margin=0.72in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Roboto}[
+  Ligatures=TeX,
+  BoldFont={Roboto Medium},
+  ItalicFont={Roboto Italic},
+  BoldItalicFont={Roboto Medium Italic},
+]
 \usepackage[dvipsnames]{xcolor}
 \definecolor{linkblue}{HTML}{1155CC}
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
@@ -22,17 +30,22 @@
 % Run-in list of supporting artifacts after a project title.
 \newcommand{\artifacts}[1]{\hspace{0.45em}{\footnotesize #1}}
 
+% Projects are indented under their employer to establish visual hierarchy:
+% the employer line is the flush-left anchor, projects nest one step in.
+\newlength{\projindent}\setlength{\projindent}{1.3em}
+\newlength{\projbulletindent}\setlength{\projbulletindent}{2.7em}
+
 \begin{document}
 
 % ===== Header =====
 \begin{center}
   {\LARGE\bfseries {{ personal.name }}}\\[3pt]
   {\small
-    \href{mailto:{{ personal.email }}}{ {{- personal.email -}} } $\cdot$
-    \href{ {{- personal.website -}} }{Website} $\cdot$
-    \href{ {{- personal.github -}} }{GitHub} $\cdot$
-    \href{ {{- personal.linkedin -}} }{LinkedIn} $\cdot$
-    \href{ {{- personal.scholar -}} }{Google Scholar} $\cdot$
+    \href{mailto:{{ personal.email }}}{ {{- personal.email -}} } \textperiodcentered{}
+    \href{ {{- personal.website -}} }{Website} \textperiodcentered{}
+    \href{ {{- personal.github -}} }{GitHub} \textperiodcentered{}
+    \href{ {{- personal.linkedin -}} }{LinkedIn} \textperiodcentered{}
+    \href{ {{- personal.scholar -}} }{Google Scholar} \textperiodcentered{}
     \href{ {{- personal.orcid -}} }{ORCID}%
   }\\[5pt]
   \textit{ {{ personal.title }} }
@@ -41,16 +54,15 @@
 % ===== PAGE 1: Work Experience & Projects =====
 \section{Work Experience}
 {% for entry in workExperience -%}
-\textbf{ {{- entry.organization -}} }\hfill\textbf{ {{- entry.period -}} }\par
-\textit{ {{- entry.role -}} }\par
+\textsc{\textbf{ {{- entry.organization -}} }} \textit{ {{- entry.role -}} } \hfill\textbf{ {{- entry.period -}} }\par
 {%- if entry.note %}
 {\small {{ entry.note }} }\par
 {%- endif %}
 {%- for h in entry.highlights %}
 \vspace{2pt}
-\textbf{ {{- h.title -}} }{% if h.references %}\artifacts{ {% for r in h.references %}\href{ {{- r.href -}} }{ {{- r.label -}} }{% if not loop.last %} $\cdot$ {% endif %}{% endfor %} }{% endif %}\par
+{\leftskip\projindent\textbf{ {{- h.title -}} }{% if h.references %}\artifacts{ {% for r in h.references %}\href{ {{- r.href -}} }{ {{- r.label -}} }{% if not loop.last %} \textperiodcentered{} {% endif %}{% endfor %} }{% endif %}\par}
 {%- if h.bullets %}
-\begin{itemize}
+\begin{itemize}[leftmargin=\projbulletindent]
 {%- for bullet in h.bullets %}
   \item {{ bullet }}
 {%- endfor %}
