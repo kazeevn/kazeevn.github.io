@@ -54,7 +54,7 @@
 % ===== PAGE 1: Work Experience & Projects =====
 \section{Work Experience}
 {% for entry in workExperience -%}
-\textsc{\textbf{ {{- entry.organization -}} }} \textit{ {{- entry.role -}} } \hfill\textbf{ {{- entry.period -}} }\par
+\textsc{\textbf{ {{- entry.organization -}} }}\quad{\small\color{black!55}\itshape {{ entry.role }}} \hfill\textbf{ {{- entry.period -}} }\par
 {%- if entry.note %}
 {\small {{ entry.note }} }\par
 {%- endif %}
@@ -110,14 +110,6 @@
 \end{itemize}
 {%- endif %}
 
-{%- if otherItems %}
-\section{Other}
-\begin{itemize}
-{%- for item in otherItems %}
-  \item {{ item.body }}
-{%- endfor %}
-\end{itemize}
-{%- endif %}
 \newpage
 
 % ===== PAGE 3: Skills & Publications =====

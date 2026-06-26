@@ -90,8 +90,15 @@
       "tags": ["agents", "industry"]
     },
     {
+      "organization": "Constructor Group",
+      "role": "Machine Learning Consultant",
+      "period": "2021–present",
+      "url": "https://constructor.org/",
+      "tags": ["atomistic", "finance", "industry"]
+    },
+    {
       "organization": "National University of Singapore",
-      "role": "Postdoc under Kostya Novoselov",
+      "role": "Postdoc under [Kostya Novoselov](https://en.wikipedia.org/wiki/Konstantin_Novoselov)",
       "period": "2022–present",
       "tags": ["atomistic", "agents", "finance", "industry"],
       "highlights": [
@@ -103,8 +110,8 @@
             "Project Management"
           ],
           "bullets": [
-            "Program Chair for the [AI4X 2025/6 conferences](https://ai4x.cc/).",
-            "Main organizer of the [ICLR 2025 workshop on multiscale machine learning](https://multiscale-ai.github.io/)."
+            "Program Chair for the [AI4X 2025/6 conferences](https://ai4x.cc/)",
+            "Main organizer of the [ICLR 2025 Workshop on Machine Learning Multiscale Processes](https://multiscale-ai.github.io/)"
           ],
           "tags": ["agents", "industry"]
         },
@@ -124,21 +131,21 @@
             },
             {
               "href": "https://github.com/SymmetryAdvantage/WyckoffTransformer",
-              "label": "code"
+              "label": "GitHub"
             }
           ],
           "bullets": [
             "Developed a coordinate-free permutation-invariant autoregressive Transformer encoder model for material generation and property prediction based on symmetry inductive bias",
             "Increased materials discovery yield (S.U.N.) by 1.24x",
-            "Accelerated inference throughput by 4 orders of magnitude, dropping generation costs to 0.05 GPU ms per structure.",
-            "Implemented the model in PyTorch; production-ready package published on [PyPI](https://pypi.org/project/wyckoff-transformer/",
+            "Accelerated inference by 4 orders of magnitude, to 0.05 GPU ms per structure",
+            "Implemented the model in PyTorch; production-ready package published on [PyPI](https://pypi.org/project/wyckoff-transformer/)",
             "Orchestrated large-scale (10k structures) DFT computations with VASP at an HPC cluster",
             "Led a team of 6"
           ],
           "tags": ["atomistic", "agents", "finance", "industry"]
         },
         {
-          "title": "ML for predicting properties of defects in 2D crystals",
+          "title": "ML for defects in 2D crystals",
           "skills": [
             "ML & AI",
             "Python",
@@ -150,11 +157,11 @@
           "references": [
             {
               "href": "https://www.nature.com/articles/s41699-023-00369-1",
-              "label": "paper 1"
+              "label": "npj 2D Mater. Appl."
             },
             {
               "href": "https://www.nature.com/articles/s41524-023-01062-z",
-              "label": "paper 2"
+              "label": "npj Comput. Mater."
             },
             {
               "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=vamy2okAAAAJ&sortby=pubdate&citation_for_view=vamy2okAAAAJ:uAPFzskPt0AC",
@@ -162,26 +169,19 @@
             },
             {
               "href": "https://github.com/HSE-LAMBDA/ai4material_design",
-              "label": "code"
+              "label": "GitHub"
             }
           ],
           "bullets": [
             "Conceived a novel sparse representation of crystals with defects",
             "Achieved a 3.7x energy prediction error reduction",
-            "Optimized training and inference workflows, reducing memory usage by 4x and GPU operations by 8x",
+            "Optimized training and inference: 4x less memory, 8x fewer GPU operations",
             "Developed code for reproducible parallel running of machine learning experiments",
             "Led a team of 3"
           ],
           "tags": ["atomistic", "finance", "industry"]
         }
       ]
-    },
-    {
-      "organization": "Constructor Group",
-      "role": "Machine Learning Consultant",
-      "period": "2021–present",
-      "url": "https://constructor.org/",
-      "tags": ["atomistic", "finance", "industry"]
     },
     {
       "organization": "CERN [Yandex → HSE University]",
@@ -324,12 +324,12 @@
     {
       "title": "Higher School of Economics (HSE University)",
       "period": "2016–2020",
-      "body": "PhD in Computer Science, supervisor [Andrey Ustyuzhanin](https://www.linkedin.com/profile/view?id=2422149); [Machine Learning for particle identification in the LHCb detector](https://repository.cern/records/034yx-nt191)."
+      "body": "*PhD in Computer Science*, supervisor [Andrey Ustyuzhanin](https://www.linkedin.com/profile/view?id=2422149); [Machine Learning for particle identification in the LHCb detector](https://repository.cern/records/034yx-nt191)."
     },
     {
       "title": "Sapienza — Universita di Roma",
       "period": "2016–2020",
-      "body": "PhD in Physics (double degree with HSE), supervisor [Barbara Sciascia](https://it.linkedin.com/in/barbara-sciascia-234935a)."
+      "body": "*PhD in Physics* (double degree with HSE), supervisor [Barbara Sciascia](https://it.linkedin.com/in/barbara-sciascia-234935a)."
     },
     {
       "title": "Product Management course at Yandex",
@@ -343,7 +343,12 @@
     },
     {
       "title": "Moscow Institute of Physics and Technology",
-      "body": "**MS in Physics** (2014–2016): Optimisation of data processing of the LHCb experiment.\n\n**BS in Physics** (2010–2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting."
+      "body": "*MS in Physics* (2014–2016): Optimisation of data processing of the LHCb experiment.\n\n*BS in Physics* (2010–2014): Study of the quantum states of the electrons in nonideal plasma and selected molecules using wave packet molecular dynamics with packet splitting."
+    },
+    {
+      "title": "International Junior Science Olympiad (IJSO)",
+      "period": "2008",
+      "body": "Silver medal (held in Korea)."
     }
   ],
   "mentorship": [
@@ -370,7 +375,7 @@
       "tags": ["atomistic", "finance", "industry"]
     },
     {
-      "body": "Lecturer in the [Coursera Advanced Machine Learning specialisation](https://www.coursera.org/specializations/aml), which is [award-winning](https://www.hse.ru/en/news/edu/259378493.html).",
+      "body": "Lecturer in the [award-winning](https://www.hse.ru/en/news/edu/259378493.html) Coursera Advanced Machine Learning [  specialisation](https://web.archive.org/web/20220127183223/https://www.coursera.org/specializations/aml)",
       "tags": ["atomistic", "agents", "finance", "industry"]
     },
     {
@@ -426,18 +431,10 @@
   ],
   "service": [
     {
-      "body": "Reviewer for RSC Advances, Machine Learning: Science and Technology, and AI for Accelerated Materials Design workshops at NeurIPS and ICLR (2023–2025)."
+      "body": "Reviewer for NeurIPS, RSC Advances, Machine Learning: Science and Technology"
     },
     {
       "body": "Peer Staff Supporter at NUS, serving as a first-line support for mental wellbeing."
-    }
-  ],
-  "otherItems": [
-    {
-      "body": "Aspiring stand-up comedian; bombed more than 20 times at open mics."
-    },
-    {
-      "body": "International Junior Science Olympiad 2008 in Korea, silver medal."
     }
   ]
 }

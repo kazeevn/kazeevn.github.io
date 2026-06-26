@@ -127,10 +127,9 @@ def filter_cv_data(data, target_tag):
     # Publications
     filtered["publications"] = [p for p in data["publications"] if target_tag in p.get("tags", [])]
     
-    # Service and Also/Other
+    # Service
     filtered["service"] = [s for s in data.get("service", []) if target_tag in s.get("tags", ["generic", target_tag])]
-    filtered["otherItems"] = [o for o in data.get("otherItems", []) if target_tag in o.get("tags", ["generic", target_tag])]
-    
+
     return filtered
 
 def main():
@@ -165,8 +164,7 @@ def main():
             mentorship=latex_data["mentorship"],
             teachingAndOutreach=latex_data["teachingAndOutreach"],
             service=latex_data["service"],
-            skills=latex_data["skills"],
-            otherItems=latex_data["otherItems"]
+            skills=latex_data["skills"]
         )
         
         tex_path = f"cv-variants/cv_{name}.tex"

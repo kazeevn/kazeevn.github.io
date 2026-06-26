@@ -59,7 +59,6 @@ const education: SimpleSectionItem[] = cvData.education;
 const mentorship = cvData.mentorship;
 const teachingAndOutreach = cvData.teachingAndOutreach;
 const service = cvData.service;
-const otherItems = cvData.otherItems;
 const stats: Stat[] = cvData.stats;
 const publications: Publication[] = cvData.publications;
 
@@ -471,25 +470,15 @@ export default function CvContent() {
           </ol>
         </section>
 
-        {/* ── Service & Other (compact) ── */}
+        {/* ── Service (compact) ── */}
         <section className="cv-compact-section space-y-3 border-t border-neutral-200 pt-6 dark:border-neutral-800">
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <p className="text-xs font-bold tracking-widest text-neutral-500 dark:text-neutral-400 uppercase mb-2">Service</p>
-              <ul className="list-disc pl-4 space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300">
-                {service.map((item, index) => (
-                  <li key={index}>{renderFormattedText(item.body)}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs font-bold tracking-widest text-neutral-500 dark:text-neutral-400 uppercase mb-2">Also</p>
-              <ul className="list-disc pl-4 space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300">
-                {otherItems.map((item, index) => (
-                  <li key={index}>{renderFormattedText(item.body)}</li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <p className="text-xs font-bold tracking-widest text-neutral-500 dark:text-neutral-400 uppercase mb-2">Service</p>
+            <ul className="list-disc pl-4 space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300">
+              {service.map((item, index) => (
+                <li key={index}>{renderFormattedText(item.body)}</li>
+              ))}
+            </ul>
           </div>
         </section>
       </div>
