@@ -57,10 +57,10 @@
 \AtEveryBibitem{\ifkeyword{icml2026}{\clearfield{year}\clearfield{month}\clearfield{day}\printtext{\textbf{\thefield{note}}\addspace\textemdash\addspace}\clearfield{note}}{}}
 
 % Variant filters: the build script bakes the current variant tag into the
-% template, so `agents` is a literal keyword here (empty for the
+% template, so `safety` is a literal keyword here (empty for the
 % generic CV, which prints everything).
-\defbibfilter{cvicml}{ \keyword{icml2026} and \keyword{agents} }
-\defbibfilter{cvselected}{ not \keyword{icml2026} and \keyword{agents} }
+\defbibfilter{cvicml}{ \keyword{icml2026} and \keyword{safety} }
+\defbibfilter{cvselected}{ not \keyword{icml2026} and \keyword{safety} }
 
 \setcounter{secnumdepth}{0}            % no section numbering
 \titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
@@ -90,12 +90,15 @@
     \href{https://scholar.google.com/citations?user=vamy2okAAAAJ}{Google Scholar} \textperiodcentered{}
     \href{https://orcid.org/0000-0002-5699-7634}{ORCID}%
   }\\[5pt]
-  \textit{ Research Scientist focusing on AI Agents \& ML Reliability }
+  \textit{ Research Scientist focusing on Reliability and Uncertainty in Agentic Systems }
 \end{center}
 
 % ===== PAGE 1: Work Experience & Projects =====
 \section{Work Experience}
 \textsc{\textbf{\boldmath{}Perfomax}}\quad{\small\color{black!55}\itshape AI Advisor} \hfill\textbf{2026--present}\par
+\smallskip
+
+\textsc{\textbf{\boldmath{}Constructor Group}}\quad{\small\color{black!55}\itshape Machine Learning Consultant} \hfill\textbf{2021--present}\par
 \smallskip
 
 \textsc{\textbf{\boldmath{}National University of Singapore}}\quad{\small\color{black!55}\itshape Postdoc under \href{https://en.wikipedia.org/wiki/Konstantin\_Novoselov}{Kostya Novoselov}} \hfill\textbf{2022--present}\par
@@ -107,14 +110,20 @@
   \item Co-PI of a US\$3.4m AI Singapore grant on multiscale machine learning
 \end{itemize}
 \vspace{2pt}
+{\leftskip\projindent\textbf{LLM Agent Safety \& Alignment}\artifacts{ \href{https://openreview.net/forum?id=zqShTtnTZc}{ICML 2026 Workshop} \textperiodcentered{} \href{https://openreview.net/forum?id=J3Vqv2fFse}{ICML 2026 Workshop} \textperiodcentered{} \href{https://github.com/kazeevn/referenece-checker}{GitHub} }\par}
+\begin{itemize}[leftmargin=\projbulletindent]
+  \item Conceived and developed a novel geometric framework to predict multi-step reasoning failures in LLM agents using semantic abstraction trajectories
+  \item Designed uncertainty quantification (UQ) algorithms for LLM reasoning loops, improving agent error detection and calibration
+  \item Developed and open-sourced \href{https://github.com/kazeevn/referenece-checker}{reference-checker}, a tool for verifying claims and citation references in scientific papers to detect and mitigate LLM hallucinations
+  \item Authored a position paper on Pluralistic Alignment, advocating for aligning AI models with aspirational human values rather than replicating behavioral flaws
+\end{itemize}
+\vspace{2pt}
 {\leftskip\projindent\textbf{Wyckoff Transformer, a generative model for materials}\artifacts{ \href{https://icml.cc/virtual/2025/poster/44595}{ICML 2025} \textperiodcentered{} \href{https://github.com/SymmetryAdvantage/WyckoffTransformer}{GitHub} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Developed a coordinate-free permutation-invariant autoregressive Transformer encoder model for material generation and property prediction based on symmetry inductive bias
-  \item Increased materials discovery yield (S.U.N.) by 1.24x
-  \item Cut inference to 0.05 GPU-ms/structure --- 4 orders of magnitude faster than prior models
-  \item Implemented the model in PyTorch; production-ready package published on \href{https://pypi.org/project/wyckoff-transformer/}{PyPI}
-  \item Orchestrated large-scale (10k structures) DFT computations with VASP on an HPC cluster
-  \item Led a team of 6
+  \item Alignment by design: enforced physical principles directly at the architectural level as hard constraints, mathematically guaranteeing plausible generations
+  \item Solved a systemic failure mode where generative models default to asymmetric outputs despite symmetric training data, mitigating this structural bias via coordinate-free representations
+  \item Increased materials discovery yield (S.U.N.) by 1.24x while cutting inference time by 4 orders of magnitude (to 0.05 GPU-ms per structure)
+  \item Orchestrated large-scale (10k structures) DFT computation loops to verify out-of-distribution stability; led a team of 6
 \end{itemize}
 \smallskip
 
@@ -127,10 +136,15 @@
   \item Led a team of 3 students
 \end{itemize}
 \vspace{2pt}
-{\leftskip\projindent\textbf{Generative models for fast simulation}\artifacts{ \href{https://www.sciencedirect.com/science/article/pii/S0168900219300701}{paper 1} \textperiodcentered{} \href{https://arxiv.org/abs/1905.11825}{paper 2} \textperiodcentered{} \href{https://ml4physicalsciences.github.io/2019/files/NeurIPS\_ML4PS\_2019\_40.pdf}{paper 3} \textperiodcentered{} \href{https://github.com/yandexdataschool/QuantileTransformerTF}{code} }\par}
+{\leftskip\projindent\textbf{Machine learning on noisy data}\artifacts{ \href{http://doi.org/10.1088/1748-0221/14/08/P08020}{paper 1} \textperiodcentered{} \href{https://ml4physicalsciences.github.io/2019/files/NeurIPS\_ML4PS\_2019\_122.pdf}{paper 2} \textperiodcentered{} \href{https://github.com/yandexdataschool/ML-sWeights-experiments/}{code} }\par}
 \begin{itemize}[leftmargin=\projbulletindent]
-  \item Built a GAN for high-fidelity, tabular-data simulation of a Cherenkov detector
-  \item Reached ~10⁵× speed-up over the full Geant4 simulation
+  \item Derived a statistically rigorous method to train classifiers on sPlot-weighted (label-noisy) data, standard in high-energy physics
+\end{itemize}
+\vspace{2pt}
+{\leftskip\projindent\textbf{CatBoost: Combatting Biases in Boosting}\artifacts{ \href{https://arxiv.org/abs/1706.09516v1}{paper} }\par}
+\begin{itemize}[leftmargin=\projbulletindent]
+  \item Designed and built distributed experiment infrastructure to scale systematic bias analysis across large-scale tabular datasets
+  \item Investigated dynamic boosting formulations to eliminate target leakage and prediction shift, mitigating statistical bias in gradient boosting
 \end{itemize}
 \smallskip
 
@@ -186,12 +200,13 @@
 % ===== PAGE 3: Skills & Publications =====
 \section{Skills}
 \begin{itemize}
-  \item \textbf{Generative modelling for scientific data} --- GANs, autoregressive transformers, and diffusion; from fast detector simulation to symmetry-aware crystal generation.
+  \item \textbf{Agent Reliability \& UQ} --- developed geometric and statistical frameworks to predict LLM agent reasoning failures using semantic abstraction trajectories.
+  \item \textbf{Aspirational Alignment \& Verification} --- formulated alignment strategies based on high-level human values and established benchmarks (e.g. Foresight-Phys) for validating AI systems in complex environments.
   \item \textbf{Uncertainty quantification} --- built the first methods for estimating the uncertainty of conditional GANs; calibrated generative and discriminative models.
-  \item \textbf{ML on structured, non-text data} --- tabular, graph, and atomistic representations, spanning gradient boosting to transformers.
+  \item \textbf{Inference and systems at scale} --- C++ production integration, large-scale DFT/VASP on HPC clusters, and reproducible experiment pipelines.
   \item \textbf{Research leadership} --- lead multidisciplinary teams, chair conferences, and mentor students from idea to publication.
 \end{itemize}
-{\small\centering ML \& AI \textbullet\ Python \textbullet\ PyTorch \textbullet\ HPC \textbullet\ Physics \textbullet\ Research Writing \& Speaking \textbullet\ Leadership \& Mentorship\par}
+{\small\centering ML \& AI \textbullet\ Python \textbullet\ PyTorch \textbullet\ C++ \textbullet\ HPC \textbullet\ Physics \textbullet\ Research Writing \& Speaking \textbullet\ Leadership \& Mentorship\par}
 
 % Pull every entry from publications.bib into the bibliography; the filters
 % below split them into the two sections.

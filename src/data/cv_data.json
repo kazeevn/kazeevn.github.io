@@ -2,6 +2,10 @@
   "personal": {
     "name": "Nikita Kazeev",
     "title": "Research Scientist at the intersection of AI and Physics",
+    "titles": {
+      "safety": "Research Scientist focusing on Reliability and Uncertainty in Agentic Systems",
+      "agents": "Research Scientist focusing on AI Agents & ML Reliability"
+    },
     "email": "kazeevn@gmail.com",
     "website": "https://kazeevn.github.io",
     "github": "https://github.com/kazeevn",
@@ -47,8 +51,16 @@
       "tags": ["atomistic", "agents"]
     },
     {
+      "body": "**Agent Reliability & UQ** — developed geometric and statistical frameworks to predict LLM agent reasoning failures using semantic abstraction trajectories.",
+      "tags": ["safety"]
+    },
+    {
+      "body": "**Aspirational Alignment & Verification** — formulated alignment strategies based on high-level human values and established benchmarks (e.g. Foresight-Phys) for validating AI systems in complex environments.",
+      "tags": ["safety"]
+    },
+    {
       "body": "**Uncertainty quantification** — built the first methods for estimating the uncertainty of conditional GANs; calibrated generative and discriminative models.",
-      "tags": ["atomistic", "agents", "finance"]
+      "tags": ["atomistic", "agents", "finance", "safety"]
     },
     {
       "body": "**ML on structured, non-text data** — tabular, graph, and atomistic representations, spanning gradient boosting to transformers.",
@@ -56,7 +68,7 @@
     },
     {
       "body": "**Inference and systems at scale** — C++ production integration, large-scale DFT/VASP on HPC clusters, and reproducible experiment pipelines.",
-      "tags": ["atomistic", "finance", "industry"]
+      "tags": ["atomistic", "finance", "industry", "safety"]
     },
     {
       "body": "**Physics domain depth** — high-energy and condensed-matter physics; first-principles intuition that shapes model design.",
@@ -64,41 +76,41 @@
     },
     {
       "body": "**Research leadership** — lead multidisciplinary teams, chair conferences, and mentor students from idea to publication.",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": ["atomistic", "agents", "industry", "safety"]
     }
   ],
   "skills": [
     {
       "label": "ML & AI",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"]
     },
     {
       "label": "Python",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"]
     },
     {
       "label": "PyTorch",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"]
     },
     {
       "label": "C++",
-      "tags": ["atomistic", "finance", "industry"]
+      "tags": ["atomistic", "finance", "industry", "safety"]
     },
     {
       "label": "HPC",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": ["atomistic", "agents", "industry", "safety"]
     },
     {
       "label": "Physics",
-      "tags": ["atomistic", "agents", "finance"]
+      "tags": ["atomistic", "agents", "finance", "safety"]
     },
     {
       "label": "Research Writing & Speaking",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": ["atomistic", "agents", "industry", "safety"]
     },
     {
       "label": "Leadership & Mentorship",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": ["atomistic", "agents", "industry", "safety"]
     }
   ],
   "workExperience": [
@@ -107,20 +119,20 @@
       "role": "AI Advisor",
       "period": "2026–present",
       "url": "https://perfomax.io/",
-      "tags": ["agents", "industry"]
+      "tags": ["agents", "industry", "safety"]
     },
     {
       "organization": "Constructor Group",
       "role": "Machine Learning Consultant",
       "period": "2021–present",
       "url": "https://constructor.org/",
-      "tags": ["atomistic", "finance", "industry"]
+      "tags": ["atomistic", "finance", "industry", "safety"]
     },
     {
       "organization": "National University of Singapore",
       "role": "Postdoc under [Kostya Novoselov](https://en.wikipedia.org/wiki/Konstantin_Novoselov)",
       "period": "2022–present",
-      "tags": ["atomistic", "agents", "finance", "industry"],
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"],
       "highlights": [
         {
           "title": "Leadership",
@@ -134,7 +146,37 @@
             "Main organiser of the [ICLR 2025 Workshop on Machine Learning Multiscale Processes](https://multiscale-ai.github.io/)",
             "Co-PI of a US$3.4m AI Singapore grant on multiscale machine learning"
           ],
-          "tags": ["agents", "industry"]
+          "tags": ["agents", "industry", "safety"]
+        },
+        {
+          "title": "LLM Agent Safety & Alignment",
+          "skills": [
+            "ML & AI",
+            "Python",
+            "PyTorch",
+            "Research Writing & Speaking"
+          ],
+          "references": [
+            {
+              "href": "https://openreview.net/forum?id=zqShTtnTZc",
+              "label": "ICML 2026 Workshop"
+            },
+            {
+              "href": "https://openreview.net/forum?id=J3Vqv2fFse",
+              "label": "ICML 2026 Workshop"
+            },
+            {
+              "href": "https://github.com/kazeevn/referenece-checker",
+              "label": "GitHub"
+            }
+          ],
+          "bullets": [
+            "Conceived and developed a novel geometric framework to predict multi-step reasoning failures in LLM agents using semantic abstraction trajectories",
+            "Designed uncertainty quantification (UQ) algorithms for LLM reasoning loops, improving agent error detection and calibration",
+            "Developed and open-sourced [reference-checker](https://github.com/kazeevn/referenece-checker), a tool for verifying claims and citation references in scientific papers to detect and mitigate LLM hallucinations",
+            "Authored a position paper on Pluralistic Alignment, advocating for aligning AI models with aspirational human values rather than replicating behavioral flaws"
+          ],
+          "tags": ["safety"]
         },
         {
           "title": "Wyckoff Transformer, a generative model for materials",
@@ -165,6 +207,34 @@
             "Led a team of 6"
           ],
           "tags": ["atomistic", "agents", "finance", "industry"]
+        },
+        {
+          "title": "Wyckoff Transformer, a generative model for materials",
+          "skills": [
+            "ML & AI",
+            "Python",
+            "PyTorch",
+            "Physics",
+            "HPC",
+            "Leadership & Mentorship"
+          ],
+          "references": [
+            {
+              "href": "https://icml.cc/virtual/2025/poster/44595",
+              "label": "ICML 2025"
+            },
+            {
+              "href": "https://github.com/SymmetryAdvantage/WyckoffTransformer",
+              "label": "GitHub"
+            }
+          ],
+          "bullets": [
+            "Alignment by design: enforced physical principles directly at the architectural level as hard constraints, mathematically guaranteeing plausible generations",
+            "Solved a systemic failure mode where generative models default to asymmetric outputs despite symmetric training data, mitigating this structural bias via coordinate-free representations",
+            "Increased materials discovery yield (S.U.N.) by 1.24x while cutting inference time by 4 orders of magnitude (to 0.05 GPU-ms per structure)",
+            "Orchestrated large-scale (10k structures) DFT computation loops to verify out-of-distribution stability; led a team of 6"
+          ],
+          "tags": ["safety"]
         },
         {
           "title": "ML for defects in 2D crystals",
@@ -209,7 +279,7 @@
       "organization": "⟨CERN ∣ Yandex → HSE University⟩",
       "role": "Researcher",
       "period": "2014–2022",
-      "tags": ["atomistic", "agents", "finance", "industry"],
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"],
       "note": "[2025 Breakthrough Prize in Fundamental Physics](https://breakthroughprize.org/Laureates/1/L3995) as a member of LHCb.",
       "highlights": [
         {
@@ -243,7 +313,7 @@
             "Developed the first methods for estimating uncertainty of conditional GANs",
             "Led a team of 3 students"
           ],
-          "tags": ["agents", "finance"]
+          "tags": ["agents", "finance", "safety"]
         },
         {
           "title": "Generative models for fast simulation",
@@ -297,7 +367,7 @@
           "bullets": [
             "Derived a statistically rigorous method to train classifiers on sPlot-weighted (label-noisy) data, standard in high-energy physics"
           ],
-          "tags": ["atomistic", "finance"]
+          "tags": ["atomistic", "finance", "safety"]
         },
         {
           "title": "Muon identification at the LHCb experiment at CERN",
@@ -338,6 +408,21 @@
             "Studied gradient boosting improvements with experiments on toy data"
           ],
           "tags": ["finance", "industry"]
+        },
+        {
+          "title": "CatBoost: Combatting Biases in Boosting",
+          "skills": ["ML & AI", "Python", "HPC"],
+          "references": [
+            {
+              "href": "https://arxiv.org/abs/1706.09516v1",
+              "label": "paper"
+            }
+          ],
+          "bullets": [
+            "Designed and built distributed experiment infrastructure to scale systematic bias analysis across large-scale tabular datasets",
+            "Investigated dynamic boosting formulations to eliminate target leakage and prediction shift, mitigating statistical bias in gradient boosting"
+          ],
+          "tags": ["safety"]
         }
       ]
     }
@@ -389,13 +474,13 @@
   "mentorship": [
     {
       "body": "Mentored 9 students ([1](https://www.hse.ru/edu/vkr/219430466), [2](https://www.hse.ru/edu/vkr/296294066), [3](https://www.hse.ru/edu/vkr/219524130), [4](https://www.hse.ru/en/edu/vkr/470561417), [5](https://www.hse.ru/en/edu/vkr/470935224), [6](https://www.hse.ru/ma/datasci/students/diplomas/631565328), [7](https://www.hse.ru/ma/datasci/students/diplomas/631565422), [8](https://www.hse.ru/edu/vkr/624890096), [9](https://www.hse.ru/ba/ami/students/diplomas/834351454)), 3 interns, and student workshop projects ([1](https://sochisirius.ru/news/3148), [2](https://web.archive.org/web/20220512040654/https://academy.yandex.ru/posts/vossozdat-arkhitekturu-bazy-dannykh-i-nauchit-golosovogo-pomoschnika-predskazyvat-namereniya-polzovatelya)).",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"]
     }
   ],
   "teachingAndOutreach": [
     {
       "body": "Pitch research to the general public through major newspaper coverage ([1](https://www.kommersant.ru/doc/7832307), [2](https://www.kommersant.ru/doc/6122817)), blog posts ([1](https://ifim.nus.edu.sg/tailor-made-2d-materials-became-closer-with-the-new-machine-learning-algorithm-developed-at-nus/), [2](https://communities.springernature.com/posts/sparse-representation-for-machine-learning-the-properties-of-defects-in-2d-materials)), a [science slam](https://elementy.ru/events/435506/IV_Nauchnye_boi_NIU_VShE_na_Dne_Vyshki), interviews ([1](https://web.archive.org/web/20210518043835/https://academy.yandex.ru/posts/beresh-i-razbiraeshsya), [2](https://habr.com/en/company/yandex/blog/422761/)), and a public [talk](https://www.youtube.com/watch?v=zLFZ_z-7-JI&feature=youtu.be&t=7779).",
-      "tags": ["atomistic", "agents", "industry"]
+      "tags": ["atomistic", "agents", "industry", "safety"]
     },
     {
       "body": "Taught at the Machine Learning in High Energy Physics Summer School in [2015](https://indico.cern.ch/event/439520/), [2016](https://indico.cern.ch/event/497368/), [2017](https://indico.cern.ch/event/613571/), [2018](https://indico.cern.ch/event/687473/), [2019](https://indico.cern.ch/event/768915/), [2020](https://indico.cern.ch/event/838377/), [2021](https://indico.cern.ch/event/1025052/), and [2023](https://indico.cern.ch/event/1229514/).",
@@ -403,7 +488,7 @@
     },
     {
       "body": "Lecturer in the [award-winning](https://www.hse.ru/en/news/edu/259378493.html) Coursera Advanced Machine Learning [  specialisation](https://web.archive.org/web/20220127183223/https://www.coursera.org/specializations/aml)",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"]
     },
     {
       "body": "Taught and developed an introductory data analysis [course](https://we.hse.ru/en/) at HSE.",
@@ -411,7 +496,7 @@
     },
     {
       "body": "Delivered more than 20 [conference talks](https://docs.google.com/document/d/1IOlBse4q0YgEoL_RCJTvJfbFhFaD_YMAIJJ3W77B_X0/edit?usp=sharing).",
-      "tags": ["atomistic", "agents", "finance", "industry"]
+      "tags": ["atomistic", "agents", "finance", "industry", "safety"]
     }
   ],
   "service": [

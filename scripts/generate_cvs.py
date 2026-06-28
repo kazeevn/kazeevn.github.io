@@ -11,7 +11,8 @@ VARIANTS = {
     "atomistic": "atomistic",
     "agents": "agents",
     "finance": "finance",
-    "industry": "industry"
+    "industry": "industry",
+    "safety": "safety"
 }
 
 BIB_PATH = "src/data/publications.bib"
@@ -265,12 +266,46 @@ def to_latex(val):
     return text
 
 def filter_cv_data(data, target_tag):
+    personal = data["personal"].copy()
+    if "titles" in personal and target_tag in personal["titles"]:
+        personal["title"] = personal["titles"][target_tag]
+
     if target_tag == "generic":
-        # Keep everything for generic
-        return data
+        # Keep everything except items tagged ONLY with safety-specific tags
+        # (i.e. tags that do not overlap with the original variants).
+        original_tags = {"atomistic", "agents", "finance", "industry"}
+        
+        def keep_item(item):
+            tags = item.get("tags")
+            if tags is None:
+                return True
+            return any(t in original_tags for t in tags)
+
+        filtered = {}
+        filtered["personal"] = personal
+        filtered["stats"] = data["stats"]
+        filtered["differentiators"] = [d for d in data.get("differentiators", []) if keep_item(d)]
+        filtered["skills"] = [s for s in data["skills"] if keep_item(s)]
+        
+        filtered_exp = []
+        for entry in data["workExperience"]:
+            if not keep_item(entry):
+                continue
+            highlights = entry.get("highlights", [])
+            filtered_highlights = [h for h in highlights if keep_item(h)]
+            entry_copy = entry.copy()
+            entry_copy["highlights"] = filtered_highlights
+            filtered_exp.append(entry_copy)
+        filtered["workExperience"] = filtered_exp
+        
+        filtered["education"] = data["education"]
+        filtered["mentorship"] = [m for m in data["mentorship"] if keep_item(m)]
+        filtered["teachingAndOutreach"] = [t for t in data["teachingAndOutreach"] if keep_item(t)]
+        filtered["service"] = data.get("service", [])
+        return filtered
 
     filtered = {}
-    filtered["personal"] = data["personal"]
+    filtered["personal"] = personal
     filtered["stats"] = data["stats"]
     
     # Filter differentiators
@@ -284,9 +319,8 @@ def filter_cv_data(data, target_tag):
     for entry in data["workExperience"]:
         highlights = entry.get("highlights", [])
         filtered_highlights = [h for h in highlights if target_tag in h.get("tags", [])]
-        # Keep an entry if it has matching highlights, or if it has no highlights
-        # at all but its own tags match the variant.
-        if filtered_highlights or (not highlights and target_tag in entry.get("tags", [])):
+        # Keep an entry if its own tags match the variant
+        if target_tag in entry.get("tags", []):
             entry_copy = entry.copy()
             entry_copy["highlights"] = filtered_highlights
             filtered_exp.append(entry_copy)
