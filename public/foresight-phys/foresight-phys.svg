@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .title { font-family: 'Roboto', 'Liberation Sans', Arial, sans-serif; font-weight: 900; }
+      .cap   { font-family: 'Roboto', 'Liberation Sans', Arial, sans-serif; font-weight: 700; letter-spacing: 0.05em; }
+      .tag   { font-family: 'Roboto', 'Liberation Sans', Arial, sans-serif; font-weight: 700; letter-spacing: 0.04em; }
+      .sub   { font-family: 'Roboto', 'Liberation Sans', Arial, sans-serif; font-weight: 500; }
+      .subb  { font-family: 'Roboto', 'Liberation Sans', Arial, sans-serif; font-weight: 700; }
+      .mono  { font-family: 'SFMono-Regular','DejaVu Sans Mono',monospace; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1280" height="640" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="12" fill="#BE1128"/>
+
+  <!-- ================= HEADER ================= -->
+  <text x="72" y="104" class="title" font-size="64" fill="#14110F"><tspan fill="#BE1128">F</tspan>oresight<tspan fill="#BE1128">-P</tspan>hys</text>
+  <text x="74" y="150" class="sub" font-size="30" fill="#14110F">Can AI forecast a physics experiment &#8212; <tspan class="title" fill="#BE1128">before it&#8217;s run?</tspan></text>
+
+  <g transform="translate(1208,58)">
+    <rect x="-232" y="0" width="232" height="44" rx="4" fill="none" stroke="#BE1128" stroke-width="2.2"/>
+    <text x="-116" y="29.5" class="tag" font-size="17" fill="#BE1128" text-anchor="middle">ICML 2026 &#183; FORECASTING</text>
+  </g>
+
+  <line x1="72" y1="188" x2="1208" y2="188" stroke="#E6E3DE" stroke-width="1.5"/>
+
+  <!-- ================= DIAGRAM (full width, centered) ================= -->
+  <!-- chip 1: fresh preprint -->
+  <g transform="translate(285,378)">
+    <rect x="-98" y="-98" width="196" height="196" rx="26" fill="#EFECE7"/>
+    <g transform="translate(0,-8)">
+      <rect x="-44" y="-58" width="88" height="110" fill="#FFFFFF" stroke="#5A554E" stroke-width="4.5"/>
+      <path d="M21,-58 L44,-35 L21,-35 Z" fill="#D8D4CE" stroke="#5A554E" stroke-width="3.2"/>
+      <line x1="-25" y1="-16" x2="21" y2="-16" stroke="#8C8C8C" stroke-width="4.5"/>
+      <line x1="-25" y1="4" x2="21" y2="4" stroke="#8C8C8C" stroke-width="4.5"/>
+      <line x1="-25" y1="24" x2="4" y2="24" stroke="#8C8C8C" stroke-width="4.5"/>
+      <circle cx="40" cy="-54" r="17" fill="#BE1128"/>
+      <text x="40" y="-47" font-size="22" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-family="Roboto, Arial, sans-serif">+</text>
+    </g>
+    <text x="0" y="132" class="cap" font-size="24" fill="#14110F" text-anchor="middle">FRESH ARXIV</text>
+    <text x="0" y="161" class="sub" font-size="17" fill="#8C8C8C" text-anchor="middle">after the model&#8217;s cutoff</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <g stroke="#E5371C" stroke-width="10" fill="none" stroke-linecap="round">
+    <line x1="400" y1="378" x2="480" y2="378"/>
+  </g>
+  <path d="M480,359 L515,378 L480,397 Z" fill="#E5371C"/>
+
+  <!-- chip 2: AI forecast -->
+  <g transform="translate(640,378)">
+    <rect x="-98" y="-98" width="196" height="196" rx="26" fill="#BE1128"/>
+    <g stroke="#FFFFFF" stroke-width="5.4" fill="#FFFFFF">
+      <line x1="0" y1="-5" x2="-42" y2="40"/>
+      <line x1="0" y1="-5" x2="42" y2="40"/>
+      <line x1="-42" y1="40" x2="42" y2="40"/>
+      <circle cx="0" cy="-45" r="17"/>
+      <circle cx="-42" cy="40" r="17"/>
+      <circle cx="42" cy="40" r="17"/>
+      <circle cx="0" cy="-5" r="9" fill="#BE1128" stroke="#FFFFFF" stroke-width="5.4"/>
+    </g>
+    <text x="0" y="132" class="cap" font-size="24" fill="#14110F" text-anchor="middle">AI FORECASTS</text>
+    <text x="0" y="161" class="sub" font-size="17" fill="#8C8C8C" text-anchor="middle">p10 / p50 / p90, sight unseen</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <g stroke="#E5371C" stroke-width="10" fill="none" stroke-linecap="round">
+    <line x1="765" y1="378" x2="845" y2="378"/>
+  </g>
+  <path d="M845,359 L880,378 L845,397 Z" fill="#E5371C"/>
+
+  <!-- chip 3: vs reality -->
+  <g transform="translate(995,378)">
+    <rect x="-98" y="-98" width="196" height="196" rx="26" fill="#FFFFFF" stroke="#BE1128" stroke-width="5.4"/>
+    <g>
+      <path d="M-54,44 C-39,44 -34,-40 0,-40 C34,-40 39,44 54,44" fill="none" stroke="#BE1128" stroke-width="6.2" stroke-linecap="round"/>
+      <line x1="0" y1="-40" x2="0" y2="46" stroke="#BE1128" stroke-width="3.6" stroke-dasharray="4.5 6"/>
+      <circle cx="25" cy="34" r="10" fill="#14110F"/>
+    </g>
+    <text x="0" y="132" class="cap" font-size="24" fill="#14110F" text-anchor="middle">SCORED VS REALITY</text>
+    <text x="0" y="161" class="sub" font-size="17" fill="#8C8C8C" text-anchor="middle">CRPS / Brier, ground truth</text>
+  </g>
+
+  <!-- ================= FOOTER ================= -->
+  <line x1="72" y1="566" x2="1208" y2="566" stroke="#E0DDD8" stroke-width="1.5"/>
+  <text x="72" y="606" class="mono" font-size="21" fill="#14110F" font-weight="700">github.com/kazeevn/Foresight-Phys</text>
+  <text x="1208" y="606" text-anchor="end" class="sub" font-size="20" fill="#5A554E">135 experiments &#183; 661 typed fields &#183; 26 arXiv preprints, post-cutoff</text>
+</svg>
