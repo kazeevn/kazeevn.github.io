@@ -69,6 +69,17 @@ export default function ResourceAllocationPage() {
             be right, but AI is.
           </p>
           <p>
+            Whether today's models can actually place these bets is an empirical
+            question, and we have started to measure it.{" "}
+            <Link href="https://openreview.net/forum?id=GhUK6VGW67">
+              Foresight-Phys
+            </Link>{" "}
+            asks whether frontier LLMs can forecast the outcomes of physics
+            experiments before the results are in. The early answer is humbling:
+            they clear a meaningful bar but remain systematically overconfident,
+            well short of what trustworthy governance would demand.
+          </p>
+          <p>
             Finally, elegance. For too long the scientific progress was a
             mysterious philosopher's journey among Platonic Forms. Let's finally
             make it{" "}

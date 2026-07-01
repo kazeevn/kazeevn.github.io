@@ -21,6 +21,12 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{linkblue}{HTML}{1155CC}
 \usepackage[colorlinks=true,urlcolor=linkblue,linkcolor=linkblue]{hyperref}
+\hypersetup{
+  pdftitle={ {{- personal.name }} - CV},
+  pdfauthor={ {{- personal.name -}} },
+  pdfsubject={ {{- personal.title -}} },
+  pdfkeywords={ {{- skills | map(attribute='label') | join(', ') -}} },
+}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{xstring}        % substring test for the equal-contribution marker
