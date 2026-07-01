@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default function BlogList() {
-  const blogDir = path.join(process.cwd(), "src/app/blog");
+  const blogDir = path.join(process.cwd(), "src/app/blog/(post)");
   const entries = fs.readdirSync(blogDir, { withFileTypes: true });
   
   const posts = entries
